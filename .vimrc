@@ -20,6 +20,7 @@
 "   => General
 """""""""""""""""""""""""""""""""""""""""
 
+"Set leaders
 let mapleader = "\<Space>"
 let maplocalleader = "\\"
 
@@ -31,14 +32,19 @@ if exists("&undodir")
 	set undoreload=500
 endif
 
+"Set Y to match C and D
+nnoremap Y y$
+
 "Set vim to use system clipboard
 if has('clipboard')
     nnoremap y "+y
+    nnoremap Y "+y$
     nnoremap d "+d
+    nnoremap D "+D
     nnoremap p "+p
     nnoremap P "+P
-    nnoremap p "+p
-    nnoremap P "+P
+    nnoremap c "+c
+    nnoremap C "+C
 endif
 
 "Visual cues on errors
@@ -101,13 +107,18 @@ set showcmd
 nmap j gj
 nmap k gk
 
-"Set Y to match C and D
-nnoremap Y y$
 
-"Surround a word in 'quotes'
-
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e
+"Surround a word 
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e " in 'quotes'
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e " in "quotes"
+nnoremap <leader>> viw<esc>a><esc>bi<<esc>e " in <tags>
+nnoremap <leader>< viw<esc>a><esc>bi<<esc>e " in <tags>
+nnoremap <leader>) viw<esc>a)<esc>bi(<esc>e " in (parentheses)
+nnoremap <leader>( viw<esc>a)<esc>bi(<esc>e " in (parentheses)
+nnoremap <leader>] viw<esc>a]<esc>bi[<esc>e " in [brackets]
+nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>e " in [brackets]
+nnoremap <leader>} viw<esc>a}<esc>bi{<esc>e " in {curlies}
+nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>e " in {curlies}
 
 "Make editing .vimrc simple
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
