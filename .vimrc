@@ -20,8 +20,12 @@
 "   => General
 """""""""""""""""""""""""""""""""""""""""
 
-let mapleader = "\<Space>"
-let maplocalleader = "\\"
+"Not vi-compatible
+set nocompatible
+
+"Leaders
+let mapleader = "\\"
+let maplocalleader = "-"
 
 "Set persistent undo
 if exists("&undodir")
@@ -29,16 +33,6 @@ if exists("&undodir")
 	let &undodir=&directory
 	set undolevels=500
 	set undoreload=500
-endif
-
-"Set vim to use system clipboard
-if has('clipboard')
-    nnoremap y "+y
-    nnoremap d "+d
-    nnoremap p "+p
-    nnoremap P "+P
-    nnoremap p "+p
-    nnoremap P "+P
 endif
 
 "Visual cues on errors
@@ -112,6 +106,11 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e
 "Make editing .vimrc simple
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"Instant commenting
+autocmd Filetype cpp     nnoremap <buffer> <localleader>c I//<esc>
+autocmd Filetype python  nnoremap <buffer> <localleader>c I#<esc>
+autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Notes
