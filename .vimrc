@@ -11,17 +11,26 @@
 "   | Mappings
 "   | Notes
 " 
+"
+" IDEAS:
+" 
+"   Create mapping for comment headers
+"       i.e.
+" nnoremap <leader>h ############<cr>#Header<cr>############
+"
+"
 """""""""""""""""""""""""""""""""""""""""
-
-
 
 
 """""""""""""""""""""""""""""""""""""""""
 "   => General
 """""""""""""""""""""""""""""""""""""""""
 
-"Set leaders
-let mapleader = "\<Space>"
+"Not vi-compatible
+set nocompatible
+
+"Leaders
+let mapleader = "\<space>"
 let maplocalleader = "\\"
 
 "Set persistent undo
@@ -47,6 +56,10 @@ if has('clipboard')
     nnoremap C "+C
 endif
 
+"FIXME
+"Let <esc> toggle in and out of insert
+"nnoremap <esc> a
+
 "Visual cues on errors
 set visualbell " vb
 
@@ -70,12 +83,8 @@ set autoindent " ai
 "Enable syntax highlighting
 syntax on
 
-"Color schemes
-"Try these:
-"color peachpuff
+"Colorscheme
 color pablo
-"color slate
-"color torte
 
 "Show line numbers
 set number " nu
@@ -107,7 +116,6 @@ set showcmd
 nmap j gj
 nmap k gk
 
-
 "Surround a word 
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e " in 'quotes'
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e " in "quotes"
@@ -120,9 +128,37 @@ nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>e " in [brackets]
 nnoremap <leader>} viw<esc>a}<esc>bi{<esc>e " in {curlies}
 nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>e " in {curlies}
 
+"Insert a space
+nnoremap <space><space> i<space><esc>
+
+"Insert empty line
+nnoremap <enter> o<esc>
+augroup enter
+    autocmd CmdwinEnter * nnoremap <CR> <CR> " Fix q: new enter problem
+    autocmd BufReadPost quickfix nnoremap <CR> <CR>
+augroup END
+
 "Make editing .vimrc simple
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"Instant commenting
+augroup comments
+    autocmd!
+    autocmd Filetype cpp     nnoremap <buffer> <localleader>c I//<esc>
+    autocmd Filetype python  nnoremap <buffer> <localleader>c I#<esc>
+    autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
+    autocmd Filetype vim     nnoremap <buffer> <localleader>c I"<esc>
+augroup END
+
+"Instant conditionals
+augroup conditionals
+    autocmd!
+    autocmd Filetype cpp     :iabbrev <buffer> iff if ( )<left><left>
+    autocmd Filetype python  :iabbrev <buffer> iff if:<left>
+augroup END
+
+iabbrev FX FIXME
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Notes
