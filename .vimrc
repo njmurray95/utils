@@ -11,9 +11,15 @@
 "   | Mappings
 "   | Notes
 " 
+"
+" IDEAS:
+" 
+"   Create mapping for comment headers
+"       i.e.
+" nnoremap <leader>h ############<cr>#Header<cr>############
+"
+"
 """""""""""""""""""""""""""""""""""""""""
-
-
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -24,8 +30,8 @@
 set nocompatible
 
 "Leaders
-let mapleader = "\\"
-let maplocalleader = "-"
+let mapleader = "\<space>"
+let maplocalleader = "\\"
 
 "Set persistent undo
 if exists("&undodir")
@@ -34,6 +40,9 @@ if exists("&undodir")
 	set undolevels=500
 	set undoreload=500
 endif
+
+"Let <esc> toggle in and out of insert
+"nnoremap <esc> a
 
 "Visual cues on errors
 set visualbell " vb
@@ -58,12 +67,8 @@ set autoindent " ai
 "Enable syntax highlighting
 syntax on
 
-"Color schemes
-"Try these:
-"color peachpuff
+"Colorscheme
 color pablo
-"color slate
-"color torte
 
 "Show line numbers
 set number " nu
@@ -99,18 +104,46 @@ nmap k gk
 nnoremap Y y$
 
 "Surround a word in 'quotes'
-
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e
+
+"Insert a space
+nnoremap <space><space> i<space><esc>
+
+"Insert empty line
+nnoremap <enter> o<esc>
+augroup enter
+    autocmd CmdwinEnter * nnoremap <CR> <CR> " Fix q: new enter problem
+    autocmd BufReadPost quickfix nnoremap <CR> <CR>
+augroup END
 
 "Make editing .vimrc simple
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Instant commenting
-autocmd Filetype cpp     nnoremap <buffer> <localleader>c I//<esc>
-autocmd Filetype python  nnoremap <buffer> <localleader>c I#<esc>
-autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
+augroup comments
+    autocmd!
+    autocmd Filetype cpp     nnoremap <buffer> <localleader>c I//<esc>
+    autocmd Filetype python  nnoremap <buffer> <localleader>c I#<esc>
+    autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
+    autocmd Filetype vim     nnoremap <buffer> <localleader>c I"<esc>
+augroup END
+
+"Instant conditionals
+augroup conditionals
+    autocmd!
+    autocmd Filetype cpp     :iabbrev <buffer> iff if ( )<left><left>
+    autocmd Filetype python  :iabbrev <buffer> iff if:<left>
+augroup END
+
+"Set to system clipboard
+if has('clipboard')
+    nnoremap y "+y
+    nnoremap d "+d
+    nnoremap p "+p
+    nnoremap c "+c
+endif
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Notes
