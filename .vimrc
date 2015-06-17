@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""
+"[>1;3409;0c"""""""""""""""""""""""""""""""""""""""
 " Nick Murray
 "
 " Plugins
@@ -6,9 +6,13 @@
 "
 " Sections
 "   | General
-"   | Text, tabs, and spacing
-"   | VIM user interface
+"   | User interface
 "   | Mappings
+"   | Abbreviations
+"   | Search and Replace
+"   | Text Formattig -- General
+"   | Text Formatting -- Specific File Formats
+"   | Text, tabs, and spacing
 "   | Notes
 " 
 "
@@ -26,8 +30,19 @@
 "   => General
 """""""""""""""""""""""""""""""""""""""""
 
+autocmd!
+
 "Not vi-compatible
 set nocompatible
+
+"When .vimrc is edited, reload it.
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
+"Make editing .vimrc simple
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 "Make backspace work
 set backspace=indent,eol,start
@@ -54,7 +69,8 @@ endif
 
 "FIXME
 "Let <esc> toggle in and out of insert
-"nnoremap <esc> a
+"nnoremap <C-[> a
+
 
 "Visual cues on errors
 set visualbell " vb
@@ -68,6 +84,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smarttab
 
 "Auto indent
 set autoindent " ai
@@ -120,8 +137,8 @@ set showcmd
 """""""""""""""""""""""""""""""""""""""""
 
 "Scrolling catches line wraps
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
 
 "Move lines up and down
 nnoremap <C-j> :m+<CR>==
@@ -148,10 +165,6 @@ augroup enter
     autocmd CmdwinEnter * nnoremap <CR> <CR> " Fix q: new enter problem
     autocmd BufReadPost quickfix nnoremap <CR> <CR>
 augroup END
-
-"Make editing .vimrc simple
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "Instant commenting
 augroup comments
