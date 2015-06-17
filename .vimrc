@@ -1,19 +1,19 @@
-"[>1;3409;0c"""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
 " Nick Murray
 "
-" Plugins
-"   (N/A)
+"   Plugins
+"       gotham256.vim --> Gotham colorscheme
 "
-" Sections
-"   | General
-"   | User interface
-"   | Mappings
-"   | Abbreviations
-"   | Search and Replace
-"   | Text Formattig -- General
-"   | Text Formatting -- Specific File Formats
-"   | Text, tabs, and spacing
-"   | Notes
+"   Sections
+"    | General
+"    | User interface
+"    | Mappings
+"    | Abbreviations
+"    | Search and Replace
+"    | Text Formattig -- General
+"    | Text Formatting -- Specific File Formats
+"    | Text, tabs, and spacing
+"    | Notes
 " 
 "
 " IDEAS:
@@ -21,6 +21,10 @@
 "   Create mapping for comment headers
 "       i.e.
 " nnoremap <leader>h ############<cr>#Header<cr>############
+" write command to save when not sudo
+" toggle on and off $ on end of lines
+" autocomplete tab when not whitespace
+" 
 "
 "
 """""""""""""""""""""""""""""""""""""""""
@@ -41,15 +45,15 @@ augroup reload_vimrc " {
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 
-"Make editing .vimrc simple
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-"Make backspace work
-set backspace=indent,eol,start
+"Make backspace work set backspace=indent,eol,start
 
 "Leaders
 let mapleader = "\<space>"
 let maplocalleader = "\\"
+
+"Make editing .vimrc simple
+nnoremap <silent><leader>ev :vsplit $MYVIMRC<cr>
+
 
 "Set persistent undo
 if exists("&undodir")
@@ -75,6 +79,21 @@ endif
 "Visual cues on errors
 set visualbell " vb
 
+"Don't update display unless necessary
+set lazyredraw
+
+"Show current mode
+set showmode
+
+"Hide unsaved buffers when switching, instead of forcing a save
+set hidden
+
+"Keep cursor 4 lines from edge as page shifts
+set scrolloff=4
+
+"Automatically reload file written to disk
+set autoread
+
 """""""""""""""""""""""""""""""""""""""""
 "   => Text, tabs, and spacing
 """""""""""""""""""""""""""""""""""""""""
@@ -92,6 +111,10 @@ set autoindent " ai
 """""""""""""""""""""""""""""""""""""""""
 "   => VIM user interface
 """""""""""""""""""""""""""""""""""""""""
+
+if $COLORTERM ==# 'gnome-terminal'
+    set t_Co=256
+endif
 
 "Enable syntax highlighting
 syntax on
@@ -114,6 +137,9 @@ set matchtime=2 " mat
 "Autocomplete matches longest match, lists matches, then finishes them
 set wildmode=longest,list,full
 
+"Filetypes for wildmode autocomplete to ignore
+set wildignore+=*.o,*.git
+
 "Command Line WiLd menu
 set wildmenu
 
@@ -126,11 +152,17 @@ set ignorecase
 "Search highlights synchronously
 set incsearch 
 
+"Search wraps around end of file
+set wrapscan
+
 "Show Status line
 set laststatus=2
 
 "Show commands as types
 set showcmd
+
+"This sets the timeout waiting for input in milliseconds
+set timeoutlen=500
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Mappings
@@ -143,6 +175,9 @@ nnoremap k gk
 "Move lines up and down
 nnoremap <C-j> :m+<CR>==
 nnoremap <C-k> :m-2<CR>==
+
+"Backspace jumps to previous location, reversing Taab
+nnoremap <BS> <C-o>
 
 "Surround a word 
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e " in 'quotes'
@@ -173,8 +208,8 @@ augroup comments
     autocmd Filetype python  nnoremap <buffer> <localleader>c I#<esc>
     autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
     autocmd Filetype vim     nnoremap <buffer> <localleader>c I"<esc>
-augroup END
 
+augroup END
 "Instant conditionals
 augroup conditionals
     autocmd!
