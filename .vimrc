@@ -29,6 +29,9 @@
 "Not vi-compatible
 set nocompatible
 
+"Make backspace work
+set backspace=indent,eol,start
+
 "Leaders
 let mapleader = "\<space>"
 let maplocalleader = "\\"
@@ -46,14 +49,7 @@ nnoremap Y y$
 
 "Set vim to use system clipboard
 if has('clipboard')
-    nnoremap y "+y
-    nnoremap Y "+y$
-    nnoremap d "+d
-    nnoremap D "+D
-    nnoremap p "+p
-    nnoremap P "+P
-    nnoremap c "+c
-    nnoremap C "+C
+    set clipboard=unnamed
 endif
 
 "FIXME
@@ -84,7 +80,12 @@ set autoindent " ai
 syntax on
 
 "Colorscheme
-color pablo
+try
+    color gotham256
+catch
+    color pablo
+endtry
+
 
 "Show line numbers
 set number " nu
@@ -93,14 +94,20 @@ set number " nu
 set showmatch
 set matchtime=2 " mat
 
+"Autocomplete matches longest match, lists matches, then finishes them
+set wildmode=longest,list,full
+
 "Command Line WiLd menu
 set wildmenu
 
 "Always show current position
 set ruler
 
+"Search results ignore case
+set ignorecase
+
 "Search highlights synchronously
-set incsearch
+set incsearch 
 
 "Show Status line
 set laststatus=2
@@ -115,6 +122,10 @@ set showcmd
 "Scrolling catches line wraps
 nmap j gj
 nmap k gk
+
+"Move lines up and down
+nnoremap <C-j> :m+<CR>==
+nnoremap <C-k> :m-2<CR>==
 
 "Surround a word 
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e " in 'quotes'
