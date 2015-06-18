@@ -11,9 +11,10 @@
 "    | Search and Replace
 "    | Foldings
 "    | Abbreviations
+"    | Buffers
 "    | Macros
 "
-"   Plugins
+"   Plugins. 
 "       gotham256.vim --> Gotham colorscheme
 "
 "
@@ -35,6 +36,8 @@
 " hlsearch and whitespace hl not working for some reason
 "
 " yypVr= underlines an entire line with =
+"
+" Add tabedit function for easy file access
 "
 
 """""""""""""""""""""""""""""""""""""""""
@@ -65,9 +68,8 @@ augroup reload_vimrc " {{{
 augroup END " }}}
 
 "Set persistent undo
-if exists("&undodir")
+if has("persistent_undo")
     set undofile
-    set undodir=~/.vim/undo
 	set undolevels=500
     set undoreload=500
 endif
@@ -189,6 +191,10 @@ inoremap <tab> <c-r>=TabOrAuto()<cr>
 let mapleader = "\<space>"
 let maplocalleader = "\\"
 
+"FIXME Find something more interesting
+"Folding maybe?
+nnoremap <space> <nop>
+
 "Enter starts command line
 nnoremap <CR> :
 
@@ -226,12 +232,6 @@ nnoremap H 0
 onoremap H 0
 nnoremap L $
 onoremap L $
-
-"Switch between buffers easily
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 "Move lines up and down and reindent
 nnoremap <Down> :m+<CR>==
@@ -283,6 +283,24 @@ augroup END
 iabbrev FX FIXME
 iabbrev @@ njmurray@umich.edu
 iabbrev ssig --<cr>Nick Murray<cr>njmurray@umich.edu<cr>
+
+"""""""""""""""""""""""""""""""""""""""""
+"   => Buffers and Windows
+"""""""""""""""""""""""""""""""""""""""""
+
+set splitbelow                  "New windows appear below current
+set splitright                  "New windows appear right of current
+
+"Switch between buffers easily
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"Navigate tabs easily
+nnoremap <leader>l :tabNext<CR> 
+nnoremap <leader>h :tabprevious<CR> 
+nnoremap <leader>x :w!<CR> :tabclose<CR>
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Functions
