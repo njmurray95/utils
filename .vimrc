@@ -3,18 +3,19 @@
 "
 "   Notes
 "
-"   Main Settings
+"   Main Settings (XXX)
+"    | Notes
 "    | General
 "    | User Interface
-"    | Basic Mappings
-"    | Text, tabs, and spacing
+"    | Keyboard and Mappings
 "    | Search and Replace
-"    | Foldings
-"    | Abbreviations
-"    | Buffers
-"    | Macros
+"    | Text and spacing
+"    | Buffers and Windows
+"    | Abbreviations (TBD)
+"    | Functions
+"    | Macros (TBD)
 "
-"   Plugins. 
+"   Plugins.
 "       gotham256.vim --> Gotham colorscheme
 "
 "
@@ -22,7 +23,7 @@
 """""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""
-"   => Notes
+"   => Notes (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
 " Look into nohl
@@ -38,6 +39,7 @@
 " yypVr= underlines an entire line with =
 "
 " Add tabedit function for easy file access
+" Get t and f working across lines with , and ; operators
 "
 
 """""""""""""""""""""""""""""""""""""""""
@@ -52,11 +54,11 @@
 
 
 """""""""""""""""""""""""""""""""""""""""
-"   => General
+"   => General (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
-"Turn on vi-incompatible advanced features
-set nocompatible
+"Ensure vim is not using vi compatibility mode
+if &compatible | set nocompatible | endif
 
 "Unicode 8 encoding
 set encoding=utf-8
@@ -64,12 +66,13 @@ set encoding=utf-8
 "When .vimrc is edited, reload it.
 augroup reload_vimrc " {{{
     autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+	autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }}}
 
 "Set persistent undo
 if has("persistent_undo")
     set undofile
+    "set undodir=$HOME/.vim/undo
 	set undolevels=500
     set undoreload=500
 endif
@@ -89,8 +92,11 @@ filetype on                     "Enable filetype detection
 filetype indent on              "Enable filetype indentation
 filetype plugin on              "Enable filetype plugins
 
+"Saving when not sudo
+cnoremap w!! w !sudo tee > /dev/null %
+
 """""""""""""""""""""""""""""""""""""""""
-"   => User Interface
+"   => User Interface (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
 if $COLORTERM ==# 'gnome-terminal'
@@ -106,80 +112,46 @@ endtry
 
 set number                      "Show line numbers
 
-set visualbell                  "Visual cues on errors
-
-set wrap                        "Wrap long lines
-set linebreak                   "Wrap lines at words instead of letters
-
 set laststatus=2                "Show Status line
 set showcmd                     "Show commands as typed
 set showmode                    "Show current mode
 set ruler                       "Always show current position
 
+set visualbell                  "Visual cues on errors
+set cursorline                  "Highlight current line
+
 set mouse=a                     "Enable mouse on all modes
-set scrolloff=4                 "Keep cursor 4 lines from edge 
+set scrolloff=4                 "Keep cursor 4 lines from edge
+
+set wildmenu                    "Command Line WiLd menu
+set wildmode=longest,list,full  "Autocomplete longest, list all, cycle
+set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore
+
+set wrap                        "Wrap long lines
+set linebreak                   "Wrap lines at words instead of letters
+"set breakindent                 "Wrapped lines are visually indented
+"set breakindentopt=shift:8      "Wrapped lines are indented automatically
+"FIXME
 
 set showmatch                   "Show matching parentheses
 set matchtime=2                 "Length matched paren flashes (1/10 sec)
-
-set wildmenu                    "Command Line WiLd menu
-set wildmode=longest,list,full  "Autocomplete longest, list all, cycle 
-set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore 
+set matchpairs+=<:>             "Add matching brackets
 
 set timeoutlen=500              "Set timeout waiting for input (millisec)
 
 set lazyredraw                  "Don't update display unless necessary
-
 set hidden                      "Hide unsaved buffers when switching
 set autoread                    "Automatically reload file written to disk
 
 """""""""""""""""""""""""""""""""""""""""
-"   => Search Results
-"""""""""""""""""""""""""""""""""""""""""
-
-set smartcase                   "Search ignores case unless capitals
-set incsearch                   "Search highlights synchronously
-set wrapscan                    "Search wraps around end of file
-
-set gdefault                    "Replace with :s affects entire line
-
-"FIXME
-set hlsearch "Highlight search results
-
-"Clear search results on redraw
-nnoremap <C-l> <esc>:nohlsearch<CR><C-l>
-
-
-"""""""""""""""""""""""""""""""""""""""""
-"   => Text, tabs, and spacing
-"""""""""""""""""""""""""""""""""""""""""
-
-"Everything adjusts to 4 spaces
-set tabstop=4                   "Tab has length 4 spaces
-set shiftwidth=4                ">> shifts 4 spaces
-set softtabstop=4               "Tabs equate to 4 spaces
-set expandtab                   "Tabs become softtabstop# spaces
-
-set smarttab                    "<BS> deletes 1 tab's worth of spaces
-set autoindent                  "Copy current indent when new line starts
-
-
-"FIXME
-"Highlight trailing whitespace
-"highlight WhitespaceErrors ctermbg=Red guibg=Red 
-"match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/ 
-
-
-
-"""""""""""""""""""""""""""""""""""""""""
-"   => Basic Mappings
+"   => Keyboard and Mappings (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
 " Reclaim Useful keys:
 "______________________
 " Tab -- <tab>, autocomplete, and return to next jump
 " Caps Lock -- <esc> and <Ctrl> (Mapped at OS level)
-" Space -- <leader>
+" Space -- <leader> and un/fold
 " Enter -- Command line
 " Backslash (\) -- <localleader>
 " Backspace -- delete char, return to last jump
@@ -187,8 +159,13 @@ set autoindent                  "Copy current indent when new line starts
 "Tab now doubles as autocomplete
 inoremap <tab> <c-r>=TabOrAuto()<cr>
 
-"Set leaders
+"Set space as leader
 let mapleader = "\<space>"
+
+"Space itself is used for foldings
+nnoremap <space> za
+
+"\ becomes local leader
 let maplocalleader = "\\"
 
 "FIXME Find something more interesting
@@ -223,19 +200,48 @@ nnoremap Y y$
 "Insert a space
 nnoremap <space><space> i<space><esc>
 
+" Repurpose h,j,k,l
+"_______________________
+
 "Scrolling does not skip wrapped lines
 nnoremap j gj
+vnoremap j gj
 nnoremap k gk
+vnoremap k gk
 
-"H and L replace 0 and $
+"Include the default behavior if ever needed
+nnoremap gj j
+vnoremap gj j
+nnoremap gk k
+vnoremap gk k
+
+"Let h and l wrap around lines
+set whichwrap+=h,l
+
+"H and L replace 0 and $ nnoremap H 0
 nnoremap H 0
 onoremap H 0
+vnoremap H 0
+
 nnoremap L $
 onoremap L $
+vnoremap L $
+
+"Since H and L move sideways, let J and K move topdown
+nnoremap J }
+onoremap J }
+vnoremap J }
+nnoremap K {
+onoremap K {
+vnoremap K {
+
+"Give <C-j> and <C-k> the old meanings
+nnoremap <C-j> J
+nnoremap <C-k> K
 
 "Move lines up and down and reindent
-nnoremap <Down> :m+<CR>==
-nnoremap <Up> :m-2<CR>==
+nnoremap <silent> <Down> :m+<CR>==
+nnoremap <silent> <Up> :m-2<CR>==
 
 "Move chars left and right
 "FIXME
@@ -244,7 +250,7 @@ nnoremap <Left> Xph
 nnoremap <Right> xp
 "NOTE: <Left> will paste extra chars on 0
 
-"Surround a word 
+"Surround a word
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e " in 'quotes'
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e " in "quotes"
 nnoremap <leader>> viw<esc>a><esc>bi<<esc>e " in <tags>
@@ -259,6 +265,15 @@ nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>e " in {curlies}
 "+/- as increment/decrement is more intuitive than the defaults
 nnoremap + <C-a>
 nnoremap - <C-x>
+
+"Toggle relative numbers on and off
+nnoremap <silent> <leader>n :set invrelativenumber<CR>
+
+"Expedite C++ Compiling
+"FIXME: Decide
+"Something for :make
+"Something for :cn -- go to next compile error
+"Something for :cc -- go to current compile error
 
 "Instant commenting
 augroup comments
@@ -277,7 +292,61 @@ augroup conditionals
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""
-"   => Abbreviations
+"   => Search and Replace (XXX)
+"""""""""""""""""""""""""""""""""""""""""
+
+set ignorecase					"Search ignores case
+set smartcase                   "Search matches case on capital letters
+set incsearch                   "Search highlights synchronously
+set wrapscan                    "Search wraps around end of file
+
+set gdefault                    "Replace with :s affects entire line
+
+set hlsearch                    "Highlight search results
+
+"Clear search results on redraw
+nnoremap <C-l> <esc>:nohlsearch<CR><C-l>
+
+"""""""""""""""""""""""""""""""""""""""""
+"   => Text and spacing
+"""""""""""""""""""""""""""""""""""""""""
+
+"Everything adjusts to 4 spaces
+set tabstop=4                   "Tab has length 4 spaces
+set shiftwidth=4                ">> shifts 4 spaces
+set softtabstop=4               "Tabs equate to 4 spaces
+set expandtab                   "Tabs become softtabstop spaces
+
+set smarttab                    "<BS> deletes 1 tab's worth of spaces
+set autoindent                  "Copy current indent when new line starts
+
+"Highlight trailing whitespace
+highlight WhitespaceErrors ctermbg=DarkGray guibg=DarkGray
+match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/       
+
+"FIXME
+"Highlight comments in italics
+"highlight Comment term=italic gui=italic
+
+"""""""""""""""""""""""""""""""""""""""""
+"   => Buffers and Windows (XXX)
+"""""""""""""""""""""""""""""""""""""""""
+
+set showtabline=2               "Always show tabs list
+
+"Switch between buffers easily
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+nnoremap <leader>c :w!<CR><C-w>c
+
+"Write to tabs easily
+nnoremap <leader>x :w!<CR>:tabclose<CR>
+
+"""""""""""""""""""""""""""""""""""""""""
+"   => Abbreviations (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
 iabbrev FX FIXME
@@ -285,25 +354,7 @@ iabbrev @@ njmurray@umich.edu
 iabbrev ssig --<cr>Nick Murray<cr>njmurray@umich.edu<cr>
 
 """""""""""""""""""""""""""""""""""""""""
-"   => Buffers and Windows
-"""""""""""""""""""""""""""""""""""""""""
-
-set splitbelow                  "New windows appear below current
-set splitright                  "New windows appear right of current
-
-"Switch between buffers easily
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-"Navigate tabs easily
-nnoremap <leader>l :tabNext<CR> 
-nnoremap <leader>h :tabprevious<CR> 
-nnoremap <leader>x :w!<CR> :tabclose<CR>
-
-"""""""""""""""""""""""""""""""""""""""""
-"   => Functions
+"   => Functions (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
 "Return <C-n> for autocomplete on words, <tab> otherwise
@@ -318,10 +369,32 @@ endfunction
 
 "Return <nop> on 0 col, transpose character left otherwise
 function! TransposeLeft()
-if col('.') ==# 1
+fi col('.') ==# 1
         return "<nop>"
     else
         return "Xph"
     endif
 endfunction
 
+"Let f move linewise
+function! FindChar(back, inclusive, exclusive)
+	let flag = 'W'
+if a:back
+		let flag = 'Wb'
+	endif
+	if search('\V' . nr2char(getchar()), flag)
+		if a:inclusive
+			norm! l
+		endif
+		if a:exclusive
+			norm! h
+		endif
+	endif
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""
+"   => Macros (XXX)
+"""""""""""""""""""""""""""""""""""""""""
+
+"syntax:
+"let @a='0fa'
