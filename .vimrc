@@ -16,7 +16,7 @@
 "    | Macros (TBD) 
 "
 "   Plugins
-"       gotham256.vim --> Gotham colorscheme
+"       gotham255.vim --> Gotham colorscheme
 "
 "
 "
@@ -207,18 +207,24 @@ vnoremap gj j
 nnoremap gk k
 vnoremap gk k
 
-"Since <C-h> and <C-l> browse tabs, let j and k browse sentences
-nnoremap <C-j> }
-nnoremap <C-k> {
+"Let J and K browse sections of text
+nnoremap J }
+onoremap J }
+nnoremap K {
+onoremap K {
 
-"Let h and l wrap around lines
-set whichwrap+=h,l
+"Let <C-j> and <C-k> remember the old J and K
+nnoremap <C-j> J
+nnoremap <C-k> K
 
 "H and L replace 0 and $ nnoremap H 0
 nnoremap H 0
 onoremap H 0
 nnoremap L $
 onoremap L $
+
+"Let h and l wrap around lines
+set whichwrap+=h,l
 
 "Move lines up and down and reindent
 nnoremap <Down> :m+<CR>==
@@ -272,6 +278,7 @@ augroup conditionals
     autocmd Filetype python  :iabbrev <buffer> if if:<left>
 augroup END
 
+
 """""""""""""""""""""""""""""""""""""""""
 "   => Search and Replace (XXX)
 """""""""""""""""""""""""""""""""""""""""
@@ -297,13 +304,12 @@ nnoremap <C-l> <esc>:nohlsearch<CR><C-l>
 set tabstop=4                   "Tab has length 4 spaces
 set shiftwidth=4                ">> shifts 4 spaces
 set softtabstop=4               "Tabs equate to 4 spaces
-"set expandtab                   "Tabs become softtabstop# spaces
+set expandtab                   "Tabs become softtabstop# spaces
 
 set smarttab                    "<BS> deletes 1 tab's worth of spaces
 set autoindent                  "Copy current indent when new line starts
 
-
-"Highlight trailing whitespace
+"Highlight trailing whitespace 
 highlight WhitespaceErrors ctermbg=DarkGray guibg=DarkGray
 match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/       
 
@@ -323,6 +329,7 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 
+"FIXME
 nnoremap <leader>c :w!<CR><C-w>c
 
 "Switch between tabs easily
