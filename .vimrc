@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""
 " Nick Murray
-"
+
 "   Notes
 "
 "   Main Settings (XXX)
@@ -9,34 +9,34 @@
 "    | User Interface
 "    | Keyboard and Mappings
 "    | Search and Replace
-"    | Text, tabs, and spacing
+"    | Text and spacing
 "    | Buffers and Windows
 "    | Abbreviations (TBD)
 "    | Functions
-"    | Macros (TBD) 
+"    | Macros (TBD)
 "
-"   Plugins
-"       gotham255.vim --> Gotham colorscheme
+"   Plugins.
+"       gotham256.vim --> Gotham colorscheme
 "
 "
 "
 """""""""""""""""""""""""""""""""""""""""
+
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Notes (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
-" Look into nohl
-" Suggested remapping:
-" nnoremap <silent> <C-l> :nohl<CR><C-l>
-"   Create mapping for comment headers
-"       i.e.
+" Wishlist " Consistent command to comment out range of lines
+" Get t and f working across lines with , and ; operators
+
 " nnoremap <leader>h ############<cr>#Header<cr>############
-" write command to save when not sudo
 " toggle on and off $ on end of lines
 " hlsearch and whitespace hl not working for some reason
 "
 " yypVr= underlines an entire line with =
+"
+" Add tabedit function for easy file access
 "
 
 """""""""""""""""""""""""""""""""""""""""
@@ -63,20 +63,24 @@ set encoding=utf-8
 "When .vimrc is edited, reload it.
 augroup reload_vimrc " {{{
     autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+	autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }}}
 
 "Set persistent undo
-if exists("&undodir")
+if has("persistent_undo")
     set undofile
     "set undodir=$HOME/.vim/undo
 	set undolevels=500
     set undoreload=500
 endif
 
+" Remember 200 cmdline commands
+set history=200
+
 "Fix backups
-set backupdir=~/vimtemp,.
-set dir=~/vimtemp//,.
+"set backupdir=~/vimtemp,.
+"set dir=~/vimtemp//,.
+"FIXME
 
 "Set vim to use system clipboard
 if has('clipboard')
@@ -89,10 +93,8 @@ filetype on                     "Enable filetype detection
 filetype indent on              "Enable filetype indentation
 filetype plugin on              "Enable filetype plugins
 
-" Saving
-"________
-
-cmap w!! w !sudo tee > /dev/null %
+"Saving when not sudo
+cnoremap w!! w !sudo tee > /dev/null %
 
 """""""""""""""""""""""""""""""""""""""""
 "   => User Interface (XXX)
@@ -120,16 +122,17 @@ set visualbell                  "Visual cues on errors
 set cursorline                  "Highlight current line
 
 set mouse=a                     "Enable mouse on all modes
-set scrolloff=4                 "Keep cursor 4 lines from edge 
+set scrolloff=4                 "Keep cursor 4 lines from edge
 
 set wildmenu                    "Command Line WiLd menu
-set wildmode=longest,list,full  "Autocomplete longest, list all, cycle 
-set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore 
+set wildmode=longest,list,full  "Autocomplete longest, list all, cycle
+set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore
 
 set wrap                        "Wrap long lines
 set linebreak                   "Wrap lines at words instead of letters
 set breakindent                 "Wrapped lines are visually indented
 set breakindentopt=shift:8      "Wrapped lines are indented automatically
+"FIXME
 
 set showmatch                   "Show matching parentheses
 set matchtime=2                 "Length matched paren flashes (1/10 sec)
@@ -140,7 +143,6 @@ set timeoutlen=500              "Set timeout waiting for input (millisec)
 set lazyredraw                  "Don't update display unless necessary
 set hidden                      "Hide unsaved buffers when switching
 set autoread                    "Automatically reload file written to disk
-
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Keyboard and Mappings (XXX)
@@ -156,7 +158,8 @@ set autoread                    "Automatically reload file written to disk
 " Backspace -- delete char, return to last jump
 
 "Tab now doubles as autocomplete
-inoremap <tab> <c-r>=TabOrAuto()<cr>
+inoremap <Tab> <c-r>=TabOrAuto()<cr>
+inoremap <S-Tab> <c-p>
 
 "Set space as leader
 let mapleader = "\<space>"
@@ -168,12 +171,14 @@ nnoremap <space> za
 let maplocalleader = "\\"
 
 "Enter starts command line
-nnoremap <CR> :
+noremap <CR> :
+noremap q<CR> q:
 
 "Fix Command Window enter
 augroup enter
-    autocmd CmdwinEnter * nnoremap <CR> <CR> " Fix q: new enter problem
-    autocmd BufReadPost quickfix nnoremap <CR> <CR>
+    autocmd!
+    autocmd CmdwinEnter * noremap <CR> <CR>
+    autocmd CmdwinLeave * noremap <CR> :
 augroup END
 
 "Backspace jumps to previous location, reversing Tab
@@ -192,43 +197,35 @@ nnoremap <silent><leader>ev :vsplit $MYVIMRC<cr>
 "Set Y to match C and D
 nnoremap Y y$
 
-"Insert a space
-nnoremap <space><space> i<space><esc>
+" Repurpose h,j,k,l
+"_______________________
 
 "Scrolling does not skip wrapped lines
-nnoremap j gj
-vnoremap j gj
-nnoremap k gk
-vnoremap k gk
+noremap j gj
+noremap k gk
 
 "Include the default behavior if ever needed
-nnoremap gj j
-vnoremap gj j
-nnoremap gk k
-vnoremap gk k
+noremap gj j
+noremap gk k
 
 "Let J and K browse sections of text
-nnoremap J }
-onoremap J }
-nnoremap K {
-onoremap K {
+noremap J }
+noremap K {
 
 "Let <C-j> and <C-k> remember the old J and K
 nnoremap <C-j> J
 nnoremap <C-k> K
 
-"H and L replace 0 and $ nnoremap H 0
-nnoremap H 0
-onoremap H 0
-nnoremap L $
-onoremap L $
-
 "Let h and l wrap around lines
 set whichwrap+=h,l
 
+"H and L replace 0 and $ nnoremap H 0
+noremap H 0
+noremap L $
+
 "Move lines up and down and reindent
-nnoremap <Down> :m+<CR>==
-nnoremap <Up> :m-2<CR>==
+nnoremap <silent> <Down> :m+<CR>==
+nnoremap <silent> <Up> :m-2<CR>==
 
 "Move chars left and right
 "FIXME
@@ -254,7 +251,7 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 
 "Toggle relative numbers on and off
-nnoremap <leader>n :set invrelativenumber<CR>
+nnoremap <silent> <leader>n :set invrelativenumber<CR>
 
 "Expedite C++ Compiling
 "FIXME: Decide
@@ -270,14 +267,6 @@ augroup comments
     autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
     autocmd Filetype vim     nnoremap <buffer> <localleader>c I"<esc>
 augroup END
-
-"Instant conditionals
-augroup conditionals
-    autocmd!
-    autocmd Filetype cpp     :iabbrev <buffer> if if ( )<left><left>
-    autocmd Filetype python  :iabbrev <buffer> if if:<left>
-augroup END
-
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Search and Replace (XXX)
@@ -295,27 +284,39 @@ set hlsearch                    "Highlight search results
 "Clear search results on redraw
 nnoremap <C-l> <esc>:nohlsearch<CR><C-l>
 
-
 """""""""""""""""""""""""""""""""""""""""
-"   => Text, tabs, and spacing (XXX)
+"   => Text and spacing
 """""""""""""""""""""""""""""""""""""""""
 
 "Everything adjusts to 4 spaces
 set tabstop=4                   "Tab has length 4 spaces
 set shiftwidth=4                ">> shifts 4 spaces
 set softtabstop=4               "Tabs equate to 4 spaces
-set expandtab                   "Tabs become softtabstop# spaces
+set expandtab                   "Tabs become softtabstop spaces
 
 set smarttab                    "<BS> deletes 1 tab's worth of spaces
 set autoindent                  "Copy current indent when new line starts
 
-"Highlight trailing whitespace 
+"Highlight trailing whitespace
 highlight WhitespaceErrors ctermbg=DarkGray guibg=DarkGray
 match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/       
 
 "FIXME
 "Highlight comments in italics
 "highlight Comment term=italic gui=italic
+"
+
+" Makefiles require tabs not spaces
+augroup makefile
+    autocmd!
+    autocmd FileType make setlocal noexpandtab
+augroup END
+
+" Fix python whitespace
+augroup re-tab
+    autocmd!
+    autocmd BufWrite *.py retab
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Buffers and Windows (XXX)
@@ -323,18 +324,32 @@ match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/
 
 set showtabline=2               "Always show tabs list
 
-"Switch between buffers easily
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+" Easy buffer navigation
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
+" Easy tab navigation
+nnoremap ]1 1gt
+nnoremap ]2 2gt
+nnoremap ]3 3gt
+nnoremap ]4 4gt
+nnoremap ]5 5gt
+nnoremap ]6 6gt
+nnoremap ]7 7gt
+nnoremap ]8 8gt
+nnoremap ]9 9gt
+nnoremap ]0 :tablast<CR>
+
+"nnoremap <C-1> 1gt
+"nnoremap <C-2> 2gt
+"nnoremap <C-3> 3gt
 
 "FIXME
 nnoremap <leader>c :w!<CR><C-w>c
 
-"Switch between tabs easily
-nnoremap <leader><tab> gt
-nnoremap <leader><BS> gT
+"Write to tabs easily
 nnoremap <leader>x :w!<CR>:tabclose<CR>
 
 """""""""""""""""""""""""""""""""""""""""
@@ -368,6 +383,25 @@ if col('.') ==# 1
     endif
 endfunction
 
+"Let f move linewise
+function! FindChar(back, inclusive, exclusive)
+	let flag = 'W'
+if a:back
+		let flag = 'Wb'
+	endif
+	if search('\V' . nr2char(getchar()), flag)
+		if a:inclusive
+			norm! l
+		endif
+		if a:exclusive
+			norm! h
+		endif
+	endif
+endfunction
+
 """""""""""""""""""""""""""""""""""""""""
 "   => Macros (XXX)
 """""""""""""""""""""""""""""""""""""""""
+
+"syntax:
+"let @a='0fa'
