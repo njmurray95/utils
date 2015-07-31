@@ -3,7 +3,7 @@ alias rm='rm -vi'
 
 # Aliases for convenience
 alias sd='sudo'
-alias ls='ls -GF'
+alias ls='ls -F'
 alias lla='ls -la'
 alias la='ls -a'
 alias ll='ls -l'
