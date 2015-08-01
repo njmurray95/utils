@@ -130,9 +130,12 @@ set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore
 
 set wrap                        "Wrap long lines
 set linebreak                   "Wrap lines at words instead of letters
-"set breakindent                 "Wrapped lines are visually indented
-"set breakindentopt=shift:8      "Wrapped lines are indented automatically
-"FIXME
+try
+    set breakindent             "Wrapped lines are visually indented
+    set breakindentopt=shift    "Wrapped lines are indented automatically
+catch
+    set nowrap
+endtry
 
 set showmatch                   "Show matching parentheses
 set matchtime=2                 "Length matched paren flashes (1/10 sec)
