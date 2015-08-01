@@ -130,8 +130,8 @@ set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore
 
 set wrap                        "Wrap long lines
 set linebreak                   "Wrap lines at words instead of letters
-set breakindent                 "Wrapped lines are visually indented
-set breakindentopt=shift:8      "Wrapped lines are indented automatically
+"set breakindent                 "Wrapped lines are visually indented
+"set breakindentopt=shift:8      "Wrapped lines are indented automatically
 "FIXME
 
 set showmatch                   "Show matching parentheses
@@ -220,7 +220,7 @@ nnoremap <C-k> K
 set whichwrap+=h,l
 
 "H and L replace 0 and $ nnoremap H 0
-noremap H 0
+noremap H ^
 noremap L $
 
 "Move lines up and down and reindent
