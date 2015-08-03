@@ -1,3 +1,6 @@
 cat /proc/cpuinfo -- Check stats about core
 Note: if only one processor shows, check `uname -a` for SMP.
         Non-SMP kernals may not handle multiple processors.
+
+getent group <groupname>
+    fetches list of all members in that group (full /etc/group line)
