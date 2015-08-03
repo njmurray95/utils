@@ -4,3 +4,19 @@ Note: if only one processor shows, check `uname -a` for SMP.
 
 getent group <groupname>
     fetches list of all members in that group (full /etc/group line)
+
+Attributes:
+    a: append only
+    c: compressed (?)
+    d: no dump (?)
+    e: extent format (?)
+    i: immutable (?)
+    j: data journaling (?)
+    s: secure deletion (?)
+    t: no tail-merging (?)
+    u: undeletable
+    A: no atime updates (?)
+    C: no copy on write (?)
+    D: synchronous directory updates (?)
+    S: synchronous updates (?)
+    T: top of directory hierarchy (?)
