@@ -1,2 +1,10 @@
-# Remove terminal autocomplete beep
+"\e[i;5C": forward-word
+"\e[i;5D": backward-word
+"\ew":"echo `whoami`@`uname -n`\n"
+
 set bell-style none
+
+# Magic-space auto-expands abbreviations
+$if Bash
+    Space: magic-space
+$endif
