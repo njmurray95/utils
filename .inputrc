@@ -1,4 +1,9 @@
-# Remove terminal autocomplete beep
+
 set bell-style none
 
 Control-x: glob-expand-word
+
+# Magic-space auto-expands abbreviations
+$if Bash
+    Space: magic-space
+$endif

@@ -20,3 +20,22 @@ Attributes:
     D: synchronous directory updates (?)
     S: synchronous updates (?)
     T: top of directory hierarchy (?)
+
+seq  -- prints sequence of numbers (who comes up with this stuff?)
+
+w -- shows who is logged on and what they are doing
+
+blkid -- locate and print block device attributes
+
+cut --  '-d' and a char sets the delimeter
+        '-f' and a range of numbers sets the fields to retain
+
+$RANDOM in bash returns a random int
+
+BASH SHORTCUTS:
+    Alt + *     :   Insert all possible completions
+    Alt + Ctrl-e:   Expose aliases, history, and completions
+    C-x C-e     :   Open current line's command in $EDITOR
+
+
+
