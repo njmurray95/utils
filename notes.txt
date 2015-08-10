@@ -30,12 +30,26 @@ blkid -- locate and print block device attributes
 cut --  '-d' and a char sets the delimeter
         '-f' and a range of numbers sets the fields to retain
 
+column -- columnate input
+        -- '-t' automatically constructs a table from # of inputs
+
 $RANDOM in bash returns a random int
+
+$CDPATH is a variable that sets directories for cd to search in
+        Note: if ~ is in CDPATH, ~/temp/ precedes ./temp/
+        Note: Does not work with bash expansion
 
 BASH SHORTCUTS:
     Alt + *     :   Insert all possible completions
     Alt + Ctrl-e:   Expose aliases, history, and completions
     C-x C-e     :   Open current line's command in $EDITOR
 
+type -- "type ls" will expose the alias on ls
+        '-t' lists the type of the command invoked
+        '-a' lists the types of all binaries of the command
+        '-f' suppresses shell lookup when listing types
 
+\ls -- will execute ls without it's aliased value
+
+pbcopy -- copies text to Mac system clipboard. I.e., pwd | pbcopy
 
