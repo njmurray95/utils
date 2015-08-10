@@ -5,14 +5,13 @@
 # If not running interactively, return
 [[ $- != *i* ]] && return
 
+# Clean in case being sourced again
+unalias -a
+
 # -i asks before deleting and -v tattles after
 alias rm='rm -vi'
 
-# -F displays filetypes
-alias ls='ls -F'
-
 # Change terminal prompt
-#PS1="[\u@\h-\W]$ "
 if [ "$EUID" -eq 0 ]; then
     export PS1="# "
 else
@@ -30,11 +29,8 @@ PROMPT_COMMAND="$EXIT_STATUS $WINDOW_NAME"
 # Ignore commands begun with spaces and duplicates
 export HISTCONTROL="ignorespace:ignoredups"
 
-# History can only be appended to
-
-
 # Format history as: Month/date - xx:xx:xx
-export HISTTIMEFORMAT="%h/%d - %H:%M:%S"
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 
 # cd lists directory names
 cd ()
@@ -42,6 +38,33 @@ cd ()
     builtin cd "$@"
     (($?)) || echo "$OLDPWD --> $PWD"
 }
+
+# Directories cd looks in
+export CDPATH="~"
+
+ls ()
+{
+    command ls -F "$@"
+}
+
+# Build help pages into man
+man ()
+{
+    case "`type -tf $1`:$1" in
+        builtin:*)      help "$1" | less            ;;
+        function:*)     command -p man "$1"         ;;
+        *)              command -p man "$@"         ;;
+    esac
+}
+
+# Background GUI-based jobs
+BG_IN_LINUX=" gedit emacs"
+BG_IN_UNIX=""
+BACKGROUND_COMMANDS="$BG_IN_LINUX"
+
+for com in $BACKGROUND_COMMANDS; do
+    alias $com="$com &"
+done
 
 # Login message
 #FIXME broken on systems without fortune and cowsay
