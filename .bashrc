@@ -1,13 +1,15 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, return
+[[ $- != *i* ]] && return
+
 # -i asks before deleting and -v tattles after
 alias rm='rm -vi'
 
-# Aliases for convenience
-alias sd='sudo'
+# -F displays filetypes
 alias ls='ls -F'
-alias lla='ls -la'
-alias la='ls -a'
-alias ll='ls -l'
-alias lh='ls -lhart'
 
 # Change terminal prompt
 #PS1="[\u@\h-\W]$ "
@@ -34,11 +36,6 @@ export HISTCONTROL="ignorespace:ignoredups"
 # Format history as: Month/date - xx:xx:xx
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S"
 
-# <C-s> doesn't get remapped to stop
-#if stty -a | grep -q ixon; then
-    #stty -ixon
-#fi
-
 # cd lists directory names
 cd ()
 {
@@ -46,17 +43,6 @@ cd ()
     (($?)) || echo "$OLDPWD --> $PWD"
 }
 
-function tabname
-{
-    printf "\e]1;$1\a"
-}
-
-
-function winname
-{
-    printf "\e]2;$1\a"
-}
 # Login message
 #FIXME broken on systems without fortune and cowsay
 [ -z "$SSH_CLIENT" ] && fortune | cowsay
-

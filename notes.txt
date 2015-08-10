@@ -39,3 +39,7 @@ BASH SHORTCUTS:
 
 
 
+NEW ARCHLINUX SECTION
+
+startx -- launch Xorg server
+pkill X -- kill Xorg server
