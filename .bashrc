@@ -18,10 +18,6 @@ else
     export PS1="$ "
 fi
 
-# Use local binaries
-[ -d ~/bin ] && PATH=$PATH:~/bin
-
-
 # Use vim as system editor
 export EDITOR="vim"
 
