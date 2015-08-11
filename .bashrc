@@ -18,6 +18,10 @@ else
     export PS1="$ "
 fi
 
+# Use local binaries
+[ -d ~/bin ] && PATH=$PATH:~/bin
+
+
 # Use vim as system editor
 export EDITOR="vim"
 
@@ -69,3 +73,12 @@ done
 # Login message
 #FIXME broken on systems without fortune and cowsay
 [ -z "$SSH_CLIENT" ] && fortune | cowsay
+
+# FIXME
+if [ ${DISPLAY+false} ]; then
+    xmodmap -e 'keycode 66 = Control_L'
+    xmodmap -e 'clear Lock'
+    xmodmap -e 'add Control = Control_L'
+    xmodmap -e 'keycode 255 = Escape'
+    xcape -e 'Control_L=Escape'
+fi

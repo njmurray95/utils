@@ -69,18 +69,30 @@ augroup END " }}}
 "Set persistent undo
 if has("persistent_undo")
     set undofile
-    "set undodir=$HOME/.vim/undo
 	set undolevels=500
     set undoreload=500
 endif
 
+" Keep backups outside current directory
+if isdirectory($HOME . '/.vim/backup') == 0
+    :silent !mkdir -p ~/.vim/backup > /dev/null 2>&1
+endif
+set backupdir=~/.vim/backup//
+
+" Keep swp files outside current directory
+if isdirectory($HOME . '/.vim/swap') == 0
+    :silent !mkdir -p ~/.vim/swap > /dev/null 2>&1
+endif
+set directory=~/.vim/swap//
+
+" Keep undo files outside current directory
+if isdirectory($HOME . '/.vim/swap') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+endif
+set undodir=~/.vim/undo//
+
 " Remember 200 cmdline commands
 set history=200
-
-"Fix backups
-"set backupdir=~/vimtemp,.
-"set dir=~/vimtemp//,.
-"FIXME
 
 "Set vim to use system clipboard
 if has('clipboard')
