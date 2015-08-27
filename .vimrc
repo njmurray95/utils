@@ -22,8 +22,6 @@
 "
 """""""""""""""""""""""""""""""""""""""""
 
-" changing something
-
 """""""""""""""""""""""""""""""""""""""""
 "   => Notes (XXX)
 """""""""""""""""""""""""""""""""""""""""
@@ -31,32 +29,9 @@
 " Wishlist " Consistent command to comment out range of lines
 " Get t and f working across lines with , and ; operators
 
-" nnoremap <leader>h ############<cr>#Header<cr>############
-" toggle on and off $ on end of lines
-" hlsearch and whitespace hl not working for some reason
-"
-" yypVr= underlines an entire line with =
-"
-" Add tabedit function for easy file access
-"
-
-"""""""""""""""""""""""""""""""""""""""""
-"   => General
-"""""""""""""""""""""""""""""""""""""""""
-
-"_______________________________________"
-"                                       "
-"               GENERAL                 "
-"_______________________________________"
-"                                       "
-
-
 """""""""""""""""""""""""""""""""""""""""
 "   => General (XXX)
 """""""""""""""""""""""""""""""""""""""""
-
-"Ensure vim is not using vi compatibility mode
-if &compatible | set nocompatible | endif
 
 "Unicode 8 encoding
 set encoding=utf-8
@@ -70,7 +45,6 @@ augroup END " }}}
 "Set persistent undo
 if has("persistent_undo")
     set undofile
-    "set undodir=$HOME/.vim/undo
     set undolevels=500
     set undoreload=500
 endif
@@ -79,10 +53,10 @@ endif
 set history=200
 
 "Fix backups
-set dir=~/.vim/swap//,/var/tmp//,/tmp//,.
-set backupdir=~/.vim/backup//
-set undodir=~/.vim/undo//
-"FIXME
+set dir=$HOME/.vim/swap//,/var/tmp//,/tmp//,.
+set backupdir=$HOME/.vim/backup//
+set undodir=$HOME/.vim/undo//
+set viminfo+=n$HOME/.vim/viminfo
 
 "Set vim to use system clipboard
 if has('clipboard')
