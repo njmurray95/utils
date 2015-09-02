@@ -53,7 +53,20 @@ type -- "type ls" will expose the alias on ls
 
 pbcopy -- copies text to Mac system clipboard. I.e., pwd | pbcopy
 
+Bash conditionals:
+    -z -- True iff variable is unset
+    -n -- True iff variable is set
+
 NEW ARCHLINUX SECTION
 
 startx -- launch Xorg server
 pkill X -- kill Xorg server
+
+ssh ProxyCommands:
+
+    %h refers to the hostname as defined above
+    %p refers to the port as defined above
+
+    i.e., 
+
+    ProxyCommand ssh -q nick@login.quadmetrics.com nc %h %p

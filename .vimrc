@@ -22,6 +22,7 @@
 "
 """""""""""""""""""""""""""""""""""""""""
 
+" changing something
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Notes (XXX)
@@ -63,36 +64,25 @@ set encoding=utf-8
 "When .vimrc is edited, reload it.
 augroup reload_vimrc " {{{
     autocmd!
-	autocmd BufWritePost $MYVIMRC source $MYVIMRC
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }}}
 
 "Set persistent undo
 if has("persistent_undo")
     set undofile
-	set undolevels=500
+    "set undodir=$HOME/.vim/undo
+    set undolevels=500
     set undoreload=500
 endif
 
-" Keep backups outside current directory
-if isdirectory($HOME . '/.vim/backup') == 0
-    :silent !mkdir -p ~/.vim/backup > /dev/null 2>&1
-endif
-set backupdir=~/.vim/backup//
-
-" Keep swp files outside current directory
-if isdirectory($HOME . '/.vim/swap') == 0
-    :silent !mkdir -p ~/.vim/swap > /dev/null 2>&1
-endif
-set directory=~/.vim/swap//
-
-" Keep undo files outside current directory
-if isdirectory($HOME . '/.vim/swap') == 0
-    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
-endif
-set undodir=~/.vim/undo//
-
 " Remember 200 cmdline commands
 set history=200
+
+"Fix backups
+set dir=~/.vim/swap//,/var/tmp//,/tmp//,.
+set backupdir=~/.vim/backup//
+set undodir=~/.vim/undo//
+"FIXME
 
 "Set vim to use system clipboard
 if has('clipboard')
@@ -135,29 +125,30 @@ set cursorline                  "Highlight current line
 
 set mouse=a                     "Enable mouse on all modes
 set scrolloff=4                 "Keep cursor 4 lines from edge
+set sidescrolloff=4             "Don't scroll any closer left/right
 
-set wildmenu                    "Command Line WiLd menu
-set wildmode=longest,list,full  "Autocomplete longest, list all, cycle
-set wildignore+=*.o,*.git,*.swp "Filetypes for autocomplete to ignore
+set wildmenu                    "command line wild menu
+set wildmode=longest,list,full  "autocomplete longest, list all, cycle
+set wildignore+=*.o,*.git,*.swp "filetypes for autocomplete to ignore
 
 set wrap                        "Wrap long lines
 set linebreak                   "Wrap lines at words instead of letters
-try
-    set breakindent             "Wrapped lines are visually indented
-    set breakindentopt=shift    "Wrapped lines are indented automatically
-catch
-    set nowrap
-endtry
+
+if has('multi_byte')            "Set symbol for broken lines
+    let &showbreak = '↳ '       "Display '↳ ' (u21B3)
+else
+    let &showbreak = '>> '      "Display '>> '
+endif
 
 set showmatch                   "Show matching parentheses
 set matchtime=2                 "Length matched paren flashes (1/10 sec)
-set matchpairs+=<:>             "Add matching brackets
+set matchpairs=(:),{:},[:],<:>  "Chars in a balanced pair
+
 
 set timeoutlen=500              "Set timeout waiting for input (millisec)
 
 set lazyredraw                  "Don't update display unless necessary
 set hidden                      "Hide unsaved buffers when switching
-set autoread                    "Automatically reload file written to disk
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Keyboard and Mappings (XXX)
@@ -234,9 +225,6 @@ noremap K {
 nnoremap <C-j> J
 nnoremap <C-k> K
 
-"Let h and l wrap around lines
-set whichwrap+=h,l
-
 "H and L replace 0 and $ nnoremap H 0
 noremap H ^
 noremap L $
@@ -244,47 +232,6 @@ noremap L $
 "Move lines up and down and reindent
 nnoremap <silent> <Down> :m+<CR>==
 nnoremap <silent> <Up> :m-2<CR>==
-
-"Move chars left and right
-"FIXME
-nnoremap <Left> Xph
-"nnoremap <Left> <c-r>=TransposeLeft()<cr>
-nnoremap <Right> xp
-"NOTE: <Left> will paste extra chars on 0
-
-"Surround a word
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>e " in 'quotes'
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>e " in "quotes"
-nnoremap <leader>> viw<esc>a><esc>bi<<esc>e " in <tags>
-nnoremap <leader>< viw<esc>a><esc>bi<<esc>e " in <tags>
-nnoremap <leader>) viw<esc>a)<esc>bi(<esc>e " in (parentheses)
-nnoremap <leader>( viw<esc>a)<esc>bi(<esc>e " in (parentheses)
-nnoremap <leader>] viw<esc>a]<esc>bi[<esc>e " in [brackets]
-nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>e " in [brackets]
-nnoremap <leader>} viw<esc>a}<esc>bi{<esc>e " in {curlies}
-nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>e " in {curlies}
-
-"+/- as increment/decrement is more intuitive than the defaults
-nnoremap + <C-a>
-nnoremap - <C-x>
-
-"Toggle relative numbers on and off
-nnoremap <silent> <leader>n :set invrelativenumber<CR>
-
-"Expedite C++ Compiling
-"FIXME: Decide
-"Something for :make
-"Something for :cn -- go to next compile error
-"Something for :cc -- go to current compile error
-
-"Instant commenting
-augroup comments
-    autocmd!
-    autocmd Filetype cpp     nnoremap <buffer> <localleader>c I//<esc>
-    autocmd Filetype python  nnoremap <buffer> <localleader>c I#<esc>
-    autocmd Filetype sh      nnoremap <buffer> <localleader>c I#<esc>
-    autocmd Filetype vim     nnoremap <buffer> <localleader>c I"<esc>
-augroup END
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Search and Replace (XXX)
@@ -311,18 +258,24 @@ set tabstop=4                   "Tab has length 4 spaces
 set shiftwidth=4                ">> shifts 4 spaces
 set softtabstop=4               "Tabs equate to 4 spaces
 set expandtab                   "Tabs become softtabstop spaces
+set shiftround                  "Round indents to multiple of shiftwidth
 
 set smarttab                    "<BS> deletes 1 tab's worth of spaces
 set autoindent                  "Copy current indent when new line starts
 
+"Maintain highlight on indent
+vnoremap < <gv
+vnoremap > >gv
+
+"Reindent file
+nmap <silent> <Leader>g :call Preserve("normal gg=G")<CR>
+
+"Strip trailing whitespace
+noremap <silent> <Leader>s :call Preserve("%s/\\s\\+$//e")<CR>
+
 "Highlight trailing whitespace
 highlight WhitespaceErrors ctermbg=DarkGray guibg=DarkGray
 match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/       
-
-"FIXME
-"Highlight comments in italics
-"highlight Comment term=italic gui=italic
-"
 
 " Makefiles require tabs not spaces
 augroup makefile
@@ -339,6 +292,9 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""
 "   => Buffers and Windows (XXX)
 """""""""""""""""""""""""""""""""""""""""
+
+set splitbelow                  "Open new panes in bottom
+set splitright                  "Open new panes to right
 
 set showtabline=2               "Always show tabs list
 
@@ -360,16 +316,6 @@ nnoremap ]8 8gt
 nnoremap ]9 9gt
 nnoremap ]0 :tablast<CR>
 
-"nnoremap <C-1> 1gt
-"nnoremap <C-2> 2gt
-"nnoremap <C-3> 3gt
-
-"FIXME
-nnoremap <leader>c :w!<CR><C-w>c
-
-"Write to tabs easily
-nnoremap <leader>x :w!<CR>:tabclose<CR>
-
 """""""""""""""""""""""""""""""""""""""""
 "   => Abbreviations (XXX)
 """""""""""""""""""""""""""""""""""""""""
@@ -381,6 +327,22 @@ iabbrev ssig --<cr>Nick Murray<cr>njmurray@umich.edu<cr>
 """""""""""""""""""""""""""""""""""""""""
 "   => Functions (XXX)
 """""""""""""""""""""""""""""""""""""""""
+
+function! Preserve(command)
+    let last_search=@/
+    let cursor = getpos('.')
+    normal H
+    let window = getpos('.')
+    call setpos('.', cursor)
+
+    execute a:command
+
+    let @/=last_search
+    call setpos('.', window)
+    normal zz
+    call setpos('.', cursor)
+endfunction
+
 
 "Return <C-n> for autocomplete on words, <tab> otherwise
 function! TabOrAuto()
@@ -394,7 +356,7 @@ endfunction
 
 "Return <nop> on 0 col, transpose character left otherwise
 function! TransposeLeft()
-if col('.') ==# 1
+    if col('.') ==# 1
         return "<nop>"
     else
         return "Xph"
@@ -403,23 +365,22 @@ endfunction
 
 "Let f move linewise
 function! FindChar(back, inclusive, exclusive)
-	let flag = 'W'
-if a:back
-		let flag = 'Wb'
-	endif
-	if search('\V' . nr2char(getchar()), flag)
-		if a:inclusive
-			norm! l
-		endif
-		if a:exclusive
-			norm! h
-		endif
-	endif
+    let flag = 'W'
+    if a:back
+        let flag = 'Wb'
+    endif
+    if search('\V' . nr2char(getchar()), flag)
+        if a:inclusive
+            norm! l
+        endif
+        if a:exclusive
+            norm! h
+        endif
+    endif
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""
 "   => Macros (XXX)
 """""""""""""""""""""""""""""""""""""""""
 
-"syntax:
-"let @a='0fa'
+"EOF
