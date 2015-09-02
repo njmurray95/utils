@@ -9,7 +9,9 @@
 unalias -a
 
 # -i asks before deleting and -v tattles after
-alias rm='rm -vi'
+alias rm='rm -div'
+alias ping='ping -c 3'
+alias vim='nvim'
 
 # Change terminal prompt
 if [ "$EUID" -eq 0 ]; then
@@ -22,9 +24,19 @@ fi
 export EDITOR="vim"
 
 # Echo all non-zero exit codes to caller
-EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo \$l; fi;"
-WINDOW_NAME='echo -ne "\033]0;`uname -n`:"$PWD" $$\007";'
-PROMPT_COMMAND="$EXIT_STATUS $WINDOW_NAME"
+EXIT_STATUS="e=\$?; [ \$e -ne 0 ] && echo \$e;"
+WINDOW_NAME='echo -ne "\033]0;`uname -n`:"$PWD"\007";'
+PROMPT_COMMAND="$EXIT_COMMAND $WINDOW_NAME"
+
+#__vte_prompt_command() {
+#  local pwd='~'
+#  [ "$PWD" != "$HOME" ] && pwd=${PWD/#$HOME\//\~\/}
+#  printf "\033]0;%s@%s:%s\007%s" "${USER}" "${HOSTNAME%%.*}" "${pwd}" "$(__vte_osc7)"
+#}
+
+# Remember 10k commands
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 
 # Ignore commands begun with spaces and duplicates
 export HISTCONTROL="ignorespace:ignoredups"
@@ -32,29 +44,9 @@ export HISTCONTROL="ignorespace:ignoredups"
 # Format history as: Month/date - xx:xx:xx
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 
-# cd lists directory names
-cd ()
-{
-    builtin cd "$@"
-    (($?)) || echo "$OLDPWD --> $PWD"
-}
-
-# Directories cd looks in
-export CDPATH="~"
-
 ls ()
 {
     command ls -F "$@"
-}
-
-# Build help pages into man
-man ()
-{
-    case "`type -tf $1`:$1" in
-        builtin:*)      help "$1" | less            ;;
-        function:*)     command -p man "$1"         ;;
-        *)              command -p man "$@"         ;;
-    esac
 }
 
 # Background GUI-based jobs
@@ -70,11 +62,4 @@ done
 #FIXME broken on systems without fortune and cowsay
 [ -z "$SSH_CLIENT" ] && fortune | cowsay
 
-# FIXME
-if [ ${DISPLAY+false} ]; then
-    xmodmap -e 'keycode 66 = Control_L'
-    xmodmap -e 'clear Lock'
-    xmodmap -e 'add Control = Control_L'
-    xmodmap -e 'keycode 255 = Escape'
-    xcape -e 'Control_L=Escape'
-fi
+#EOF
