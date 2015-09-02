@@ -172,6 +172,9 @@ nnoremap <silent><leader>ev :vsplit $MYVIMRC<cr>
 "Set Y to match C and D
 nnoremap Y y$
 
+"Let S split lines
+nnoremap S i<CR><esc>k$
+
 " Repurpose h,j,k,l
 "_______________________
 
