@@ -75,11 +75,6 @@ cnoremap w!! w !sudo tee > /dev/null %
 """""""""""""""""""""""""""""""""""""""""
 "   => User Interface (XXX)
 """""""""""""""""""""""""""""""""""""""""
-
-if $COLORTERM ==# 'gnome-terminal'
-    set t_Co=256
-endif
-
 "Colorscheme
 try
     color gotham256
