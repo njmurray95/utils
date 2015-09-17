@@ -70,3 +70,10 @@ ssh ProxyCommands:
     i.e., 
 
     ProxyCommand ssh -q nick@login.quadmetrics.com nc %h %p
+
+Really Obscure bash
+
+    `set -- one` makes "$1" == 'one'
+    `n=1 && echo ${!n}` evaluates to "$1"
+
+du -h <dirname> -- get size of files in directory recursively
