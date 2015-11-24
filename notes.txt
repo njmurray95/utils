@@ -77,3 +77,11 @@ Really Obscure bash
     `n=1 && echo ${!n}` evaluates to "$1"
 
 du -h <dirname> -- get size of files in directory recursively
+
+
+PYTHON
+
+dis.dis(<some python>) -- dissemble python into bytecode
+
+PRINT ALL COLORS AVAILABLE TO TERM 256
+for i in {0..255} ; do     printf "\x1b[38;5;${i}mcolour${i}\n"; done

@@ -1,17 +1,46 @@
+################################################################################
+#   _                 _
+#  | |__   __ _  ___ | |__
+#  |  _ \ / _` |/ __||  _ \
+#  | |_| | |_| |\__ \| | | |
+#  |_^__/ \__^_||___/|_| |_|
+
 #
-# ~/.bashrc
+#   Table of Contents
+#    | General
+#    | History
+#    | Prompt
+#    | Builtins
+#    | Startup
+#
+#    Plugins
+#       N/A
 #
 
-# If not running interactively, return
-[[ $- != *i* ]] && return
+################################################################################
+#  => General (XXX)
+################################################################################
 
 # Clean in case being sourced again
 unalias -a
 
-# -i asks before deleting and -v tattles after
-alias rm='rm -div'
-alias ping='ping -c 3'
-alias vim='nvim'
+# Clear <C-w> from deleting to last space
+# <C-w> later redefined with backward-kill-word in ~/.inputrc
+stty werase undef
+
+# Use vim as system editor
+export VISUAL="vim"
+export EDITOR="$VISUAL"
+
+################################################################################
+#  => History (XXX)
+################################################################################
+
+# Ignore commands begun with spaces and duplicates
+export HISTCONTROL="ignorespace:ignoredups"
+
+# Format history as: Month/date - xx:xx:xx
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 
 # Change terminal prompt
 if [ "$EUID" -eq 0 ]; then
@@ -20,46 +49,51 @@ else
     export PS1="$ "
 fi
 
-# Use vim as system editor
-export EDITOR="vim"
+################################################################################
+#  => Prompt (XXX)
+################################################################################
 
 # Echo all non-zero exit codes to caller
-EXIT_STATUS="e=\$?; [ \$e -ne 0 ] && echo \$e;"
-WINDOW_NAME='echo -ne "\033]0;`uname -n`:"$PWD"\007";'
-PROMPT_COMMAND="$EXIT_COMMAND $WINDOW_NAME"
+EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo \$l; fi;"
+WINDOW_NAME='echo -ne "\033]0;`uname -n`:"$PWD" $$\007";'
+PROMPT_COMMAND="$EXIT_STATUS $WINDOW_NAME"
 
-#__vte_prompt_command() {
-#  local pwd='~'
-#  [ "$PWD" != "$HOME" ] && pwd=${PWD/#$HOME\//\~\/}
-#  printf "\033]0;%s@%s:%s\007%s" "${USER}" "${HOSTNAME%%.*}" "${pwd}" "$(__vte_osc7)"
-#}
+################################################################################
+#  => Builtins (XXX)
+################################################################################
 
-# Remember 10k commands
-export HISTSIZE=10000
-export HISTFILESIZE=10000
-
-# Ignore commands begun with spaces and duplicates
-export HISTCONTROL="ignorespace:ignoredups"
-
-# Format history as: Month/date - xx:xx:xx
-export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+# cd lists directory names
+cd ()
+{
+    builtin cd "$@"
+    (($?)) || echo "$OLDPWD --> $PWD"
+}
 
 ls ()
 {
     command ls -F "$@"
 }
 
-# Background GUI-based jobs
-BG_IN_LINUX=" gedit emacs"
-BG_IN_UNIX=""
-BACKGROUND_COMMANDS="$BG_IN_LINUX"
+# Build help pages into man
+man ()
+{
+    case "`type -tf $1 2>/dev/null`" in
+        builtin)      help "$1" | less            ;;
+        function)     command -p man "$@"         ;;
+        *)            command -p man "$@"         ;;
+    esac
+}
 
-for com in $BACKGROUND_COMMANDS; do
-    alias $com="$com &"
-done
+# Use rmdir when needed
+rm ()
+{
+    command rm -dv "$@"
+}
+
+################################################################################
+#  => Startup (XXX)
+################################################################################
 
 # Login message
-#FIXME broken on systems without fortune and cowsay
-[ -z "$SSH_CLIENT" ] && fortune | cowsay
+which fortune >/dev/null && which cowsay >/dev/null && fortune | cowsay
 
-#EOF
