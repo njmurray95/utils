@@ -5,6 +5,9 @@
 "      \ \/ /  | || | | | | |
 "       \__/   |_||_| |_| |_|
 "
+"   Author: Nick Murray
+"   Version: \0
+"
 "   Main Settings (XXX)
 "    | Notes
 "    | General
@@ -13,12 +16,12 @@
 "    | Search and Replace
 "    | Text and spacing
 "    | Buffers and Windows
-"    | Abbreviations (TBD)
+"    | Git
 "    | Functions
-"    | Macros (TBD)
 "
 "   Plugins.
 "       gotham256.vim --> Gotham colorscheme
+"       gitgutter     --> Display a `git diff` in the left column
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Notes (XXX)
@@ -57,7 +60,6 @@ augroup last-position-jump
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zz" | endif
 augroup END
 
-
 "Set persistent undo
 if has("persistent_undo")
     set undofile
@@ -87,6 +89,14 @@ filetype plugin on              "Enable filetype plugins
 
 "Saving when not sudo
 cnoremap w!! w !sudo tee > /dev/null %
+
+" Start pathogen
+execute pathogen#infect()
+
+"set statusline=%{fugitive#statusline()}
+
+"Open all files in argslist as tabs
+tab sball
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => User Interface (XXX)
@@ -129,11 +139,14 @@ set showmatch                   "Show matching parentheses
 set matchtime=2                 "Length matched paren flashes (1/10 sec)
 set matchpairs=(:),{:},[:],<:>  "Chars in a balanced pair
 
-
 set timeoutlen=500              "Set timeout waiting for input (millisec)
 
 set lazyredraw                  "Don't update display unless necessary
 set hidden                      "Hide unsaved buffers when switching
+
+set tags=tags;/                 "Search up directory for ctags file
+
+set autochdir                   "Vim's pwd is the file's basename
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Keyboard and Mappings (XXX)
@@ -148,8 +161,6 @@ set hidden                      "Hide unsaved buffers when switching
 " Backslash (\) -- <localleader>
 " Backspace -- delete char, return to last jump
 
-"nnoremap db <expr> col('.') - 1 == " " ? db : dT\<space>
-
 "Tab now doubles as autocomplete
 inoremap <Tab> <c-r>=TabOrAuto()<cr>
 inoremap <S-Tab> <c-p>
@@ -159,6 +170,10 @@ let mapleader = "\<space>"
 
 "Space itself is used for foldings
 nnoremap <space> za
+
+"Quit in visual mode
+vnoremap ZZ <esc>ZZ
+vnoremap ZQ <esc>ZQ
 
 "\ becomes local leader
 let maplocalleader = "\\"
@@ -177,7 +192,7 @@ augroup END
 "Backspace jumps to previous location, reversing Tab
 nnoremap <BS> <C-o>
 
-"Make backspace work set backspace=indent,eol,start
+"Make backspace work
 set backspace=indent,eol,start
 
 " Other useful mappings
@@ -186,13 +201,8 @@ set backspace=indent,eol,start
 "Set Y to match C and D
 nnoremap Y y$
 
-nnoremap S a<cr><esc>k$
-
-" Search up directory for ctags file
-set tags=tags;/
-
-" C-[ climbs back up the tag tree, matching C-]
-nnoremap <C-\[> <C-t>
+"Split a line at cursor. Delete any trailing whitespace this creates.
+nnoremap <silent> S a<cr><esc>k:silent! s/\s\+$//<CR>$
 
 " Repurpose h,j,k,l
 "_______________________
@@ -209,15 +219,13 @@ noremap gk k
 noremap J }
 noremap K {
 
-"H and L replace 0 and $ nnoremap H 0
-noremap H ^
-noremap L $
-
 "Let ctrl remember original versions
 nnoremap <C-j> J
 nnoremap <C-k> K
-nnoremap <C-H> H
-nnoremap <C-L> L
+
+"H and L replace 0 and $ nnoremap H 0
+noremap H ^
+noremap L $
 
 "Move lines up and down and reindent
 nnoremap <silent> <Down> :m+<CR>==
@@ -241,6 +249,9 @@ noremap <silent> <Leader>s :keeppatterns %s/\s\+$//e<CR>:retab<CR>
 "Turn paste on and off
 noremap <Leader>p :set paste!<CR>
 
+" Toggle line wraps
+nnoremap <leader>w :set wrap!<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Search and Replace (XXX)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -258,7 +269,7 @@ set hlsearch                    "Highlight search results
 nnoremap <C-l> <esc>:nohlsearch<CR><C-l>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   => Text and spacing
+"   => Text and spacing (XXX)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Everything adjusts to 4 spaces
@@ -284,33 +295,17 @@ vnoremap > >gv
 highlight WhitespaceErrors ctermbg=DarkGray guibg=DarkGray
 match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/
 
-"Render comments in italics
-"highlight Comment cterm=italic
-
-" Makefiles require tabs not spaces
-augroup makefile
+" Load filetype-specific settings
+augroup filetype
     autocmd!
-    autocmd FileType make setlocal noexpandtab
-augroup END
-
-" Let markdown files have easy headings
-augroup markdown
-    autocmd!
-    autocmd Filetype markdown nnoremap <leader>- yypVr-
-    autocmd Filetype markdown nnoremap <leader>= yypVr=
-augroup END
-
-" Toggle line wraps
-nnoremap <leader>w :set wrap!<cr>
-
-" Fix python whitespace
-augroup re-tab
-    autocmd!
-    autocmd BufWrite *.py retab
+    autocmd FileType make       call MakefileMode()
+    autocmd Filetype markdown   call MarkdownMode()
+    autocmd Filetype python     call PyMode()
+    autocmd BufRead latex      call LatexMode()
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   => Buffers and Windows (XXX)
+"   => Buffers, Windows, and Tabs (XXX)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set splitbelow                  "Open new panes in bottom
@@ -324,21 +319,45 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
-" Easy tab navigation
-nnoremap ]1 1gt
-nnoremap ]2 2gt
-nnoremap ]3 3gt
-nnoremap ]4 4gt
-nnoremap ]5 5gt
-nnoremap ]6 6gt
-nnoremap ]7 7gt
-nnoremap ]8 8gt
-nnoremap ]9 9gt
-nnoremap ]0 :tablast<CR>
+nnoremap <silent><Leader>bt :tab sball<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   => Abbreviations (XXX)
+"   => Git (XXX)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <Leader>ga :!git add %<CR>
+nnoremap <Leader>gga :Git add %<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   => Modes (XXX)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+function! MakefileMode()
+    " Make requires tab characters
+    setlocal noexpandtab
+    setlocal tabstop=8
+    setlocal shiftwidth=8
+    setlocal softtabstop=8
+endfunction
+
+function! MarkdownMode()
+    " Wrap text slightly over 80 char edge
+    setlocal textwidth=85
+endfunction
+
+function! LatexMode()
+    setlocal textwidth=80
+endfunction
+
+function! CMode()
+    set cindent
+
+endfunction
+
+function! PyMode()
+    "Clean up malformed indentations
+    retab
+endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Functions (XXX)
@@ -353,18 +372,5 @@ function! TabOrAuto()
         return "\<C-n>"
     endif
 endfunction
-
-function! DeleteBack()
-    let col = col('.') - 1
-    if col == " "
-        return "db"
-    else
-        return "dT\<space>"
-    endif
-endfunction
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   => Macros (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "EOF

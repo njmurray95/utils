@@ -5,14 +5,13 @@
 #  | |_| | |_| |\__ \| | | |
 #  |_^__/ \__^_||___/|_| |_|
 
-#
 #   Table of Contents
 #    | General
 #    | History
 #    | Prompt
 #    | Builtins
 #    | Startup
-#
+
 #    Plugins
 #       N/A
 #
@@ -42,16 +41,16 @@ export HISTCONTROL="ignorespace:ignoredups"
 # Format history as: Month/date - xx:xx:xx
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 
-# Change terminal prompt
-if [ "$EUID" -eq 0 ]; then
-    export PS1="# "
-else
-    export PS1="$ "
-fi
-
 ################################################################################
 #  => Prompt (XXX)
 ################################################################################
+
+# Change terminal prompt
+if [ "$EUID" -eq 0 ]; then
+    export PS1="\h-# "
+else
+    export PS1="\h-$ "
+fi
 
 # Echo all non-zero exit codes to caller
 EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo \$l; fi;"
