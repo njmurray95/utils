@@ -25,11 +25,12 @@ unalias -a
 
 # Clear <C-w> from deleting to last space
 # <C-w> later redefined with backward-kill-word in ~/.inputrc
-stty werase undef
+# stty werase undef
 
 # Use vim as system editor
 export VISUAL="vim"
 export EDITOR="$VISUAL"
+export PATH="$PATH:~/bin/"
 
 ################################################################################
 #  => History (XXX)
@@ -56,6 +57,13 @@ fi
 EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo \$l; fi;"
 WINDOW_NAME='echo -ne "\033]0;`uname -n`:"$PWD" $$\007";'
 PROMPT_COMMAND="$EXIT_STATUS $WINDOW_NAME"
+
+################################################################################
+#  => Aliases (XXX)
+################################################################################
+
+alias vim=/usr/local/Cellar/vim/8.0.0002/bin/vim
+alias python="ipython"
 
 ################################################################################
 #  => Builtins (XXX)
@@ -94,5 +102,6 @@ rm ()
 ################################################################################
 
 # Login message
-which fortune >/dev/null && which cowsay >/dev/null && fortune | cowsay
+#which fortune >/dev/null && which cowsay >/dev/null && fortune | cowsay
 
+echo "Sourced bashrc!"

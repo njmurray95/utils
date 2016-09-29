@@ -70,7 +70,15 @@ endif
 " Remember 200 cmdline commands
 set history=200
 
-"Fix backups
+"Put all backups, swaps, and meta files in ~/.vim
+if !exists("~/.vim/install")
+    silent execute '!mkdir -p ~/.vim/swap'
+    silent execute '!mkdir -p ~/.vim/backup'
+    silent execute '!mkdir -p ~/.vim/undo'
+    silent execute '!mkdir -p ~/.vim/colors'
+    silent execute '!touch ~/.vim/install'
+endif
+
 set dir=$HOME/.vim/swap//,/var/tmp//,/tmp//,.
 set backupdir=$HOME/.vim/backup//
 set undodir=$HOME/.vim/undo//
@@ -91,7 +99,7 @@ filetype plugin on              "Enable filetype plugins
 cnoremap w!! w !sudo tee > /dev/null %
 
 " Start pathogen
-execute pathogen#infect()
+"execute pathogen#infect()
 
 "set statusline=%{fugitive#statusline()}
 
@@ -103,7 +111,8 @@ tab sball
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Colorscheme
 try
-    color gotham256
+    let g:solarized_termcolors=256
+    color solarized
 catch
     color pablo
 endtry
