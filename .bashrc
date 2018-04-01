@@ -27,6 +27,9 @@ unalias -a
 # <C-w> later redefined with backward-kill-word in ~/.inputrc
 # stty werase undef
 
+# Set configuration file home
+export XDG_CONFIG_HOME="~/.config"
+
 # Use vim as system editor
 export VISUAL="vim"
 export EDITOR="$VISUAL"
@@ -48,22 +51,27 @@ export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 
 # Change terminal prompt
 if [ "$EUID" -eq 0 ]; then
-    export PS1="\h-# "
+    export PS1="# "
 else
-    export PS1="\h-$ "
+    export PS1="$ "
 fi
 
 # Echo all non-zero exit codes to caller
 EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo \$l; fi;"
 WINDOW_NAME='echo -ne "\033]0;`uname -n`:"$PWD" $$\007";'
-PROMPT_COMMAND="$EXIT_STATUS $WINDOW_NAME"
+PROMPT_COMMAND="$EXIT_STATUS"
 
 ################################################################################
 #  => Aliases (XXX)
 ################################################################################
 
-alias vim=/usr/local/Cellar/vim/8.0.0002/bin/vim
-alias python="ipython"
+# Better python terminals fast
+alias py="ipython"
+alias py2="ipython2"
+alias py3="ipython3"
+
+# Found at https://gitlab.com/gnachman/iterm2/issues/3898
+alias imgcat=~/lib/hack_imgcat.sh
 
 ################################################################################
 #  => Builtins (XXX)
@@ -97,11 +105,23 @@ rm ()
     command rm -dv "$@"
 }
 
+wiki ()
+{
+lynx -dump https://en.wikipedia.org/wiki/"$1" | less
+}
+
+################################################################################
+#  => Appearance (XXX)
+################################################################################
+
+# Escape codes for iterm2 to fade title bar
+echo -e "\033]6;1;bg;red;brightness;0\a"
+echo -e "\033]6;1;bg;green;brightness;0\a"
+echo -e "\033]6;1;bg;blue;brightness;0\a"
+
 ################################################################################
 #  => Startup (XXX)
 ################################################################################
 
 # Login message
 #which fortune >/dev/null && which cowsay >/dev/null && fortune | cowsay
-
-echo "Sourced bashrc!"

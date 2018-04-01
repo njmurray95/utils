@@ -7,7 +7,7 @@
 "
 "   Author: Nick Murray
 "   Version: \0
-"
+
 "   Main Settings (XXX)
 "    | Notes
 "    | General
@@ -22,7 +22,7 @@
 "   Plugins.
 "       gotham256.vim --> Gotham colorscheme
 "       gitgutter     --> Display a `git diff` in the left column
-"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Notes (XXX)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,6 +137,7 @@ set wildignore+=*.o,*.git,*.swp "filetypes for autocomplete to ignore
 
 set nowrap                      "Wrap long lines
 set linebreak                   "Wrap lines at words instead of letters
+set display=lastline            "Wrapped partial lines will display
 
 if has('multi_byte')            "Set symbol for broken lines
     let &showbreak = '↳ '       "Display '↳ ' (u21B3)
@@ -310,7 +311,7 @@ augroup filetype
     autocmd FileType make       call MakefileMode()
     autocmd Filetype markdown   call MarkdownMode()
     autocmd Filetype python     call PyMode()
-    autocmd BufRead latex      call LatexMode()
+    autocmd FileType tex      call LatexMode()
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -351,11 +352,15 @@ endfunction
 
 function! MarkdownMode()
     " Wrap text slightly over 80 char edge
-    setlocal textwidth=85
+    set wrap
+    set nonumber
 endfunction
 
 function! LatexMode()
-    setlocal textwidth=80
+    setlocal tabstop=2
+    setlocal shiftwidth=2
+    setlocal softtabstop=2
+    setlocal wrap
 endfunction
 
 function! CMode()
