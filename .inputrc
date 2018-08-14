@@ -5,9 +5,18 @@ set show-all-if-ambiguous on
 
 set completion-ignore-case on
 
-Control-x: glob-expand-word
+#Control-x: glob-expand-word
 
 # Magic-space auto-expands abbreviations
 $if Bash
     Space: magic-space
 $endif
+
+# Allow UTF-8 input/output instead of showing binary
+#set input-meta on
+#set output-meta on
+#set convert-meta off
+
+# Replace clear since tmux-navigator eliminates it
+# One of the only keys that doesn't cause a problem
+Control-x: clear-screen
