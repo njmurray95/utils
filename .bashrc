@@ -77,6 +77,9 @@ alias imgcat=~/lib/hack_imgcat.sh
 #  => Builtins (XXX)
 ################################################################################
 
+# Aliases
+alias info="info --vi-keys"
+
 # cd lists directory names
 cd ()
 {
@@ -99,6 +102,20 @@ man ()
     esac
 }
 
+# Lint files in different formats
+lint()
+{
+    [ -z "$1" ] && echo "usage: lint <file>" && return 1
+    filetype="${1##*.}"
+    case $filetype in
+        cpp)        g++ -std=c++11 -fsyntax-only "$1"           ;;
+        py)         python -m py_compile "$1"                   ;;
+        json)       jsonlint "$1"                               ;;
+        sh)         bash -n "$1"                                ;;
+        *)          echo "No linter set for filetype $filetype" ;;
+    esac
+}
+
 # Use rmdir when needed
 rm ()
 {
@@ -107,17 +124,17 @@ rm ()
 
 wiki ()
 {
-lynx -dump https://en.wikipedia.org/wiki/"$1" | less
+    lynx -dump https://en.wikipedia.org/wiki/"$1" | less
 }
 
 ################################################################################
 #  => Appearance (XXX)
-################################################################################
+###############################################################################
 
 # Escape codes for iterm2 to fade title bar
-echo -e "\033]6;1;bg;red;brightness;0\a"
-echo -e "\033]6;1;bg;green;brightness;0\a"
-echo -e "\033]6;1;bg;blue;brightness;0\a"
+#echo -e "\033]6;1;bg;red;brightness;0\a"
+#echo -e "\033]6;1;bg;green;brightness;0\a"
+#echo -e "\033]6;1;bg;blue;brightness;0\a"
 
 ################################################################################
 #  => Startup (XXX)
