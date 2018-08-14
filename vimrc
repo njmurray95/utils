@@ -9,38 +9,19 @@
 "   Version: \0
 
 "   Main Settings (XXX)
-"    | Notes
 "    | General
+"    | Plugins
 "    | User Interface
 "    | Keyboard and Mappings
 "    | Search and Replace
 "    | Text and spacing
 "    | Buffers and Windows
-"    | Git
 "    | Functions
 "
-"   Plugins.
-"       gotham256.vim --> Gotham colorscheme
-"       gitgutter     --> Display a `git diff` in the left column
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   => Notes (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Set visual line break at line 80
-"let &colorcolumn=join(range(81,999),",")
-"let &colorcolumn=join(range(81,82),",")
-"let &colorcolumn=join(range(81,81),",")
-"let &colorcolumn=80
-
-" Wishlist:
-" Consistent command to comment out range of lines
-" Get t and f working across lines with , and ; operators
-" Airline
-" Better commenting
-
-" [[ and ]] piss me off
-" make [[ do % if on } and in first column, else ][%
-" make ]] do % if on } and in first column, else []%
+"   Plugins
+"    | gitgutter      --> Display a `git diff` in the left column
+"    | vim-surround   --> Mappings for surrounding text
+"    | tmux-navigator --> Switch between vim and tmux panes
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => General (XXX)
@@ -98,13 +79,32 @@ filetype plugin on              "Enable filetype plugins
 "Saving when not sudo
 cnoremap w!! w !sudo tee > /dev/null %
 
-" Start pathogen
-"execute pathogen#infect()
-
-"set statusline=%{fugitive#statusline()}
-
 "Open all files in argslist as tabs
 tab sball
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   => Plugins (XXX)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"tmux-navigator -- write all buffers before switching over
+let g:tmux_navigator_save_on_switch = 2
+
+"Switch panes even when in insert mode
+inoremap <C-h> <C-o>:silent TmuxNavigateRight<cr>
+inoremap <C-j> <C-o>:silent TmuxNavigateDown<cr>
+inoremap <C-k> <C-o>:silent TmuxNavigateUp<cr>
+inoremap <C-l> <C-o>:silent TmuxNavigateLeft<cr>
+
+"Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0                 "Don't check syntax on quitting
+
+"Linters
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = "-E"       "Turns off pylint style checking
+let g:syntastic_cpp_checkers = ["gcc"]
+let g:syntastic_cpp_gcc_args = "-std=c++11"     "Always use c++11
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => User Interface (XXX)
@@ -146,7 +146,7 @@ else
 endif
 
 set showmatch                   "Show matching parentheses
-set matchtime=2                 "Length matched paren flashes (1/10 sec)
+set matchtime=2                 "Length matched paren flashes (1/10ths sec)
 set matchpairs=(:),{:},[:],<:>  "Chars in a balanced pair
 
 set timeoutlen=500              "Set timeout waiting for input (millisec)
@@ -162,31 +162,13 @@ set autochdir                   "Vim's pwd is the file's basename
 "   => Keyboard and Mappings (XXX)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Reclaim Useful keys:
-"______________________
-" Tab -- <tab>, autocomplete, and return to next jump
-" Caps Lock -- <esc> and <Ctrl> (Mapped at OS level)
-" Space -- <leader> and un/fold
-" Enter -- Command line
-" Backslash (\) -- <localleader>
-" Backspace -- delete char, return to last jump
-
 "Tab now doubles as autocomplete
 inoremap <Tab> <c-r>=TabOrAuto()<cr>
 inoremap <S-Tab> <c-p>
 
-"Set space as leader
-let mapleader = "\<space>"
-
-"Space itself is used for foldings
-nnoremap <space> za
-
 "Quit in visual mode
 vnoremap ZZ <esc>ZZ
 vnoremap ZQ <esc>ZQ
-
-"\ becomes local leader
-let maplocalleader = "\\"
 
 "Enter starts command line
 noremap <CR> :
@@ -205,33 +187,16 @@ nnoremap <BS> <C-o>
 "Make backspace work
 set backspace=indent,eol,start
 
-" Other useful mappings
-"_______________________
-
 "Set Y to match C and D
 nnoremap Y y$
-
-"Split a line at cursor. Delete any trailing whitespace this creates.
-nnoremap <silent> S a<cr><esc>k:silent! s/\s\+$//<CR>$
-
-" Repurpose h,j,k,l
-"_______________________
 
 "Scrolling does not skip wrapped lines
 noremap j gj
 noremap k gk
 
-"Include the default behavior if ever needed
-noremap gj j
-noremap gk k
-
-"Let J and K browse sections of text
+"Use J and K to scroll by paragraphs
 noremap J }
 noremap K {
-
-"Let ctrl remember original versions
-nnoremap <C-j> J
-nnoremap <C-k> K
 
 "H and L replace 0 and $ nnoremap H 0
 noremap H ^
@@ -249,18 +214,33 @@ nnoremap <silent> <Right> xp
 " Leader Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Make editing .vimrc simple
-nnoremap <silent><leader>ev :vsplit $MYVIMRC<cr>
+"Set space as leader
+let mapleader = "\<space>"
 
-"Strip trailing whitespace
-"noremap <silent> <Leader>s :call Preserve("%s/\\s\\+$//e")<CR>
-noremap <silent> <Leader>s :keeppatterns %s/\s\+$//e<CR>:retab<CR>
+"\ becomes local leader
+let maplocalleader = "\\"
 
-"Turn paste on and off
+"Split a line at cursor. Delete any trailing whitespace this creates.
+nnoremap <silent> <leader>s a<cr><esc>k:silent! s/\s\+$//<CR>$
+
+"Join two lines together
+nnoremap <leader>j J
+
+"Fix Formatting and whitespace
+noremap <silent> <Leader>f mm:keeppatterns %s/\s\+$//e<CR>:retab<CR>`m
+
+"Paste mode toggle
 noremap <Leader>p :set paste!<CR>
 
-" Toggle line wraps
-nnoremap <leader>w :set wrap!<cr>
+"Wraps toggle
+noremap <leader>w :set wrap!<cr>
+
+"Number line toggle
+noremap <silent> <leader>n :call ToggleNumber()<cr>
+
+"Invisible chars toggle
+noremap <leader>i :set list!<cr>
+set listchars=tab:>-,space:_,eol:$
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Search and Replace (XXX)
@@ -276,7 +256,7 @@ set gdefault                    "Replace with :s affects entire line
 set hlsearch                    "Highlight search results
 
 "Clear search results on redraw
-nnoremap <C-l> <esc>:nohlsearch<CR><C-l>
+nnoremap <C-x> <esc>:nohlsearch<CR><C-l>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Text and spacing (XXX)
@@ -294,14 +274,11 @@ set autoindent                  "Copy current indent when new line starts
 
 set colorcolumn=81              "Highlight column 81 for line breaks
 
-"Maintain highlight on indent
+"Maintain highlight on visual mode indent
 vnoremap < <gv
 vnoremap > >gv
 
-"Reindent file
-"nmap <silent> <Leader>g :call Preserve("normal gg=G")<CR>
-
-"Highlight trailing whitespace
+"Highlight trailing whitespace (regex)
 highlight WhitespaceErrors ctermbg=DarkGray guibg=DarkGray
 match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/
 
@@ -310,8 +287,9 @@ augroup filetype
     autocmd!
     autocmd FileType make       call MakefileMode()
     autocmd Filetype markdown   call MarkdownMode()
+    autocmd Filetype text       call MarkdownMode()
     autocmd Filetype python     call PyMode()
-    autocmd FileType tex      call LatexMode()
+    autocmd FileType tex        call LatexMode()
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -322,21 +300,6 @@ set splitbelow                  "Open new panes in bottom
 set splitright                  "Open new panes to right
 
 set showtabline=2               "Always show tabs list
-
-" Easy buffer navigation
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
-
-nnoremap <silent><Leader>bt :tab sball<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"   => Git (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-nnoremap <Leader>ga :!git add %<CR>
-nnoremap <Leader>gga :Git add %<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Modes (XXX)
@@ -351,9 +314,8 @@ function! MakefileMode()
 endfunction
 
 function! MarkdownMode()
-    " Wrap text slightly over 80 char edge
-    set wrap
-    set nonumber
+    setlocal wrap     "Wrap text slightly over 80 char edge
+    setlocal nonumber "Prettier for text files
 endfunction
 
 function! LatexMode()
@@ -363,14 +325,8 @@ function! LatexMode()
     setlocal wrap
 endfunction
 
-function! CMode()
-    set cindent
-
-endfunction
-
 function! PyMode()
-    "Clean up malformed indentations
-    retab
+    retab  "Clean up malformed indentation
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -384,6 +340,18 @@ function! TabOrAuto()
         return "\<tab>"
     else
         return "\<C-n>"
+    endif
+endfunction
+
+"Toggle between number, relativenumber, and nonumber
+function! ToggleNumber()
+    if &number
+        set nonumber
+        set relativenumber
+    elseif &relativenumber
+        set norelativenumber
+    else
+        set number
     endif
 endfunction
 
