@@ -20,3 +20,5 @@ $endif
 # Replace clear since tmux-navigator eliminates it
 # One of the only keys that doesn't cause a problem
 Control-x: clear-screen
+
+# TAB: menu-complete
