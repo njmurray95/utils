@@ -1,3 +1,25 @@
+# bash / bsh
+
+General:
+* Key bindings: `bind` (readline)
+
+Startup config order:
+* `/etc/bashrc`
+* `~/.bashrc`
+
+# tcsh / csh
+
+**tcsh**, an extension of **csh**, a shell with """c-like syntax""". It is not POSIX-compatible. It's old (c. 1975) and this generally explains why it directly implements features other shells offload to other programs. Scripting on **csh** is generally considered unsafe (TODO: why?), which created the need for tcsh.
+
+General:
+* Key bindings: `bindkey`
+
+Startup config order:
+* `/etc/csh.cshrc`
+* `~/.tcshrc`
+* `~/.cshrc` (if no `~/.tcshrc`)
+
+# Miscellaneous
 cat /proc/cpuinfo -- Check stats about core
 Note: if only one processor shows, check `uname -a` for SMP.
         Non-SMP kernals may not handle multiple processors.
