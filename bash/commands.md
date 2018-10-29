@@ -39,6 +39,14 @@ Main options:
 
 # coreutils
 
+### timeout
+
+Run a command with a time limit. `timeout [limit] command` will run 'command' until it terminates or the time limit is reached, whichever happens first. (Time limit defaults to seconds.)
+
+Timeout [complicates signal handling](https://unix.stackexchange.com/questions/57667/why-cant-i-kill-a-timeout-called-from-a-bash-script-with-a-keystroke) when invoked in a script. Timeout places itself and all its children in a separate process group. This group by intention is different from the caller's process group. 
+
+The simplest solution is to background the timeout call and invoke `wait` on its pid, so that a trap can be set to kill the job on CTRL-C or some other signal.
+
 # binutils
 
 ## objdump
