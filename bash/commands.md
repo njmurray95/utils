@@ -1,4 +1,4 @@
-# Builtins
+# Bash Builtins
 
 ### compgen
 
@@ -52,7 +52,7 @@ The simplest solution is to background the timeout call and invoke `wait` on its
 ## objdump
 
 
-# Useful scripting commands
+# Scripting commands
 
 ## xargs
 
@@ -60,7 +60,7 @@ Remove all files from a find command:
 `find . -name "test" | xargs echo`
 
 Equivalent:
-`find . -name "test" | xargs -I '{}' echo '{]'`
+`find . -name "test" | xargs -I '{}' echo '{}'`
 
 `-I` defines a "replstr" which is replaced by xargs in the subsequent command with each line of input piped into xargs.
 
@@ -70,21 +70,23 @@ Equivalent:
 
 ## pandoc
 
-* Convert files between different formats
-`pandoc file.oldformat -o file.newformat`
+Convert files between different formats:
+`pandoc file.old -o file.new`
+
+Format is specified by default by the extension on the filetype.
 
 ## Imagemagick
 
-* Convert image to another format:
+Convert image to another format:
 `convert a.jpg b.pdf`
 `convert a.png b.jpg`
 
-* Convert multiple images into one pdf:
+Convert multiple images into one pdf:
 `convert a.jpg b.jpg ... out.pdf`
 
 ## Figlet
 
-* Make big letters
+Make big letters:
 
 ```
 $ figlet "test"
