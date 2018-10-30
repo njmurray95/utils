@@ -1,4 +1,4 @@
-# Builtins
+# Bash Builtins
 
 ### compgen
 
@@ -39,12 +39,29 @@ Main options:
 
 # coreutils
 
+### timeout
+
+Run a command with a time limit. `timeout [limit] command` will run 'command' until it terminates or the time limit is reached, whichever happens first. (Time limit defaults to seconds.)
+
+Timeout [complicates signal handling](https://unix.stackexchange.com/questions/57667/why-cant-i-kill-a-timeout-called-from-a-bash-script-with-a-keystroke) when invoked in a script. Timeout places itself and all its children in a separate process group. This group by intention is different from the caller's process group. 
+
+The simplest solution is to background the timeout call and invoke `wait` on its pid, so that a trap can be set to kill the job on CTRL-C or some other signal.
+
+### wait
+
+`wait` pauses execution until jobs have completed. This is useful for backgrounding processes, but if you want to maintain exit status you need to actually specify the process id when invoking `wait`.
+
+This hack only preserves the exit status of the last job finished but is simpler than trapping a handler:
+
+```wait $(jobs -l | awk '{print $2}')```
+
+
 # binutils
 
 ## objdump
 
 
-# Useful scripting commands
+# Scripting commands
 
 ## xargs
 
@@ -52,7 +69,7 @@ Remove all files from a find command:
 `find . -name "test" | xargs echo`
 
 Equivalent:
-`find . -name "test" | xargs -I '{}' echo '{]'`
+`find . -name "test" | xargs -I '{}' echo '{}'`
 
 `-I` defines a "replstr" which is replaced by xargs in the subsequent command with each line of input piped into xargs.
 
@@ -62,21 +79,23 @@ Equivalent:
 
 ## pandoc
 
-* Convert files between different formats
-`pandoc file.oldformat -o file.newformat`
+Convert files between different formats:
+`pandoc file.old -o file.new`
+
+Format is specified by default by the extension on the filetype.
 
 ## Imagemagick
 
-* Convert image to another format:
+Convert image to another format:
 `convert a.jpg b.pdf`
 `convert a.png b.jpg`
 
-* Convert multiple images into one pdf:
+Convert multiple images into one pdf:
 `convert a.jpg b.jpg ... out.pdf`
 
 ## Figlet
 
-* Make big letters
+Make big letters:
 
 ```
 $ figlet "test"
