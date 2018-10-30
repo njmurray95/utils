@@ -47,6 +47,14 @@ Timeout [complicates signal handling](https://unix.stackexchange.com/questions/5
 
 The simplest solution is to background the timeout call and invoke `wait` on its pid, so that a trap can be set to kill the job on CTRL-C or some other signal.
 
+### wait
+
+`wait` pauses execution until jobs have completed. This is useful for backgrounding processes, but if you want to maintain exit status you need to actually specify the process id when invoking `wait`.
+
+This hack only preserves the exit status of the last job finished but is simpler than trapping a handler:
+```wait $(jobs -l | awk '{print $2}')```
+
+
 # binutils
 
 ## objdump
