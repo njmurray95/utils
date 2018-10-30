@@ -52,6 +52,7 @@ The simplest solution is to background the timeout call and invoke `wait` on its
 `wait` pauses execution until jobs have completed. This is useful for backgrounding processes, but if you want to maintain exit status you need to actually specify the process id when invoking `wait`.
 
 This hack only preserves the exit status of the last job finished but is simpler than trapping a handler:
+
 ```wait $(jobs -l | awk '{print $2}')```
 
 
