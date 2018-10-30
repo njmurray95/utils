@@ -21,3 +21,4 @@ colors_bg()
 {
     for i in {1..256}; do echo -e "\e[48;5;${i}m color${i} \e[0m; done
 }
+
