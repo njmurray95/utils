@@ -235,6 +235,9 @@ noremap <Leader>p :set paste!<CR>
 "Wraps toggle
 noremap <leader>w :set wrap!<cr>
 
+"Check Marks
+nnoremap <leader>c A (✓)<esc>
+
 "Number line toggle
 noremap <silent> <leader>n :call ToggleNumber()<cr>
 
