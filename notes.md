@@ -31,8 +31,7 @@ set: Variable name must begin with a letter.
  ) set a ="b"
 set: Variable name must begin with a letter.
 ```
-
-This also implies that working code can crash when a rarely-executed branch is reached.
+(This also implies that working code can crash when a rarely-executed branch is reached.)
 
 2. Csh offers poor support for I/O redirection or piping with complex commands. 
 3. Csh offers poor support for process and signal management (with only one signal trap).
