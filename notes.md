@@ -7,6 +7,12 @@ Startup config order:
 * `/etc/bashrc`
 * `~/.bashrc`
 
+# zsh
+
+**zsh** is a newer shell (c. 1990) which has lately grown popular for its improved quality of life features. Zsh is completely backwards-compatible with bash -- though not by default but only when `emulate sh` is set. Given that zsh is rarely installed by default anyways, it's mostly better to stick with `bash` defaults.
+
+`zsh` does not bind with `readline`. By default it will scan `$EDITOR` and `$VISUAL` for the string `"vi"` and use vi keys if found, emacs otherwise. `bindkey -e` and `bindkey -v` can set these manually, respectively.
+
 # tcsh / csh
 
 **tcsh**, an extension of **csh**, a shell with """c-like syntax""". It is not POSIX-compatible. It's old (c. 1975) and this generally explains most of its builtin redefinitions and other assorted oddities.
