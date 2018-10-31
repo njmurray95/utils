@@ -1,7 +1,6 @@
-# Notes about vim that don't belong in a .vimrc
+# Vim Notes
 
-# Automatically change line endings
-# See 'fileformat' 'ff'
+Automatically change line endings (see 'fileformat', 'ff'):
 set ff=dos
 set ff=unix
 set ff=mac
