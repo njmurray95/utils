@@ -10,3 +10,14 @@ gdb can set breakpoints on functions or file lines:
 ```
 
 `info break` will summarize all active breakpoints while `del n` will delete the breakpoint numbered `n`.
+
+`catch throw` will set a breakpoint any time an exception is thrown.
+
+## Stack Tracing
+
+gdb is useful for switching between stack frames while code is executing:
+
+```
+(gdb) b[ack]t[race] # get list of frame numbers
+(gdb) f[rame] <N> # jump to frame N in the stack
+```
