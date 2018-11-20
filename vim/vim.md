@@ -16,17 +16,17 @@ Do an in-buffer vim-diff:
 
 ## Find/Replace Tricks
 
-Replace word within file:
+Replace **word** within file:
 ```
 :%s/word/new/g
 ```
 
-Replace word within highlighted section:
+Replace **word** within highlighted section:
 ```
 :'<,'>s/word/new/g
 ```
 
-Replace word within all active buffers:
+Replace **word** within all active buffers:
 ```
 :bufdo %s/word/new/ge 
 ```
