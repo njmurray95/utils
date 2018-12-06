@@ -11,3 +11,8 @@ Cache passwords for an hour (so you don't have to retype on every command):
 ```
 git config --global credential.helper 'cache --timeout=3600'
 ```
+
+Checkout any arbitrary commit before a given date:
+```
+git checkout `git rev-list -1 --before="<date>" <branch>`
+```
