@@ -7,6 +7,11 @@ Basic commands:
 * echo -- print text
 * path -- show current system path
 
+Get history:
+```
+> doskey /history
+```
+
 Show path:
 ```
 >>> path
