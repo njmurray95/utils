@@ -9,10 +9,10 @@ Basic commands:
 
 Get history:
 ```
-> doskey /history
+C:> doskey /history
 ```
 
 Show path:
 ```
->>> path
+C:> path
 ```
