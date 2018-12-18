@@ -8,7 +8,7 @@ import pdb
 pdb.set_trace()
 ```
 
-Invoke python with pdb:
+Invoke python with pdb as a debugger:
 ```
 $ python -m pdb [file.py]
 ```
