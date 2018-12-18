@@ -9,10 +9,7 @@
 ```
 import pdb
 pdb.set_trace()
-```
-
-Python 3.7 and higher:
-```
+# Python 3.7 and higher:
 breakpoint()
 ```
 
