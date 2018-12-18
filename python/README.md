@@ -7,6 +7,7 @@
 * Set a breakpoint in file
 
 ```
+# Python 2-3.6
 import pdb
 pdb.set_trace()
 # Python 3.7 and higher:
