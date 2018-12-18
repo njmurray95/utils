@@ -2,13 +2,30 @@
 
 ## General notes
 
-Set a breakpoint in any arbitrary file:
+### Invoking PDB (Python Debugger)
+
+* Set a breakpoint in file
+
 ```
 import pdb
 pdb.set_trace()
 ```
 
-Invoke python with pdb as a debugger:
+Python 3.7 and higher:
+```
+breakpoint()
+```
+
+* Invoke from commandline
+
 ```
 $ python -m pdb [file.py]
 ```
+
+* Invoke from python terminal
+
+```
+>>> import pdb
+>>> pdb.run([module])
+```
+
