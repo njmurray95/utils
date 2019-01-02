@@ -50,7 +50,9 @@ pick ea78103 second commit
 pick 56203ab third commit
 ```
 
-Once this file is saved git will fast-forward through each commit, applying the rebase command as it goes. Every command defaults to `pick`. 
+Once this file is saved git will fast-forward through each commit, applying the rebase command as it goes. Every command defaults to `pick`.
+
+**If something goes wrong, the bail is** `git rebase --abort`.
 
 ### Editing previous commits
 
