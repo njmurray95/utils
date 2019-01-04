@@ -6,14 +6,14 @@ In many cases the best solution involves working around git entirely, and clonin
 
 Most man pages can be found by searching for individual commands, i.e., `man git-commit`.
 
-## Checkout
+# Checkout
 
 Checkout the most recent commit before a given date:
 ```
 git checkout `git rev-list -1 --before="<date>" [branch]`
 ```
 
-## Config
+# Config
 
 ### Setting username and password
 ```
@@ -31,8 +31,22 @@ $ git config --list
 git config --global credential.helper 'cache --timeout=3600'
 ```
 
+# Diff
 
-## Rebase
+```
+git diff [--options] <commit> <commit> [--] [<path>...]
+```
+
+i.e.,
+
+```
+$ git diff HEAD^^ HEAD a.txt
+$ git diff HEAD~2 HEAD -- a.txt
+```
+
+git-diff checks arg position not timestamp when doing a diff. I.e., `git diff refA refB` will produce the opposite diff of `git diff refB refA`.
+
+# Rebase
 
 One of git's most useful and powerful features is the rebase. Rebase technically merges one branch onto HEAD while preserving some history, but practically can be used for anything involving merging different commits, including retroactively editing previous commits.
 
@@ -66,7 +80,7 @@ pick 56203ab third commit
 
 Git will drop us in the shell after the second commit but before the third commit. We can then edit the commit however we like with `git commit --amend`. To continue with the rebase use `git rebase --continue`.
 
-## Misc.
+# Misc.
 
 ### Creating a merge conflict
 
