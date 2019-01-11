@@ -6,14 +6,56 @@ In many cases the best solution involves working around git entirely, and clonin
 
 Most man pages can be found by searching for individual commands, i.e., `man git-commit`.
 
-# Checkout
+## Add
+
+Git is greedy about adding subdirectories, i.e. will add everything in any specified folder recursively:
+```
+$ ls project
+config src README.txt
+$ git add project # Adds everything under project
+```
+
+### Adding parts of a file
+
+Sometimes it's useful to add only certain changes made to a file as part of one commit. The simplest way is to do this with `--patch` (`-p`):
+
+```
+$ git add --patch hello.cpp
+```
+
+Git will try to break the file into "hunks" (more or less contiguous sets of changes) and ask you to approve each one manually:
+
+```
+Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]?
+```
+
+Where each option means:
+
+* y stage this hunk for the next commit
+* n do not stage this hunk for the next commit
+* q quit; do not stage this hunk or any of the remaining hunks
+* a stage this hunk and all later hunks in the file
+* d do not stage this hunk or any of the later hunks in the file
+* g select a hunk to go to
+* / search for a hunk matching the given regex
+* j leave this hunk undecided, see next undecided hunk
+* J leave this hunk undecided, see next hunk
+* k leave this hunk undecided, see previous undecided hunk
+* K leave this hunk undecided, see previous hunk
+* s split the current hunk into smaller hunks
+* e manually edit the current hunk
+* ? print hunk help
+
+
+
+## Checkout
 
 Checkout the most recent commit before a given date:
 ```
 git checkout `git rev-list -1 --before="<date>" [branch]`
 ```
 
-# Config
+## Config
 
 ### Setting username and password
 ```
@@ -31,7 +73,7 @@ $ git config --list
 git config --global credential.helper 'cache --timeout=3600'
 ```
 
-# Diff
+## Diff
 
 ```
 git diff [--options] <commit> <commit> [--] [<path>...]
@@ -46,7 +88,7 @@ $ git diff HEAD~2 HEAD -- a.txt
 
 git-diff checks arg position not timestamp when doing a diff. I.e., `git diff refA refB` will produce the opposite diff of `git diff refB refA`.
 
-# Rebase
+## Rebase
 
 One of git's most useful and powerful features is the rebase. Rebase technically merges one branch onto HEAD while preserving some history, but practically can be used for anything involving merging different commits, including retroactively editing previous commits.
 
@@ -80,7 +122,7 @@ pick 56203ab third commit
 
 Git will drop us in the shell after the second commit but before the third commit. We can then edit the commit however we like with `git commit --amend`. To continue with the rebase use `git rebase --continue`.
 
-# Misc.
+## Misc.
 
 ### Creating a merge conflict
 
