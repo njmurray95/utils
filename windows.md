@@ -7,9 +7,13 @@ Basic commands:
 * echo -- print text
 * path -- show current system path
 
-## Quotes
+## Notes
+
+### Quotes
 
 Quotes are finnicky and inconsistently-defined. Most programs **expect double-quotes** by default, except for statements accepted by `FOR /F`. However there is **no consistent standard**. Use double-quotes in all cases except in exceptions. 
+
+## Commands
 
 ### History
 
