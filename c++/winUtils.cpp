@@ -7,9 +7,9 @@
 bool processRunning(const LPCSTR procName)
 {
     HWND hwnd = FindWindow(NULL, pName);
-	  if (hwnd != 0)
+    if (hwnd != 0)
     { 
-		    return true;
-	  }
+        return true;
+    }
     return false;
 }
