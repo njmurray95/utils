@@ -31,6 +31,6 @@ assert() {
     $@ 2>/dev/null 1>&2
     EXIT_STAT=$?
     if [ $EXIT_STAT -ne 0 ]; then
-        yell "assertion failed: $*`1" && $FAIL_CMD $EXIT_STAT
+        yell "assertion failed: $*" && $FAIL_CMD $EXIT_STAT
     fi
 }
