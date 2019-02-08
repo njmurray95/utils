@@ -12,6 +12,11 @@ is_interactive() {
     [[ "$-" == *i* ]]
 }
 
+# True when executable in path false otherwise
+exists() {
+    which "$1" >/dev/null 2>&1
+}
+
 # Debug
 yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
