@@ -17,7 +17,8 @@ exists() {
     which "$1" >/dev/null 2>&1
 }
 
-# Debug
+# Debug: Three-Fingered Claw. See here:
+# https://stackoverflow.com/questions/1378274/#25515370
 yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
 try() { "$@" || die "cannot $*"; }
