@@ -31,7 +31,7 @@ export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 #  => Prompt (XXX)
 
 # Change terminal prompt
-if [ "$EUID" -eq 0 ]; then
+if isRoot; then
     export PS1="# "
 else
     export PS1="$ "
