@@ -10,6 +10,9 @@
 
 unalias -a                                  # Clean in case being sourced again
 
+source "$HOME/files/prog/bash/utils.sh"
+source "$HOME/files/prog/bash/tools.sh"
+
 export XDG_CONFIG_HOME="~/.config"          # Set configuration file home
 export VISUAL="vim"                         # Use vim as system editor
 export EDITOR="$VISUAL"                     # Some programs use this too
@@ -66,21 +69,3 @@ man ()
     esac
 }
 
-# Lint files in different formats
-lint()
-{
-    [ -z "$1" ] && echo "usage: lint <file>" && return 1
-    filetype="${1##*.}"
-    case $filetype in
-        cpp)        g++ -std=c++11 -fsyntax-only "$1"           ;;
-        py)         python -m py_compile "$1"                   ;;
-        json)       jsonlint "$1"                               ;;
-        sh)         bash -n "$1"                                ;;
-        *)          echo "No linter set for filetype $filetype" ;;
-    esac
-}
-
-wiki ()
-{
-    lynx -dump https://en.wikipedia.org/wiki/"$1" | less
-}
