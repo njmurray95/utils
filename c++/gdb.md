@@ -21,3 +21,9 @@ gdb is useful for switching between stack frames while code is executing:
 (gdb) b[ack]t[race] # get list of frame numbers
 (gdb) f[rame] <N> # jump to frame N in the stack
 ```
+
+## MPI
+Spawn an xterm terminal (or equivalent) for each mpi process:
+```
+$ mpirun -np N [xterm -e] gdb [--args] /path/to/exe [program args]
+```
