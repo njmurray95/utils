@@ -46,9 +46,13 @@ Where each option means:
 * e manually edit the current hunk
 * ? print hunk help
 
-
-
 ## Checkout
+
+Easiest way to make a new branch and update the remote:
+```
+$ git checkout -b [branch name]
+$ git push -u origin [branch name]
+```
 
 Checkout the most recent commit before a given date:
 ```
@@ -74,7 +78,6 @@ git config --global credential.helper 'cache --timeout=3600'
 ```
 
 ## Diff
-
 ```
 git diff [--options] <commit> <commit> [--] [<path>...]
 ```
@@ -87,6 +90,19 @@ $ git diff HEAD~2 HEAD -- a.txt
 ```
 
 git-diff checks arg position not timestamp when doing a diff. I.e., `git diff refA refB` will produce the opposite diff of `git diff refB refA`.
+
+Find all files changed since hash COMMIT:
+
+```
+$ git diff --name-only COMMIT
+```
+
+## Log
+Find all commits which affect only one file/folder
+
+```
+$ git log --follow FILE
+```
 
 ## Rebase
 
