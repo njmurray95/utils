@@ -11,6 +11,18 @@ import linecache
 
 stime = None
 
+def basename(path):
+    """
+    Return the basename of a path.
+    >>> basename("/usr/bin/env")
+    'env'
+    >>> basename("one/two/three/")
+    'three'
+    >>> basename("C:\Users\admin\notes.txt")
+    'notes.txt'
+    """
+    return os.path.basename(os.path.normpath(path))
+
 def gettime():
     global stime
     if stime == None:
