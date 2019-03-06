@@ -6,6 +6,7 @@ from __future__ import print_function
 
 import os
 import sys
+import json
 import time
 import inspect
 import linecache
@@ -23,6 +24,14 @@ def basename(path):
     'notes.txt'
     """
     return os.path.basename(os.path.normpath(path))
+
+def dict_print(dictionary)
+    print(json.dumps(
+        dictionary,
+        sort_keys=True,
+        indent=4,
+        separators=(',', ': ')
+    )
 
 def gettime():
     global stime
