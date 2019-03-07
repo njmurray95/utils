@@ -1,5 +1,4 @@
-// debug.cpp
-// Tricks for debugging c++ code
+// Utils for file-specific tasks -- paths, IO, etc. 
 
 #include <fstream>
 
