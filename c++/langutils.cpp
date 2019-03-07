@@ -1,4 +1,5 @@
-// Examples of variadic functions
+// Utils for c++ language features -- variadic types, templates, etc.
+
 #include <iostream>
 using namespace std;
 
