@@ -1,4 +1,6 @@
 #!/usr/bin/env python2
+# A script I wrote to extract a student's twitter username when they didn't provide it to us
+# Not sure if this ever worked, but it shows some neat tricks for running and inspecting arbitrary code
 import os
 import sys
 import signal
