@@ -1,22 +1,17 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
+# Utils for python printing -- neat dictionaries, stack trace prints, etc.
 
-# Utilities for Python
+from __future__ import print_function # Python 2 compatibility
 
-from __future__ import print_function
-
-import os
-import sys
-import json
-import time
-import inspect
-import linecache
-
-def dict_print(dictionary)
-    print(json.dumps(
-        dictionary,
-        sort_keys=True,
-        indent=4,
-        separators=(',', ': ')
+def dict_print(dictionary):
+    import json
+    print(
+        json.dumps(
+            dictionary,
+            sort_keys=True,
+            indent=4,
+            separators=(',', ': ')
+        )
     )
 
 def dprint(*args, **kwargs):
@@ -24,6 +19,8 @@ def dprint(*args, **kwargs):
     debug print
     Print a time stamp, stack depth, and a debug message
     """
+    import time
+    import inspect
 
     prefix = ""
 
