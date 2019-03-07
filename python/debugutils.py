@@ -10,6 +10,7 @@ def tracer(delay=0):
        Creates a trace function and sets it to the global sys trace function.
             @delay -> optional delay to slow program execution
     '''
+    import linecache
     from printutils import dprint
 
     def trace(frame, event, arg):
