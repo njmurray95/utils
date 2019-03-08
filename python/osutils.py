@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 # Utils for OS-related tasks -- paths, files, subprocess calls, etc.
 
-import os
-import struct
-
 def basename(path):
     """
     Return the basename of a path.
@@ -14,6 +11,7 @@ def basename(path):
     >>> basename("C:\Users\admin\notes.txt")
     'notes.txt'
     """
+    import os
     return os.path.basename(os.path.normpath(path))
     
 def noisefile(filename, bytesize=1, zero=False):
@@ -21,6 +19,8 @@ def noisefile(filename, bytesize=1, zero=False):
     Write a file of arbitrary or null data for n bytes.
     Useful for testing file limits, file transfers, etc.
     """
+    import os
+    import struct
     bytesize *= (1024**2) # 1 MB
     with open(filename + '.bin', 'wb') as f:
         if zero:
