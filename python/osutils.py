@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # Utils for OS-related tasks -- paths, files, subprocess calls, etc.
 
+def interactive():
+    '''
+    Return True if run in script, false otherwise.
+    '''
+    import __main__
+    return not hasattr(__main__, __file__)
+
 def basename(path):
     """
     Return the basename of a path.
@@ -13,6 +20,17 @@ def basename(path):
     """
     import os
     return os.path.basename(os.path.normpath(path))
+
+def get_cur_filepath():
+    '''
+    Return the path of the file where this code is run.
+    '''
+    import os
+    if interactive():
+        return os.getcwd()
+    else:
+        os.path.abspath(__file__)
+        
     
 def noisefile(filename, bytesize=1, zero=False):
     """
