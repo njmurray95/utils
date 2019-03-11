@@ -24,6 +24,9 @@ def basename(path):
 def get_cur_filepath():
     '''
     Return the path of the file where this code is run.
+    >>> import os
+    >>> os.path.join('utils', 'python') in get_cur_filepath()
+    True
     '''
     import os
     if interactive():
