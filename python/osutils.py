@@ -58,4 +58,4 @@ def zip(dir):
     import zipfile
     with zipfile.ZipFile(str(dir) + '.zip', 'w') as zf:
         for file in os.listdir(dir):
-            zf.write(file)
+            zf.write(os.path.join(dir, file))
