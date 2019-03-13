@@ -56,6 +56,6 @@ def zip(dir):
     '''
     import os
     import zipfile
-    with zipfile.Zipfile(str(dir) + '.zip', 'w') as zf:
+    with zipfile.ZipFile(str(dir) + '.zip', 'w') as zf:
         for file in os.listdir(dir):
             zf.write(file)
