@@ -49,3 +49,13 @@ def noisefile(filename, bytesize=1, zero=False):
             f.write(struct.pack('B', 0))
         else:
             f.write(os.urandom(bytesize))
+
+def zip(dir):
+    '''
+    Zip all the files in a directory.
+    '''
+    import os
+    import zipfile
+    with zipfile.Zipfile(str(dir) + '.zip', 'w') as zf:
+        for file in os.listdir(dir):
+            zf.write(file)
