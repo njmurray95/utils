@@ -47,3 +47,11 @@ def pdb_kill():
     def pdb_handler(signal, frame)
         pdb.set_trace()
     signal.signal(signal.SIGINT, pdb_handler)
+    
+def name(var):
+    '''
+    Hack to get the name of the variable passed in.
+    '''
+    import inspect
+    local_vars = inspect.currentframe().f_locals.items()
+    return [ name for name, val in local_vars if name is var ][0]
