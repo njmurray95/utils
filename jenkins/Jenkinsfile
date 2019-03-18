@@ -1,6 +1,5 @@
 // Closest jenkins gets to "hello world"
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
     stages {
         stage('build') {
             steps {
