@@ -1,0 +1,11 @@
+// Run only on a machine labelled 'slave'
+pipeline {
+    agent { label 'slave'}
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo `hostname`'
+            }
+        }
+    }
+}
