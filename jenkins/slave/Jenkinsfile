@@ -1,10 +1,14 @@
-// Run only on a machine labelled 'slave'
+// Simple config for Jenkins to spawn a task on a slave EC2
 pipeline {
+    // This triggers the 'slave' node, Jenkins will create an EC2 if none exists
     agent { label 'slave'}
     stages {
         stage('Build') {
             steps {
-                sh 'echo `hostname`'
+                // This will print the instance-id of the slave EC2 to the Jenkins console log
+                // As proof that this is run inside the slave and not the master
+                // See: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html
+                sh 'echo `curl http://169.254.169.254/latest/meta-data/instance-id`'
             }
         }
     }
