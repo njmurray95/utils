@@ -8,7 +8,7 @@ pipeline {
                 // This will print the instance-id of the slave EC2 to the Jenkins console log
                 // As proof that this is run inside the slave and not the master
                 // See: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html
-                sh 'echo `curl http://169.254.169.254/latest/meta-data/instance-id`'
+                sh 'curl http://169.254.169.254/latest/meta-data/instance-id'
             }
         }
     }
