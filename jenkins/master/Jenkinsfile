@@ -1,8 +1,7 @@
 // Simple config for Jenkins to spawn a task on the master node
 pipeline {
-    // This triggers the 'master' node, since Jenkins by default runs on its own node
-    // Note that `agent { label 'master' }` would be equivalent if the master was labelled correctly
-    agent any
+    // This triggers the 'master' node
+    agent { label 'master' }
     stages {
         stage('Build') {
             steps {
