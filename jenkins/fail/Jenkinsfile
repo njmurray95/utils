@@ -1,7 +1,7 @@
 // Test case for a broken Jenkins config which spawns infinite nodes
 pipeline {
     // This triggers a node which is marked to not connect and thus cascade spawn
-    agent { timeout(20) { label 'slave && broken'} }
+    agent { label 'slave && broken'}
     stages {
         stage('Build') {
             steps {
