@@ -13,3 +13,13 @@ Show invocation of java programs:
 ```
 $ jps -lvm
 ```
+
+Show process of running JVM's:
+```
+$ jcmd
+```
+
+Show JVM system information about process:
+```
+$ jinfo <pid>
+```
