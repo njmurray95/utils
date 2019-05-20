@@ -1,4 +1,6 @@
-# Variables
+# Powershell
+
+## Variables
 
 ```
 PS C:\> set-variable -name "name" -value "value"
@@ -20,7 +22,12 @@ two                            2
 PS C:>
 ```
 
-# Making a file
+Environment variables:
+```
+PS C:\> $env:APPDATA
+```
+
+## Making a file
 
 ```
 PS C:\> new-item -path "test.txt" -value "hello world"
@@ -42,7 +49,7 @@ test
 PS C:\> remove-item test.txt
 ```
 
-# Help Commands
+## Help Commands
 
 ### Get-Help
 
@@ -112,7 +119,7 @@ Get-Process -InputObject <Process[]> [-ComputerName <string[]>] [-Module] [-File
 PS C:\>
 ```
 
-# Debugging
+## Debugging
 
 Set breakpoints from CMDLine:
 ```
@@ -153,6 +160,6 @@ Clear breakpoints if any:
 PS C:\> Get-PSBreakpoint | Remove-PSBreakpoint
 ```
 
-# Tricks
+## Tricks
 
 * `Clear-Host`: Clear screen (= Linux <C-l>)
