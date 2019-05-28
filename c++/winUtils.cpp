@@ -17,5 +17,5 @@ bool processRunning(const std::string& pName)
 
 void display(const std::string& message, const std::string& title="")
 {
-    MessageBox(NULL, title.c_str(), message.c_str(), MB_OK); 
+    MessageBox(NULL, message.c_str(), title.c_str(), MB_OK); 
 }
