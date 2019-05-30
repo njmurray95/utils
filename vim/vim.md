@@ -26,9 +26,9 @@ Replace **word** within highlighted section:
 :'<,'>s/word/new/g
 ```
 
-Replace **word** within all active buffers:
+Replace **word** within all active buffers (and auto-write):
 ```
-:bufdo %s/word/new/ge 
+:bufdo %s/word/new/ge | update
 ```
 
 Appended Options:
