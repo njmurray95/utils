@@ -163,3 +163,4 @@ PS C:\> Get-PSBreakpoint | Remove-PSBreakpoint
 ## Tricks
 
 * `Clear-Host`: Clear screen (= Linux <C-l>)
+* Get Version: $PSVersionTable.PSVersion
