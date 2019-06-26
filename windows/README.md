@@ -1,4 +1,4 @@
-# Command Prompt (v. 10.0)
+# Command Prompt
 
 Basic commands:
 
