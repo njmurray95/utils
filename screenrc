@@ -7,6 +7,9 @@ altscreen on
 # Add mouse scrollback
 termcapinfo xterm* ti@:te@
 
+# Set scrollback limit
+defscrollback 5000
+
 # Use ` as the command key and type `` to send one `
 escape ``
 
