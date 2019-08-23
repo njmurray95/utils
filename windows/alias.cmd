@@ -12,5 +12,5 @@ doskey python3=C:\Program Files\Python36\python.exe
 ::  * Run multiple commands:
 ::    && is the "finish if successful operator", but CP interprets as separate from the doskey command
 ::    ^ is the escape character workaround
-::  * Weird symbol is ^G / CTRL-G / ALT+007, represents bell sound when echoed
+::  * Weird symbol/blank after echo is ^G / CTRL-G / ALT+007, represents bell sound when echoed
 doskey alert=echo  ^&^& msg %USERNAME% "Task done."
