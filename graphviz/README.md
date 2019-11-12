@@ -1,7 +1,6 @@
 # Graphviz
 
-## Create Dot Graph
-
+Create Dot Graph:
 ```
 $ dot -Tsvg [input] -o [output]
 ```
