@@ -37,6 +37,11 @@ Main options:
 * signal
 * variable
 
+### diff
+
+Diff two file systems or folders:
+`$ diff -rq A B`
+
 # coreutils
 
 ### timeout
