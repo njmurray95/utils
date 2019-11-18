@@ -29,4 +29,18 @@ Notes on bash.
 * `-ot`: file A is older than file B
 * `-er`: file A and file B are hard links to the same file
 
+i.e.,
+
+```
+if [ -e "$file" ]; then
+  # Do something
+else
+  # Do something else
+fi;
+```
+```
+[[ -d "$folder" ]] && # Do something
+```
+
+
 (See Linux Documentation Project [Bash Guide, Chapter 7.2](http://tldp.org/LDP/abs/html/fto.html))
