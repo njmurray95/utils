@@ -42,5 +42,30 @@ fi;
 [[ -d "$folder" ]] && # Do something
 ```
 
-
 (See Linux Documentation Project [Bash Guide, Chapter 7.2](http://tldp.org/LDP/abs/html/fto.html))
+
+## Getopts (argparsing)
+
+```
+while getopts <OPTSTRING> opt; do
+  case $opt in
+    <OPTION A> ) <DO SOMETHING> ;;
+    <OPTION B> ) <DO SOMETHING> ;;
+  esac
+done
+```
+
+`OPTSTRING` is a string of each single-character option with the following rules:
+* Any character preceded by `:` takes an optional argument, read into `$OPTARG`
+* `:` at the beginning of the string disables `getopt`'s automatic error checking
+
+i.e.,
+
+```
+while getopts "ab:" opt; do
+  case $opt in
+    a) echo "Flag a" ;;
+    b) echo "Flag b with $OPTARG" ;;
+  esac
+done
+```
