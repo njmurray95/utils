@@ -58,6 +58,7 @@ done
 `OPTSTRING` is a string of each single-character option with the following rules:
 * Any character preceded by `:` takes an optional argument, read into `$OPTARG`
 * `:` at the beginning of the string disables `getopt`'s automatic error checking
+* `?` cannot be specified in `OPTSTRING` but always matches to any wrong arguments
 
 i.e.,
 
@@ -66,6 +67,7 @@ while getopts "ab:" opt; do
   case $opt in
     a) echo "Flag a" ;;
     b) echo "Flag b with $OPTARG" ;;
+    \?) echo "Invalid argument: $OPTARG" >&2 && exit 1;;
   esac
 done
 ```
