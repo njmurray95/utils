@@ -2,10 +2,13 @@
 
 Basic commands:
 
-* cd -- change dir
-* dir -- list all files (equivalent to `ls`)
-* echo -- print text
-* path -- show current system path
+|     Windows Command     |     Linux Equivalent     |
+|:-----------------------:|:------------------------:|
+| cd                      | cd                       |
+| dir                     | ls                       |
+| echo                    | echo                     |
+| path                    | echo $PATH               |
+| schtasks                | crontab                  |
 
 ## Notes
 
