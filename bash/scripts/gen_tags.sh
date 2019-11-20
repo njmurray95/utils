@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Wrapper script to run ctags 
 set -o errexit
 
 # Reqs:
