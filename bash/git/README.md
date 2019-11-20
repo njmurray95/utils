@@ -104,6 +104,25 @@ Find all commits which affect only one file/folder
 $ git log --follow FILE
 ```
 
+## Stash
+
+Stash all changes (anything `add`ed but not `commit`ed will be `stash`ed un-`add`ed):
+```
+$ git stash
+```
+
+List all stashed changes that can be applied:
+```
+$ git stash list
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: 0fe0732 added number to log
+```
+
+Reapply:
+```
+git stash apply
+```
+
 ## Rebase
 
 One of git's most useful and powerful features is the rebase. Rebase technically merges one branch onto HEAD while preserving some history, but practically can be used for anything involving merging different commits, including retroactively editing previous commits.
