@@ -1,6 +1,6 @@
 # Jenkins
 
-Most folders above are structured as single-entry dirs for a Jenkinsfile showing a particular test-case. Although the convention of naming each "Jenkinsfile" is arbitrary, this is what Jenkins defaults to and is easier than creating my own convention.
+Most folders above are structured as single-entry dirs for a Jenkinsfile showing a particular test-case. Although the convention of naming each "Jenkinsfile" is arbitrary, this is the convention Jenkins defaults to and is easier than creating my own.
 
 # CLI Notes
 
