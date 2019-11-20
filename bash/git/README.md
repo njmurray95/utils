@@ -94,7 +94,12 @@ git-diff checks arg position not timestamp when doing a diff. I.e., `git diff re
 Find all files changed since hash COMMIT:
 
 ```
-$ git diff --name-only COMMIT
+$ git diff --name-only [<COMMIT>]
+```
+
+Compare only files that have been staged:
+```
+$ git diff --cached [<COMMIT>]
 ```
 
 ## Log
