@@ -15,7 +15,7 @@ config src README.txt
 $ git add project # Adds everything under project
 ```
 
-### Adding parts of a file
+---
 
 Sometimes it's useful to add only certain changes made to a file as part of one commit. The simplest way is to do this with `--patch` (`-p`):
 
@@ -46,6 +46,8 @@ Where each option means:
 * e manually edit the current hunk
 * ? print hunk help
 
+---
+
 ## Checkout
 
 Easiest way to make a new branch and update the remote:
@@ -60,6 +62,8 @@ Checkout the most recent commit before a given date:
 ```
 git checkout `git rev-list -1 --before="<date>" [branch]`
 ```
+
+---
 
 ## Config
 
@@ -115,12 +119,16 @@ Compare only files that have been staged:
 $ git diff --cached [<COMMIT>]
 ```
 
+---
+
 ## Log
 
 Find all commits which affect only one file/folder
 ```
 $ git log --follow FILE
 ```
+
+---
 
 ## Stash
 
@@ -149,6 +157,8 @@ Reapply stashed changes:
 ```
 git stash apply
 ```
+
+---
 
 ## Rebase
 
@@ -190,9 +200,9 @@ pick 56203ab third commit
 
 Git will drop us in the shell after the second commit but before the third commit. We can then edit the commit however we like with `git commit --amend`. To continue with the rebase use `git rebase --continue`.
 
-## Misc.
-
 ---
+
+## Misc.
 
 More than once I've found it useful to create a merge conflict for didactic purposes:
 ```
