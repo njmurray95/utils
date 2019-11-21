@@ -111,9 +111,14 @@ $ git log --follow FILE
 
 ## Stash
 
-Stash all changes (anything `add`ed but not `commit`ed will be `stash`ed un-`add`ed):
+Stash all changes (anything staged but not committed will be unstaged and stashed):
 ```
 $ git stash
+```
+
+Stash all unstaged changes (this is usually what you really want):
+```
+$ git stash --keep-index
 ```
 
 List all stashed changes that can be applied:
