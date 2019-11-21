@@ -54,6 +54,8 @@ $ git checkout -b [branch name]
 $ git push -u origin [branch name]
 ```
 
+---
+
 Checkout the most recent commit before a given date:
 ```
 git checkout `git rev-list -1 --before="<date>" [branch]`
@@ -61,23 +63,31 @@ git checkout `git rev-list -1 --before="<date>" [branch]`
 
 ## Config
 
-### Setting username and password
+Set username and password:
 ```
 $ git config [--local|--global] user.name VALUE
 $ git config [--local|--global] user.password VALUE
 ```
 
-### List all git configurations
+---
+
+List all git configurations:
 ```
 $ git config --list
 ```
 
-### Cache passwords for an hour (no need to retype on every command):
+---
+
+Cache passwords for an hour (no need to retype on every command):
 ```
 git config --global credential.helper 'cache --timeout=3600'
 ```
 
+---
+
 ## Diff
+
+Diff two commits:
 ```
 git diff [--options] <commit> <commit> [--] [<path>...]
 ```
@@ -91,11 +101,14 @@ $ git diff HEAD~2 HEAD -- a.txt
 
 git-diff checks arg position not timestamp when doing a diff. I.e., `git diff refA refB` will produce the opposite diff of `git diff refB refA`.
 
-Find all files changed since hash COMMIT:
+---
 
+Find all files changed since hash COMMIT:
 ```
 $ git diff --name-only [<COMMIT>]
 ```
+
+---
 
 Compare only files that have been staged:
 ```
@@ -103,8 +116,8 @@ $ git diff --cached [<COMMIT>]
 ```
 
 ## Log
-Find all commits which affect only one file/folder
 
+Find all commits which affect only one file/folder
 ```
 $ git log --follow FILE
 ```
@@ -121,6 +134,8 @@ Stash all unstaged changes (this is usually what you really want):
 $ git stash --keep-index
 ```
 
+---
+
 List all stashed changes that can be applied:
 ```
 $ git stash list
@@ -128,7 +143,9 @@ stash@{0}: WIP on master: 049d078 added the index file
 stash@{1}: WIP on master: 0fe0732 added number to log
 ```
 
-Reapply:
+---
+
+Reapply stashed changes:
 ```
 git stash apply
 ```
@@ -153,26 +170,31 @@ pick 56203ab third commit
 
 Once this file is saved git will fast-forward through each commit, applying the rebase command as it goes. Every command defaults to `pick`.
 
-**If something goes wrong, the bail is** `git rebase --abort`.
+---
 
-### Editing previous commits
+**If something goes wrong, bail with:** 
+```
+$ git rebase --abort
+```
 
-We can edit the second commit by saving this file:
+---
 
+Editing old commits by running a rebase. We can edit the second commit by saving this file:
 ```
 pick ecf349e first commit
 edit ea78103 second commit
 pick 56203ab third commit
 ```
 
+(Note the **edit** written for the second commit.)
+
 Git will drop us in the shell after the second commit but before the third commit. We can then edit the commit however we like with `git commit --amend`. To continue with the rebase use `git rebase --continue`.
 
 ## Misc.
 
-### Creating a merge conflict
+---
 
-More than once I've found it useful to force a merge conflict for didactic purposes:
-
+More than once I've found it useful to create a merge conflict for didactic purposes:
 ```
 $ git checkout -b conflict_branch
 $ # edit, save, commit the file to conflict
