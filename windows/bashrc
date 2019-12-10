@@ -1,0 +1,27 @@
+# Bashrc for WSL (Windows Subsystem for Linux)
+
+# Give me gvim
+gvim() { "/mnt/c/Program Files (x86)/Vim/vim80/gvim.exe" "$@"; }
+
+WSLROOTFS="C:\\Users\\nmurray\\AppData\\Local\\Packages\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\LocalState\\rootfs"
+
+WINROOTFS="/mnt/c/"
+WINHOME="${WINROOTFS}/Users/nmurray"
+
+# Launch gvim in a "nice" way that knows which files in Windows and which in WSL
+vim()
+{
+    for file in "$@"; do
+        # Find the path WSL thinks we have
+        wslpath=$(realpath $file 2>/dev/null)
+        # If it's in the Windows mount open the original path
+        if [[ "$wslpath" =~ "$WINROOTFS" ]]; then
+            gvim "$file"
+        else
+            gvim "${WSLROOTFS}/${wslpath}"
+        fi
+    done
+}
+
+# Format history as: Month/date - xx:xx:xx
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
