@@ -4,6 +4,11 @@
 ::  2. Add String Value entry with name "AutoRun" and full path to this file
 @echo off
 
+::::::::::::::::::::::::::::::::::::::::
+:: General
+
+doskey vim=gvim
+
 :: Python
 doskey python2=C:\Program Files\Python27\python.exe
 doskey python3=C:\Program Files\Python36\python.exe
