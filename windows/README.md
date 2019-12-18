@@ -12,6 +12,7 @@ Basic commands:
 | mkdir                   | mkdir                    |
 | del                     | rm                       |
 | fc                      | diff                     |
+| type nul > <file>       | touch <file>             |
 
 ## Commands
 
