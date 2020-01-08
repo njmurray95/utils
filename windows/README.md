@@ -7,6 +7,7 @@ Basic commands:
 | dir                     | ls                       |
 | echo                    | echo                     |
 | path                    | echo $PATH               |
+| pwd                     | echo %cd%                |
 | schtasks                | crontab                  |
 | doskey /history         | history                  |
 | mkdir                   | mkdir                    |
