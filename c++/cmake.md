@@ -4,7 +4,7 @@ Great functionality, horrible atrocious syntax.
 
 ---
 
-External Project ((Docs))[https://cmake.org/cmake/help/v3.0/module/ExternalProject.html]:
+External Project ((Docs)[https://cmake.org/cmake/help/v3.0/module/ExternalProject.html]):
 
 ```
 include(ExternalProject)
