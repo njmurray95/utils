@@ -4,7 +4,7 @@ Great functionality, horrible atrocious syntax.
 
 ---
 
-External Project ((Docs)[https://cmake.org/cmake/help/v3.0/module/ExternalProject.html]):
+**External Project** ([Docs](https://cmake.org/cmake/help/v3.0/module/ExternalProject.html)):
 
 ```
 include(ExternalProject)
@@ -38,4 +38,6 @@ ExternalProject_Add(
 ```
 
 The `<SOURCE_DIR>` in the above accesses the default option for the code install used by `ExternalProject_Add`. (That is the real syntax.) For a full example of such options, see the CMake docs above.
+
+---
     
