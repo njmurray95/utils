@@ -41,3 +41,10 @@ The `<SOURCE_DIR>` in the above accesses the default option for the code install
 
 ---
     
+**Debug**
+    
+Print-debug some CMake variable:
+
+```
+message(FATAL_ERROR "${VAR}")
+```
