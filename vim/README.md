@@ -36,3 +36,12 @@ Appended Options:
 * `i` -- case "insensitive" match
 * `c` -- ask for "confirmation" before each replace
 * `e` -- no "error" if pattern not found
+
+## Misc.
+
+List available filetypes:
+
+```
+:echo glob($VIMRUNTIME . '/ftplugin/*.vim')
+:echo glob($VIMRUNTIME . '/syntax/*.vim')
+```
