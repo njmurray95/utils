@@ -52,3 +52,12 @@ Infinity
 false
 ```
 
+## Strings
+
+All strings are unicode (UTF-16).
+
+```
+> 'hello'.length
+5
+```
+
