@@ -24,3 +24,31 @@ All numbers are "double-precision 64-bit format IEEE 754 values" -- no integers.
 false
 ```
 
+`NaN` ("Not a Number") is the infamous sludge value for botched math:
+
+```
+> parseInt('10')
+10
+> parseInt('h')
+NaN
+> NaN + 5
+NaN
+> isNaN(NaN)
+true
+```
+
+JavaScript also has values for infinity:
+
+```
+> 1 / 0
+Infinity
+> -1 / 0
+-Infinity
+> Infinity + 5
+Infinity
+> Infinity / 6
+Infinity
+> isFinite(1/0)
+false
+```
+
