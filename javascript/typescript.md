@@ -30,3 +30,10 @@ Default:
 ```
 $ tsc <files>
 ```
+
+## Files
+
+* `*.ts`: TypeScript source files
+* `*.tsx`: TypeScript source files with JSX enabled
+* `*.d.ts`: ["Declaration" files](https://en.wikipedia.org/wiki/TypeScript#Declaration_files) that declare types of JavaScript files so they can be statically-checked in TypeScript
+* `*.js`: JavaScript source files, TypeScript output files
