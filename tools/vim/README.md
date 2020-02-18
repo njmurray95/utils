@@ -8,9 +8,26 @@
 
 ## Installation
 
-Very few machines don't have `vim`; very few machines have the latest `vim`.
+Very few machines don't have `vim`; very few machines have the latest `vim`. It is usually worthwhile to acquire version 8 or above. Among other features:
 
-Windows is a special case -- it generally comes with `vim` and `gvim`, `vim` with a GUI wrapper.  
+* Built-in plugin support
+* Asynchronous I/O
+
+On Linux and OSX, vim will automatically read `~/.vimrc` or `~/.vim/vimrc` for config.
+
+Windows is a special case -- it generally comes with `vim` and `gvim`, `vim` with a GUI wrapper. Vim looks for config files in `~/.vimrc`, `~/.gvimrc`, `~/vimfiles/vimrc`, and `~/vimfiles/gvimrc`.
+
+## Plugins
+
+Vim 8 and above have automatic support for plugins -- no need to first configure a third-party plugin manager. The folders can get messy, but vim will generally look in `VIMFOLDER/pack/<PLUGIN>/start` to run a plugin. I.e., to install the TypeScript syntax plugin on a Linux system, this should suffice:
+
+```
+$ mkdir -p ~/.vim/pack/typescript/start
+$ cd ~/.vim/pack/typescript/start
+$ git clone https://github.com/leafgarland/typescript-vim.git
+```
+
+(Where vim on Windows will look under `~/vimfiles/pack` etc.)
 
 ## Common Uses
 
