@@ -13,6 +13,9 @@ core.*
 # Ctags output
 tags
 
+# OSX
+.DS_Store
+
 # Python compiled
 *.pyc
 
