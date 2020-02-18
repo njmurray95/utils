@@ -1,20 +1,20 @@
-# Vim Notes
+# Vim
 
-Automatically change line endings (see 'fileformat', 'ff'):
-```
-:set ff=dos
-:set ff=unix
-:set ff=mac
-```
+>  Vim is a highly configurable text editor for efficiently creating and changing any kind of text.
 
-Do an in-buffer vim-diff:
-```
-:split
-<open both files>
-:diffthis
-```
+> -- Vim Homepage: https://www.vim.org/
 
-## Find/Replace Tricks
+
+
+## Installation
+
+Very few machines don't have `vim`; very few machines have the latest `vim`.
+
+Windows is a special case -- it generally comes with `vim` and `gvim`, `vim` with a GUI wrapper.  
+
+## Common Uses
+
+### Find/Replace Tricks
 
 Replace **word** within file:
 ```
@@ -44,4 +44,18 @@ List available filetypes:
 ```
 :echo glob($VIMRUNTIME . '/ftplugin/*.vim')
 :echo glob($VIMRUNTIME . '/syntax/*.vim')
+```
+
+Automatically change line endings (see `fileformat`, `ff`):
+```
+:set ff=dos
+:set ff=unix
+:set ff=mac
+```
+
+Do an in-buffer vim-diff:
+```
+:split
+<open both files>
+:diffthis
 ```
