@@ -1,5 +1,14 @@
 # Powershell
 
+## Copy-Paste
+
+```
+PS C:\> set-clipboard "hello world"
+PS C:\> get-clipboard
+hello world
+PS C:\>
+```
+
 ## Variables
 
 ```
