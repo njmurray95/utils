@@ -1,12 +1,41 @@
 # Git
 
+>  Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
+
+> -- Git Homepage: https://git-scm.com/
+
+> Git development began in April 2005, after many developers of the Linux kernel gave up access to BitKeeper, a proprietary source-control management (SCM) system that they had formerly used to maintain the project. The copyright holder of BitKeeper, Larry McVoy, had withdrawn free use of the product after claiming that Andrew Tridgell had created SourcePuller by reverse engineering the BitKeeper protocols. The same incident also spurred the creation of another version-control system, Mercurial.
+
+> Linus Torvalds wanted a distributed system that he could use like BitKeeper, but none of the available free systems met his needs. Torvalds cited an example of a source-control management system needing 30 seconds to apply a patch and update all associated metadata, and noted that this would not scale to the needs of Linux kernel development, where synchronizing with fellow maintainers could require 250 such actions at once. [...]
+
+> Torvalds sarcastically quipped about the name git (which means unpleasant person in British English slang): "I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'git'." The man page describes Git as "the stupid content tracker".
+
+> -- Wikipedia: https://en.wikipedia.org/wiki/Git
+
 Git can be a right pain. The documentation is too verbose for most cases. Commands are poorly organized.
 
 In many cases the best solution involves working around git entirely, and cloning fresh before adding backups of necessary files will usually solve any issues.
 
 Most man pages can be found by searching for individual commands, i.e., `man git-commit`.
 
-## Add
+## Installation
+
+Many systems have git. For those that don't, grab the suitable install from the Git Homepage, git does not have many fussy version requirements.
+
+To get git installed on any project, simply run:
+
+```
+$ git init
+```
+
+## Files
+
+* `.git/`: Folder for git metadata
+* `.gitignore`: A list of string patterns of filenames that git will ignore (i.e., not track changes to)
+
+## Notes
+
+### Add
 
 Git is greedy about adding subdirectories, i.e. will add everything in any specified folder recursively:
 ```
@@ -48,7 +77,7 @@ Where each option means:
 
 ---
 
-## Checkout
+### Checkout
 
 Easiest way to make a new branch and update the remote:
 ```
@@ -65,7 +94,7 @@ git checkout `git rev-list -1 --before="<date>" [branch]`
 
 ---
 
-## Config
+### Config
 
 Set username and password:
 ```
@@ -89,7 +118,7 @@ git config --global credential.helper 'cache --timeout=3600'
 
 ---
 
-## Diff
+### Diff
 
 Diff two commits:
 ```
@@ -121,7 +150,7 @@ $ git diff --cached [<COMMIT>]
 
 ---
 
-## Log
+### Log
 
 Find all commits which affect only one file/folder
 ```
@@ -130,7 +159,7 @@ $ git log --follow FILE
 
 ---
 
-## Stash
+### Stash
 
 Stash all changes (anything staged but not committed will be unstaged and stashed):
 ```
@@ -160,7 +189,7 @@ git stash apply
 
 ---
 
-## Rebase
+### Rebase
 
 One of git's most useful and powerful features is the rebase. Rebase technically merges one branch onto HEAD while preserving some history, but practically can be used for anything involving merging different commits, including retroactively editing previous commits.
 
@@ -202,7 +231,7 @@ Git will drop us in the shell after the second commit but before the third commi
 
 ---
 
-## Misc.
+### Misc.
 
 More than once I've found it useful to create a merge conflict for didactic purposes:
 ```
