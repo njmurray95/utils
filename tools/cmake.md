@@ -1,6 +1,27 @@
 # CMake
 
-Great functionality, horrible atrocious syntax.
+> CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generate native makefiles and workspaces that can be used in the compiler environment of your choice. 
+
+> -- CMake Homepage: https://cmake.org/
+
+Great functionality, horrible atrocious syntax. CMake will build systems that build systems. It can make Makefiles for Linux, Visual Studio Projects for Windows, etc. etc. This means that (in theory) one build system to rule them all, one set of files that works cross-platform.
+
+The developers of CMake opted not to configure projects with an existing programming language, but instead opted for their own CMake-specific syntax, which is at the root of most frustrations with the software.
+
+## Installation
+
+Get the most recent version from the [CMake official download page](https://cmake.org/download/). CMake changes often enough that old versions cannot build projects configured for newer versions. In fact, many CMake projects make this explicit from the very first lines of `CMakeLists.txt`:
+
+```
+cmake_minimum_requires(VERSION 3.16.0)
+```
+
+## Files
+
+* `CMakeLists.txt`: The main file(s) used to specify how to build targets in the current folder and its subfolders
+* `CMakeCache.txt`: A cachefile used by CMake to avoid re-running certain config scripts. This file needs to be deleted between runs if running CMake with different arguments. (CMake assumes you *don't* want idempotent CLI commands.)
+
+## Notes
 
 ---
 
