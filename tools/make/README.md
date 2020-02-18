@@ -1,14 +1,22 @@
-# GNU Make and Makefiles
+# GNU Make
+
+> GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 
+
+> -- Make Homepage: https://www.gnu.org/software/make/
+
+Make is for building projects. A wrapper around the compiler It is very old and crufty and not very resilient, highly platform-dependent. Still it's the simplest option for building small projects that (definitely, surely) will not become very complicated. 
+
+## Installation
+
+Most Unix systems probably have it, since compiling is such a fundamental unit of computer organization. Windows does not. The easiest way to get it is to use chocolatey, instead of trusting pre-compiled builds or building from source.
 
 ```
-                 _
- _ __ ___   __ _| | _____
-| '_ ` _ \ / _` | |/ / _ \
-| | | | | | (_| |   <  __/
-|_| |_| |_|\__,_|_|\_\___|
+> choco install make
 ```
 
-* Executable: `/usr/bin/env make`
+## Files
+
+* `Makefile` or `makefile`: the main configure file for a Make project
 
 ## Notes
 
