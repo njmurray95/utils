@@ -13,5 +13,5 @@ The terminal and the shell program it runs are almost as old as the computer. Ov
 | Bash                 | pacman install xclip | echo "" | xclip      | xclip                 | ---                  |
 | Powershell           | ---                  | Set-Clipboard        | Get-Clipboard         | ---                  |
 |Windows Command Prompt| ---                  | ---                  | ---                   | ---                  |
-| Cygwin               | ---                  | cat /dev/clipboard   |                       | ---                  |
+| Cygwin               | ---                  |echo "" | /dev/clipboard| cat /dev/clipboard    | ---                  |
 
