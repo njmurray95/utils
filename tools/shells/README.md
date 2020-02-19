@@ -10,8 +10,8 @@ The terminal and the shell program it runs are almost as old as the computer. Ov
 
 |                      | Setup                | Copy                 |  Paste                | Notes                |
 |:--------------------:|:--------------------:|:--------------------:|:---------------------:|:--------------------:|
-| Bash                 | pacman install xclip |`echo "" | xclip     `| xclip                 | ---                  |
+| Bash                 | pacman install xclip | pipe to xclip        | xclip                 | ---                  |
 | Powershell           | ---                  | Set-Clipboard        | Get-Clipboard         | ---                  |
 |Windows Command Prompt| ---                  | ---                  | ---                   | ---                  |
-| Cygwin               | ---                  |`echo "" | /dev/clipboard`| cat /dev/clipboard    | ---                  |
+| Cygwin               | ---                  |pipe to /dev/clipboard| cat /dev/clipboard    | ---                  |
 
