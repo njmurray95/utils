@@ -1,9 +1,14 @@
 # Plugins
 
-A list of plugins to use or investigate.
+## Syntax checkers:
 
+* Typescript: https://github.com/leafgarland/typescript-vim
+
+## Utilities
+* Vim Surround: https://github.com/tpope/vim-surround
+
+## Misc
 * vim-instant-markdown
 * vim-pencil
-* vim-surround
 * limelight
 * Goyo
