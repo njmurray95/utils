@@ -30,8 +30,9 @@ $ git init
 
 ## Files
 
-* `.git/`: Folder for git metadata
-* `.gitignore`: A list of string patterns of filenames that git will ignore (i.e., not track changes to)
+* `~/.gitconfig`: Global config file for all git projects
+* `.git/`: Per-project folder for git metadata
+* `.gitignore`: per-project list of string patterns of filenames that git will ignore (i.e., not track changes to)
 
 ## Notes
 
