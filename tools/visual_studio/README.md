@@ -22,3 +22,12 @@ The `settings.json` file has support for many vim plugins built-in:
   "vim.useSystemClipboard": true
 }
 ```
+
+## Vim
+
+This is the official vim plugin: https://github.com/VSCodeVim/Vim
+
+Installation is as easy as:
+
+1. Opening the installer here: https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+2. Opening the resulting download with the proper version of VS
