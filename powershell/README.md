@@ -1,5 +1,23 @@
 # Powershell
 
+# Command quicklist
+
+* `Get-ChildItem` (`gci`, `ls`, `dir)
+* `Set-Location` (`sl`, `cd`)
+* `Remove-Item` (`rm`)
+* `New-Item` (`ni`)
+* `Copy-Item` (`cp`)
+* `Move-Item` (`mv`)
+* `Write-Output` (`write`, `echo`)
+* `Get-Content` (`gc`, `cat`)
+
+* `Select-String` (`sls`)
+* `Get-Help`
+* `Measure-Object` (`measure`)
+
+* `Explorer`: Open file explorer on arg
+
+
 ## Copy-Paste
 
 ```
