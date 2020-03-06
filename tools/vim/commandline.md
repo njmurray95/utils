@@ -1,4 +1,4 @@
-# ed and ex
+# Command Line Mode (`:h :`, `:h cmdline-mode`)
 
 Vim ultimately descends from `ed` -- the "standard text editor," one of the first parts of the Unix operating system developed in 1969. `ex` was developed as an *ex*tended version of `ed`, and `vi` was developed as the *vi*sual mode of `ex`. `vim` is *vi* *im*proved.
 
@@ -6,7 +6,7 @@ Vim ultimately descends from `ed` -- the "standard text editor," one of the firs
 
 From this heritage vim acquires a powerful commandline syntax available through the `:` key. (see `:help :`, `:help cmdline`). The full robustness of this command set is almost always missing from vim emulations running in other editors.
 
-## : commands (`:h :`)
+## Basic : commands
 
 `:` commands generally look like this:
 
@@ -93,6 +93,42 @@ Run the python script currently in the buffer:
 :!python %
 ```
 
+## g and v (`:h :g`, `:h :v`)
 
+Vim adds `:g` and `:v` for combining commands with pattern-matching:
 
+```
+:[range]g[lobal]/{pattern}/[cmd]
+```
 
+`:g` evaluates `[cmd]` on lines in `[range]` that match `{pattern}`; `:v` evaluates on lines that do *not* match ('v' for con**V**erse).
+
+By default `[range]` is the whole file and `[cmd]` is `:p` (print).
+
+Some examples:
+
+Delete all lines containing `cout` statements:
+```
+:g/cout/d
+```
+
+## norm and exe (`:h :norm`, `:h :exe`)
+
+```
+:norm[al][!] {commands}
+```
+
+`:norm` is used to specify normal mode commands in the command-line. `:norm dd` is equivalent to typing `dd` in normal mode on the cursor's current position. 
+
+```
+:exe[cute] {expr1} ..
+```
+
+`:exe` is used to run string expressions as if they were `ex` commands. `:exe '25p'` is equivalent to `:25p`. `:exe` allows commands to be typed without regard to control characters -- pipes allowed, escape chars not needed.
+
+## Operating across buffers
+
+* `:bufdo`
+* `:windo`
+* `:tabdo`
+* `:argdo`
