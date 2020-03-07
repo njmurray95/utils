@@ -1,0 +1,1 @@
+The files in this folder are simple C++ edgecases. Many are not intended to be run, but to expose the compiler error that results in certain cases. Others are intended to showcase some novel or unexpected result from the C++ standard. Several of these files started life as demos to show students what would happen in "What If" cases. 

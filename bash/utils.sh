@@ -1,28 +1,56 @@
 #!/usr/bin/env bash
 
-# Utilities  for Bash
+# Permission utilities
 
-# True when the user is root
-isRoot() {
+isRoot()
+{
     [ "$EUID" -eq 0 ]
 }
 
-# True in terminal false in script
-isInteractive() {
+isInteractive()
+{
+    # True in terminal false in script
     [[ "$-" == *i* ]]
 }
 
-# Debug: Three-Fingered Claw. See here:
-# https://stackoverflow.com/questions/1378274/#25515370
+onWindows()
+{
+    [[ `uname -s` == "MINGW"* ]] ||
+    [[ `uname -s` == "CYGWIN"* ]]
+}
+
+onLinux()
+{
+    [[ `uname -s` == "Linux"* ]]
+}
+
+onMac()
+{
+    [[ `uname -s` == "Darwin"* ]]
+}
+
+# Print Utilities
+
+# Three-Fingered Claw. See https://stackoverflow.com/questions/1378274/#25515370
 yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
 try() { "$@" || die "cannot $*"; }
 
-# True when executable in path false otherwise
-exists() {
+exists()
+{
+    # True when executable in path false otherwise
     which "$1" >/dev/null 2>&1
 }
 
-require() {
+require()
+{
+    # Throw if named executable not in path
     exists "$1" || die "No $1 in path."
+}
+
+bool()
+{
+    # "Casts" the output of a command's success status to true/false
+    # i.e., `bool onWindows`, `bool onLinux`
+    "$@" && echo "true" || echo "false"
 }
