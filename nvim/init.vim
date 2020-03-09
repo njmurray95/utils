@@ -1,13 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"    __      __ _
-"    \ \    / /|_| ________
-"     \ \  / /  _ |  _   _ \
-"      \ \/ /  | || | | | | |
-"       \__/   |_||_| |_| |_|
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => General (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
 
@@ -20,6 +12,9 @@ Plug 'kshenoy/vim-signature'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+"IDE Features
+Plug 'dense-analysis/ale'
+
 " Aesthetics
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'flazz/vim-colorschemes'
@@ -27,29 +22,46 @@ Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 "Reload vimrc after editing
-augroup reload_vimrc " {{{
+augroup reload_vimrc
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }}}
+augroup END
 
 "Set persistent undo
 set undofile
 
-color Monokai
-
 " TODO :h viminfo
 set viminfo+=n$HOME/.vim/viminfo
 
-"Set vim to use system clipboard
+"System clipboard -- copy-paste plays with other programs
 set clipboard=unnamed
-
-"Saving when not sudo
-cnoremap w!! w !sudo tee > /dev/null %
 
 nnoremap <silent> ]b :bnext<cr>
 nnoremap <silent> [b :bprev<cr>
 
+nnoremap <silent> ]t :tabn<cr>
+nnoremap <silent> [t :tabp<cr>
+
+"Sane escape in term mode
 tnoremap <Esc> <C-\><C-n>
+
+"A + hjkl switches windows
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
+tnoremap <A-h> <C-w>h
+tnoremap <A-j> <C-w>j
+tnoremap <A-k> <C-w>k
+tnoremap <A-l> <C-w>l
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"   => Aesthetics (XXX)
+"Cursor -- see :h cursor-style
+set guicursor=a:block,a:blinkwait1000-blinkon1000-blinkoff100
+
+color Monokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => User Interface (XXX)
@@ -66,7 +78,6 @@ set mouse=nvc                   "Enable mouse on normal, visual, command
 set scrolloff=4                 "Keep cursor 4 lines from edge
 set sidescrolloff=4             "Don't scroll any closer left/right
 
-set wildmenu                    "command line wild menu
 set wildmode=longest,list,full  "autocomplete longest, list all, cycle
 set wildignore+=*.o,*.git,*.swp "filetypes for autocomplete to ignore
 
@@ -88,11 +99,10 @@ set timeoutlen=500              "Set timeout waiting for input (millisec)
 set lazyredraw                  "Don't update display unless necessary
 set hidden                      "Hide unsaved buffers when switching
 
-set autochdir                   "Vim's pwd is the file's basename
+set autochdir                   "Vim's pwd is the open file's basename
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Keyboard and Mappings (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Tab now doubles as autocomplete
 inoremap <Tab> <c-r>=TabOrAuto()<cr>
@@ -113,15 +123,15 @@ augroup enter
     autocmd CmdwinLeave * noremap <CR> :
 augroup END
 
-"Backspace jumps to previous location, reversing Tab
-nnoremap <BS> <C-o>
-
 "Set Y to match C and D
 nnoremap Y y$
 
 "Scrolling does not skip wrapped lines
 noremap j gj
 noremap k gk
+
+"Saving when not sudo
+cnoremap w!! w !sudo tee > /dev/null %
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Mappings
@@ -159,7 +169,6 @@ set listchars=tab:>-,space:_,eol:$
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Search and Replace (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set ignorecase                  "Search ignores case
 set smartcase                   "Search matches case on capital letters
@@ -171,7 +180,6 @@ nnoremap <leader>l <esc>:nohlsearch<CR><C-l>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Text and spacing (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Everything adjusts to 4 spaces
 set tabstop=4                   "Tab has length 4 spaces
@@ -205,7 +213,6 @@ augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Buffers, Windows, and Tabs (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set splitbelow                  "Open new panes in bottom
 set splitright                  "Open new panes to right
@@ -214,7 +221,6 @@ set showtabline=2               "Always show tabs list
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Modes (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! MakefileMode()
     " Make requires tab characters
@@ -242,7 +248,6 @@ endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => Functions (XXX)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Return <C-n> for autocomplete on words, <tab> otherwise
 function! TabOrAuto()
@@ -265,5 +270,3 @@ function! ToggleNumber()
         set number
     endif
 endfunction
-
-"EOF
