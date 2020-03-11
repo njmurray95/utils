@@ -5,3 +5,6 @@ qqvUW@qq@q
 
 " Append each line with line number
 :s/^/\=line('.').' '/g<CR>
+
+" Join all lines in file
+:%j<CR>
