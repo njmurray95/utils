@@ -8,3 +8,7 @@ qqvUW@qq@q
 
 " Join all lines in file
 :%j<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Matches
+:g/\v^(<Tab><Tab>+)\1+</            " Match all lines containing non-prime number of tab chars
