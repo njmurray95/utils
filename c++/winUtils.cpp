@@ -9,7 +9,6 @@
 // Equivalent to fork + exec
 void fork(const std::string& command)
 {
-    
     // Process overhead
     STARTUPINFO si;
     PROCESS_INFORMATION pi;
