@@ -27,6 +27,8 @@ std::string openFileBrowser(const std::string dir)
     ofn.nMaxFileTitle = 0 ;
     ofn.lpstrInitialDir= dirname.c_str();
     ofn.Flags = OFN_PATHMUSTEXIST|OFN_FILEMUSTEXIST ;
+    ofn.lpstrTitle = "Title";
+    
     GetOpenFileName( &ofn );
 
     return std::string(ofn.lpstrFile);
