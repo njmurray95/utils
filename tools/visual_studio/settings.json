@@ -1,0 +1,19 @@
+{
+  "vim.surround": true,
+  "vim.sneak": true,
+  "vim.easymotion": true,
+  "vim.commentary": true,
+
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+
+
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "true",
+
+  "editor.formatOnPaste": true,
+
+  "editor.suggest.showFunctions": true,
+  "editor.tabCompletion": "on"
+
+}
