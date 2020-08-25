@@ -34,7 +34,31 @@ $ git init
 * `.git/`: Per-project folder for git metadata
 * `.gitignore`: per-project list of string patterns of filenames that git will ignore (i.e., not track changes to)
 
-## Notes
+## Config
+
+Set username and password:
+```
+$ git config [--local|--global] user.name VALUE
+$ git config [--local|--global] user.password VALUE
+```
+
+Update https certificates:
+```
+$ openssl s_client -connect <DOMAIN>:443 -showcerts </dev/null 2>/dev/null | openssl x509 -outform PEM >mi-gitlab.pem
+$ git config --global /full/path/to/mi-gitlab.pen
+```
+
+List all git configurations:
+```
+$ git config --list
+```
+
+Cache passwords for an hour (no need to retype on every command):
+```
+git config --global credential.helper 'cache --timeout=3600'
+```
+
+---
 
 ### Add
 
@@ -91,30 +115,6 @@ $ git push -u origin [branch name]
 Checkout the most recent commit before a given date:
 ```
 git checkout `git rev-list -1 --before="<date>" [branch]`
-```
-
----
-
-### Config
-
-Set username and password:
-```
-$ git config [--local|--global] user.name VALUE
-$ git config [--local|--global] user.password VALUE
-```
-
----
-
-List all git configurations:
-```
-$ git config --list
-```
-
----
-
-Cache passwords for an hour (no need to retype on every command):
-```
-git config --global credential.helper 'cache --timeout=3600'
 ```
 
 ---
