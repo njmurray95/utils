@@ -58,6 +58,12 @@ Cache passwords for an hour (no need to retype on every command):
 git config --global credential.helper 'cache --timeout=3600'
 ```
 
+Ignore SSL cert check:
+
+```
+git config --local http.sslVerify false
+```
+
 ---
 
 ### Add
