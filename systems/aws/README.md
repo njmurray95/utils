@@ -19,4 +19,5 @@ See the entries under `boto` and `cli`.
 
 ## Use
 
-...
+
+* Cost Reports: EC2 Dashboard -> Reports
