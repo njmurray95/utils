@@ -1,0 +1,24 @@
+# NOTE: Fill in parameters, move file to `~/.okta_aws_login_config`, and delete this line
+[DEFAULT]
+okta_org_url = <LINK TO ORG OKTA LOGIN PAGE HERE>
+okta_auth_server = 
+client_id = 
+gimme_creds_server = appurl
+aws_appname = 
+aws_rolename = <ARN ROLENAME HERE>
+write_aws_creds = True
+cred_profile = default
+okta_username = <USERNAME FOR OKTA LOGIN>
+app_url = <LINK TO AWS OKTA APP HERE>
+resolve_aws_alias = False
+include_path = False
+preferred_mfa_type = token
+remember_device = True
+aws_default_duration = 43200
+device_token = 
+output_format = export
+
+# Extra profiles can be added below and used with `gimme-aws-creds -profile [NAME]
+# 
+# [NAME]
+# okta_org_url = <...>
