@@ -8,7 +8,7 @@
 >
 > -- Project github: https://github.com/Nike-Inc/gimme-aws-creds
 
-GAWSC uses Okta to generate temporary AWS credentials. Bypasses a lot of the hassle of key auth / TFA. 
+GAWSC uses Okta to generate temporary AWS credentials. Bypasses a lot of the hassle of key auth / TFA if you have Okta credentials and don't want to config a set for AWS.
 
 * Source / Docs / Guide: https://github.com/Nike-Inc/gimme-aws-creds
 
