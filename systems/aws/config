@@ -1,0 +1,3 @@
+# ~/.aws/config
+[default]
+us-gov-west-1
