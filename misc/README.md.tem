@@ -1,0 +1,28 @@
+(Template Readme for new program entries. C/P and fill in blanks below.)
+
+# <Program Name>
+
+> <Brief description>
+>
+> -- <Link to description source>
+
+* Source: <SOURCE if any>
+* Docs: <DOCS if any>
+* Guide: <GUIDE if any>
+
+## Warnings
+
+<Common pratfalls, issues, non-obvious concerns, if any>
+
+## Installation
+
+<Instructions on how to install>
+
+## Files
+
+* <List of files used/created by program>
+
+## Use
+
+<Common instructions / warnings / concerns>
+
