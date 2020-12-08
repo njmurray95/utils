@@ -29,7 +29,3 @@ You can also limit these again:
 >>> for instance in resource.instances.filter(Filters=filters).limit(1) :
     print(instance.id)
 ```
-
-# Cost Reports:
-
-EC2 Dashboard -> Reports
