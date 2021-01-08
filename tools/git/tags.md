@@ -17,3 +17,9 @@ To push tags:
 ```
 $ git push --follow-tags
 ```
+
+To checkout an old tag:
+
+```
+$ git checkout tags/<tagname>
+```
