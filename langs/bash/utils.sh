@@ -36,6 +36,9 @@ yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
 try() { "$@" || die "cannot $*"; }
 
+# Echo cmd before execution
+verbose() { echo "$*"; "$@"; }
+
 exists()
 {
     # True when executable in path false otherwise
