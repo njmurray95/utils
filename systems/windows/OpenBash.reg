@@ -1,3 +1,4 @@
+; Add a prompt for opening a bash prompt when right-clicking in File Explorer
 Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\bash]
