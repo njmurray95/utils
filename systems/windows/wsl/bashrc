@@ -8,6 +8,14 @@ WSLROOTFS="C:\\Users\\nmurray\\AppData\\Local\\Packages\\CanonicalGroupLimited.U
 WINROOTFS="/mnt/c/"
 WINHOME="${WINROOTFS}/Users/nmurray"
 
+####################
+# Utils
+
+# "Three-fingered claw" from Stack Overflow; "try" is essential
+yell() { echo "$0: $*" >&2; }
+die() { yell "$*"; exit 111; }
+try() { "$@" || die "cannot $*"; }
+
 # Launch gvim in a "nice" way that knows which files in Windows and which in WSL
 vim()
 {
@@ -23,5 +31,13 @@ vim()
     done
 }
 
+# Transfer aws creds from the WSL session to the Windows session
+aws_creds()
+{
+    gimme-aws-creds
+    try cp ~/.aws/credentials /mnt/c/Users/nmurray/.aws/credentials
+}
+
 # Format history as: Month/date - xx:xx:xx
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+
