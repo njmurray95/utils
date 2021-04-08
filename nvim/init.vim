@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => General (XXX)
 
-call plug#begin(stdpath('config') . '/plugged')
+call plug#begin(stdpath('data') . '\plugged')
 
     " Vim Syntax additions
     Plug 'tpope/vim-surround'
@@ -13,7 +13,7 @@ call plug#begin(stdpath('config') . '/plugged')
     "Plug 'junegunn/fzf.vim'
 
     "IDE Features
-    Plug 'dense-analysis/ale'
+    "Plug 'dense-analysis/ale'
 
     " Aesthetics
     Plug 'nathanaelkane/vim-indent-guides'
@@ -32,9 +32,6 @@ augroup END
 
 "Set persistent undo
 set undofile
-
-" TODO :h viminfo
-set viminfo+=n$HOME/.vim/viminfo
 
 "System clipboard -- copy-paste plays with other programs
 set clipboard=unnamed
@@ -70,8 +67,7 @@ set autochdir                   "Vim's pwd is the open file's basename
 "Cursor -- see :h cursor-style
 set guicursor=a:block,a:blinkwait1000-blinkon1000-blinkoff100
 
-"colorscheme goldfish
-colorscheme slate
+colorscheme fahrenheit
 
 highlight CursorLine guibg=#444454
 highlight CursorColumn guibg=#444454
