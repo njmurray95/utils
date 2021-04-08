@@ -7,7 +7,7 @@
 A vim rewrite with new or different features. Many have since been backported into vim, but the deprecation of vimscript in favor of Lua is worth the hassle of maintaining two sets of dotfiles between neovim and vim.
 
 Documentation: https://neovim.io/doc/user/index.html
-(Also try: `:starting` and `:help`)
+(Also try: `:help` and `:help starting`)
 
 # General 
 
