@@ -1,12 +1,23 @@
 # Lua
 
+>  Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
+>
+> -- https://www.lua.org/about.html
+
+Lua is a Portuguese scripting language written in a cool 20K lines of C. 
+
+# Installation
+
+A modern linux/unix system will likely already have lua. If not, installing the `lua` or `lua5.3` packages is the easiest bet.
+
+# Objects
+
 * compiler: `luac`
 * interpreter: `lua`
-# Lua
 
 ## Interpreter
 
-* The Lua interpreter does not normally display values:
+* Old Lua interpreters does not normally display values:
 ```
 > "hello world"
 stdin:1: unexpected symbol near '"hello world"'
