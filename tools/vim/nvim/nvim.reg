@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; Add a right-click option for opening neovim in file explorer
+
 [HKEY_CLASSES_ROOT\*\shell\nvim-qt]
 @="Edit with Neovim"
 "Icon"="\"C:\\tools\\neovim\\Neovim\\bin\\nvim-qt.exe\""
