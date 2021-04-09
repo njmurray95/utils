@@ -1,6 +1,7 @@
-:: Most of these commands 
+:: Useful aliases and commands working in the Windows CMD Prompt
+:: Change as needed.
 
-:: To set up automatic loading:
+:: To set up automatic loading (TODO: Transform into a .reg file):
 ::  1. regedit 
 ::  2. HKEY_CURRENT_USER\Software\Microsoft\Command Processor
 ::  2. Add String Value entry with name "AutoRun" and full path to this file
@@ -14,9 +15,6 @@
 :: $G -> '>'
 :: $S -> (space)
 prompt $P$G$S
-
-:: The "^G" gets mangled by certain text editors. It represents the one character <CTRL-G>
-:: doskey alert=echo ^G ^&^& msg %USERNAME% "Task done."
 
 :: vim / neovim
 doskey nvim=nvim-qt.exe $*
