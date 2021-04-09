@@ -1,3 +1,5 @@
+:: Most of these commands 
+
 :: To set up automatic loading:
 ::  1. regedit 
 ::  2. HKEY_CURRENT_USER\Software\Microsoft\Command Processor
@@ -7,7 +9,17 @@
 ::::::::::::::::::::::::::::::::::::::::
 :: General
 
-doskey vim=gvim
+:: See `prompt /?`
+:: $P -> Drive and Path
+:: $G -> '>'
+:: $S -> (space)
+prompt $P$G$S
+
+:: The "^G" gets mangled by certain text editors. It represents the one character <CTRL-G>
+:: doskey alert=echo ^G ^&^& msg %USERNAME% "Task done."
+
+:: vim / neovim
+doskey nvim=nvim-qt.exe $*
 
 :: Python
 doskey python2=C:\Program Files\Python27\python.exe
