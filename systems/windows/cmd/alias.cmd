@@ -21,7 +21,7 @@
 :: $_ -> Carriage return
 :: $G -> '>'
 :: $S -> Space
-prompt $P$S$C$D$T$F$_$G$S
+prompt $P$S$C$D$B$T$F$_$G$S
 
 :: vim / neovim
 doskey nvim=nvim-qt.exe $*
