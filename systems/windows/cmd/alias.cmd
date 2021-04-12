@@ -12,9 +12,16 @@
 
 :: See `prompt /?`
 :: $P -> Drive and Path
+:: $S -> Space
+:: $C -> '('
+:: $D -> Date
+:: $B -> '|'
+:: $T -> Time
+:: $F -> ')'
+:: $_ -> Carriage return
 :: $G -> '>'
-:: $S -> (space)
-prompt $P$G$S
+:: $S -> Space
+prompt $P$S$C$D$T$F$_$G$S
 
 :: vim / neovim
 doskey nvim=nvim-qt.exe $*
