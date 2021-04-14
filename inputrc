@@ -1,4 +1,6 @@
 # Readline Config
+#
+# To force manual reload: bind -f /path/to/inputrc
 
 set bell-style none
 
