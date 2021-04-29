@@ -63,7 +63,13 @@ git config --global credential.helper 'cache --timeout=3600'
 Ignore SSL cert check. ('fatal: unable to access [...] SSL certificate problem: unable to get local issuer certificate'):
 
 ```
-git config --local http.sslVerify false
+git config --global http.sslVerify false
+```
+
+Ignore windows/linux line ending differences:
+
+```
+git config --global core.autocrlf true
 ```
 
 ---
