@@ -24,9 +24,14 @@ def settime():
     global stime
     stime = time.time()
 
-def timecmd(cmd):
+def timecmd(cmd, quiet=False):
     """Time some system command."""
+    if quiet:
+        output="stdout=PIPE, stderr=PIPE,"
+    else:
+        output=""
+    
     setup = "from subprocess import Popen, PIPE"
-    cmd = "p = Popen('{}', stdout=PIPE, shell=True); p.communicate()".format(cmd)
+    cmd = "p = Popen('{}', {} shell=True); p.communicate()".format(cmd, output)
     timeit.timeit(setup=setup, stmt=cmd, number=1)
     
