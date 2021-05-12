@@ -2,9 +2,11 @@
 # Utils for time-related tasks -- timing program runtime, formatting dates, etc.
 
 import time
+import timeit
+import subprocess
 
 def gettime():
-    """Time the execution of a program since its start."""
+    """Time the execution of a program since its start.
     >>> gettime() == gettime()
     True
     >>> t1 = gettime()
@@ -21,3 +23,10 @@ def settime():
     """Set the start of the timer.""" 
     global stime
     stime = time.time()
+
+def timecmd(cmd):
+    """Time some system command."""
+    setup = "from subprocess import Popen, PIPE"
+    cmd = "p = Popen('{}', stdout=PIPE, shell=True); p.communicate()".format(cmd)
+    timeit.timeit(setup=setup, stmt=cmd, number=1)
+    
