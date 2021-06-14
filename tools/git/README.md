@@ -72,6 +72,11 @@ Ignore windows/linux line ending differences:
 git config --global core.autocrlf true
 ```
 
+Ignore file permissions differences (the next windows/linux difference after the previous):
+```
+git config core.filemode false
+```
+
 ---
 
 ### Add
