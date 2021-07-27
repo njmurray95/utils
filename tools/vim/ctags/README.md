@@ -25,6 +25,8 @@ set tags=./tags;/
 This will look in the current directory for the "tags" folder and recurse up toward root until one is found.
 
 Default vim bindings:
-`Ctrl + ]` - go to definition
-`Ctrl + T` - jump back from definition (you've probably remapped this to `CTRL-[`)
-`Ctrl + W Ctrl + ]` - open definition in horizontal split
+
+* `Ctrl + ]` - go to definition
+* `Ctrl + T` - jump back from definition (you've probably remapped this to `CTRL-[`)
+* `g]` - jump to list of all possible definitions
+* `Ctrl + W Ctrl + ]` - open definition in horizontal split
