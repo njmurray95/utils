@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; Add a right-click option for opening neovim in file explorer
+; Uses a version of nvim found in the ".local" path (for when lacking admin install rights)
+
+[HKEY_CLASSES_ROOT\*\shell\nvim-qt]
+@="Edit with Neovim"
+"Icon"="\"C:\\Users\\nmurray\\.local\\lib\\nvim-win64\\Neovim\\bin\\nvim-qt.exe\""
+
+[HKEY_CLASSES_ROOT\*\shell\nvim-qt\command]
+@="\"C:\\Users\\nmurray\\.local\\lib\\nvim-win64\\Neovim\\bin\\nvim-qt.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\nvim-qt]
+@="Edit with Neovim"
+"Icon"="\"C:\\Users\\nmurray\\.local\\lib\\nvim-win64\\Neovim\\bin\\nvim-qt.exe\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\nvim-qt\command]
+@="\"C:\\Users\\nmurray\\.local\\lib\\nvim-win64\\Neovim\\bin\\nvim-qt.exe\" \"%1\""
+
+
