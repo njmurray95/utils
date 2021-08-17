@@ -11,3 +11,13 @@ def imagifyData(filename):
     cdata = data[::2] + 1j * data[1::2]
     cdata = cdata.reshape(row, -1)
     imshow(np.log(np.abs(cdata)), cmap='gray')
+    
+def parse_excel(filename):
+    '''Sometimes this is easier than working with csv's...'''
+    import pandas
+    data = pandas.read_excel(filename)
+    # Use 'usecols' parameter to only read certain columns
+    # data = pandas.read_excel(filename, usecols=['name', 'time', 'etc'])
+    for item in data.values:
+        print(item)
+    
