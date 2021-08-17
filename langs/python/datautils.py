@@ -21,3 +21,7 @@ def parse_excel(filename):
     for item in data.values:
         print(item)
     
+def sort():
+    '''Sort any container over any attribute.'''
+    import operator
+    container = sorted(container, key=operator.attrgetter('attribute'))
