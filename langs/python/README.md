@@ -6,7 +6,7 @@ Above are some useful functions and tricks I've picked up over time. They're gro
 
 The biggest install problem is legacy issues with Python2 vs Python3... Usually the easiest solution is to install both and symlink python2 and python3 to their respective versions, with `python` symlinking to python3.
 
-## Anaconda
+## Anaconda (Managing Versions)
 
 If you have installed `anaconda` you can switch between different python environments like this:
 
@@ -26,6 +26,20 @@ To deactivate:
 source deactivate
 ```
 
+## Pip (Installing modules)
+
+Pip should come installed with python and can usually be used like this:
+
+```
+python -m pip install <module>
+```
+
+If pip isn't available for some reason it can be installed manually per the python docs:
+
+```
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+```
 
 ## General notes
 
