@@ -41,6 +41,13 @@ wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 ```
 
+Or for python 2:
+
+```
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python get-pip.py
+```
+
 ## General notes
 
 ### Invoking PDB (Python Debugger)
