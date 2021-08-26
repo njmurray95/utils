@@ -8,3 +8,4 @@ def swap_to_master():
     master = repo.heads.master
     
     r.head.reference = master
+    repo.head.reset(index=True, working_tree=True)
