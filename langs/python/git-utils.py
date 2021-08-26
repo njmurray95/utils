@@ -7,5 +7,7 @@ def swap_to_master():
     current = repo.head.ref
     master = repo.heads.master
     
+    # NOTE:
+    # THIS WILL SWITCH BRANCHES WITHOUT CONFIRMING BEFORE DESTROYING UNSAVED WORK
     r.head.reference = master
     repo.head.reset(index=True, working_tree=True)
