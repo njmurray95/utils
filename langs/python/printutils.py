@@ -3,6 +3,8 @@
 
 from __future__ import print_function # Python 2 compatibility
 
+# See also: import pprint
+
 def dict_print(dictionary):
     import json
     print(
