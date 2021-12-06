@@ -1,0 +1,21 @@
+# Move to ~/.gdbinit or ./.gdbinit
+
+# "01;34;40m" for light blue on grey background
+set prompt \033[1;34;40m(gdb)\033[0m
+
+# Save up to 256 commands in ~/.gdb_history
+set history save on
+set history filename ~/.gdb_history
+
+# Coloring commands through hooks
+
+define hook-backtrace
+echo \033[0;35;40m
+end
+
+define hookpost-backtrace
+echo \033[0m
+end
+
+# Source the C++ STL view plugin
+source ~/stl-views.gdb
