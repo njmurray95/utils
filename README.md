@@ -21,8 +21,6 @@ source "$XDG_CONFIG_HOME/bash/bashrc"
 
 `~/.config/bash/bashrc` should then contain all local redefinitions and aliases. (I.e., `vim` -> `nvim`, `readline`, etc.)
 
-## Specific programs
-
 ### Readline
 
 If readline doesn't read from `$XDG_CONFIG_HOME` by default, it should always read from `INPUTRC`:
@@ -31,5 +29,18 @@ If readline doesn't read from `$XDG_CONFIG_HOME` by default, it should always re
 ```
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 ```
+
+### neovim
+
+Neovim is robust and should work with `$XDG_CONFIG_HOME` by default.
+
+For plugins, install: `https://github.com/junegunn/vim-plug`
+
+Then open a vim session and execute:
+```
+:PlugInstall<cr>
+```
+
+
 
 
