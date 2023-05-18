@@ -21,6 +21,8 @@ export VISUAL="vim"                         # Use vim as system editor
 export EDITOR="$VISUAL"                     # Some programs use this too
 export PATH="$PATH:~/bin/"                  # Local binaries
 
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+
 ################################################################################
 #  => History (XXX)
 
