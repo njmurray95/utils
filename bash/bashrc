@@ -50,7 +50,7 @@ alias py3="ipython3"
 
 alias info="info --vi-keys"
 alias ls="ls -F"                # Show line endings
-alias rm="rm -dv"               # -d for directories, -v vesbore
+alias rm="rm -dv"               # -d for directories, -v verbose
 
 # cd lists directory names
 cd ()
