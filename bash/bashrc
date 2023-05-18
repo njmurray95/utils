@@ -10,10 +10,13 @@
 
 unalias -a                                  # Clean in case being sourced again
 
-source "$HOME/files/prog/bash/utils.sh"
-source "$HOME/files/prog/bash/tools.sh"
+# XDG Config dirs
+export XDG_CONFIG_HOME="~/.config"          # Config files
+export XDG_CACHE_HOME="~/.cache"            # User-specific non-essential cache
+export XDG_DATA_HOME="~/.local/share"       # User-specific data files
+export XDG_STATE_HOME="~/.local/state"      # User-specific state files
 
-export XDG_CONFIG_HOME="~/.config"          # Set configuration file home
+# Misc
 export VISUAL="vim"                         # Use vim as system editor
 export EDITOR="$VISUAL"                     # Some programs use this too
 export PATH="$PATH:~/bin/"                  # Local binaries
@@ -31,14 +34,14 @@ export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 #  => Prompt (XXX)
 
 # Change terminal prompt
-if isRoot; then
-    export PS1="# "
-else
-    export PS1="$ "
-fi
+# if isRoot; then
+#     export PS1="# "
+# else
+#     export PS1="$ "
+# fi
 
 # Echo all non-zero exit codes to caller
-EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo \$l; fi;"
+EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo err: \$l; fi;"
 PROMPT_COMMAND="$EXIT_STATUS"
 
 ################################################################################
