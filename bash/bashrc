@@ -11,10 +11,10 @@
 unalias -a                                  # Clean in case being sourced again
 
 # XDG Config dirs
-export XDG_CONFIG_HOME="~/.config"          # Config files
-export XDG_CACHE_HOME="~/.cache"            # User-specific non-essential cache
-export XDG_DATA_HOME="~/.local/share"       # User-specific data files
-export XDG_STATE_HOME="~/.local/state"      # User-specific state files
+export XDG_CONFIG_HOME="$HOME/.config"      # Config files
+export XDG_CACHE_HOME="$HOME/.cache"        # User-specific non-essential cache
+export XDG_DATA_HOME="$HOME/.local/share"   # User-specific data files
+export XDG_STATE_HOME="$HOME/.local/state"  # User-specific state files
 
 # Misc
 export VISUAL="vim"                         # Use vim as system editor
@@ -29,6 +29,11 @@ export HISTCONTROL="ignorespace:ignoredups"
 
 # Format history as: Month/date - xx:xx:xx
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+
+# Write all commands to common file
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+mkdir -p "$XDG_STATE_HOME/bash"
+touch "$HISTFILE"
 
 ################################################################################
 #  => Prompt (XXX)
@@ -53,7 +58,7 @@ alias py3="ipython3"
 
 alias info="info --vi-keys"
 alias ls="ls -F"                # Show line endings
-alias rm="rm -dv"               # -d for directories, -v verbose
+alias rm="rm -dv"               # -d for directories, -v vesbore
 
 # cd lists directory names
 cd ()
