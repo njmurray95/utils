@@ -20,7 +20,7 @@ Python should come with `profile` and `cProfile` by default:
 python -m cProfile ./path/to/script
 ```
 
-### Debugging (PDB -- the Python Debugger)
+## Debugging (PDB -- the Python Debugger)
 
 * Set a breakpoint in file
 
