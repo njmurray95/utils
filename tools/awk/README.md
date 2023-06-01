@@ -1,3 +1,24 @@
+# AWK
+
+> AWK [...] is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems.
+> 
+> -- Wikipedia
+
+## Installation
+
+Should be on most systems. Otherwise, check the regular package managers, which should have it.
+
+## Use
+
+Grab the last field of some output:
+```
+docker ps | awk '{print $NF}'
+```
+
+---
+
+## Reference
+
 Valid commands (i.e., inside brackets):
 ```
 if ( conditional ) statement [ else statement ]
