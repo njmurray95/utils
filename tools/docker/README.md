@@ -13,10 +13,26 @@ https://docker-curriculum.com/
 * `docker`: Main client for running commands, modifying containers, etc.
 * `dockerd`: Daemon that runs containers in the background, executes commands from `docker` client.
 
+## Config
+
+Try these lines in a `bashrc`:
+```
+docker-login ()
+{
+    docker exec -it "$1" /bin/bash
+}
+```
+
 ## Misc.
 
 Check that the `docker` (including the `dockerd` daemon) are installed correctly:
 ```
 docker run hello-world
+```
+
+Login to a given container:
+
+```
+docker exec -it <container-name> /bin/bash
 ```
 
