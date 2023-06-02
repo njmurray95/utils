@@ -28,6 +28,25 @@ def tracer(delay=0):
         time.sleep(delay)
 
     sys.settrace(trace)
+    
+def subTracer():
+    '''Debug by printing all the programs farmed out to subprocess.Popen.communicate()
+    '''
+    def trace(frame, event, arg):
+        if event != 'call':
+            return
+        name = str(frame.f_code.co_name)
+        # subprocess library's "communicate"
+        if name != 'communicate':
+            return
+        print(frame.f_locals['self'].args)
+        
+    sys.settrace(trace)
+    
+def varAttrs(someVar):
+    '''Easy way to print the attributes of some object'''
+    from pprint import pprint
+    pprint(vars(someVar))
 
 def stack(show=None):
     """
