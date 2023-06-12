@@ -8,6 +8,7 @@ def runSeparate(cmd, N):
         p = subprocess.Popen(cmd.split(),
                 stdin=subprocess.PIPE,
                 stdout=subprocess.PIPE,
+                stderr=subprocess.DEVNULL,
                 encoding='utf8')
         out = p.communicate()
 
@@ -17,6 +18,7 @@ def runAsGroup(cmd, N):
     p = subprocess.Popen(joined,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
             shell=True)
 
     out = p.communicate()[0]
