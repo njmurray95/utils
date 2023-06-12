@@ -1,6 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   => General (XXX)
 
+" To install a new plugin, write the line
+" And then call
+" :PlugInstall
 call plug#begin(stdpath('data') . '\plugged')
 
     " Vim Syntax additions
@@ -22,6 +25,12 @@ call plug#begin(stdpath('data') . '\plugged')
     " Filetypes
     Plug 'leafgarland/typescript-vim'
 
+    " Status Line
+    Plug 'vim-airline/vim-airline'
+
+    " Line diff
+    Plug 'AndrewRadev/linediff.vim'
+
 call plug#end()
 
 "Reload vimrc after editing
@@ -34,13 +43,13 @@ augroup END
 set undofile
 
 "System clipboard -- copy-paste plays with other programs
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 nnoremap <silent> ]b :bnext<cr>
 nnoremap <silent> [b :bprev<cr>
 
-nnoremap <silent> ]t :tabn<cr>
-nnoremap <silent> [t :tabp<cr>
+nnoremap <silent> ]j :tabn<cr>
+nnoremap <silent> [j :tabp<cr>
 
 "Sane escape in term mode
 tnoremap <Esc> <C-\><C-n>
@@ -69,9 +78,9 @@ set guicursor=a:block,a:blinkwait1000-blinkon1000-blinkoff100
 
 colorscheme fahrenheit
 
-highlight CursorLine guibg=#444454
-highlight CursorColumn guibg=#444454
-highlight ColorColumn guibg=#444454
+highlight CursorLine guibg=#444454 ctermbg=grey 
+highlight CursorColumn guibg=#444454 ctermbg=grey
+highlight ColorColumn guibg=#444454 ctermbg=grey
 
 set number                      "Show line numbers
 
