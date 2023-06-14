@@ -35,7 +35,13 @@ Login to a given container:
 docker exec -it <container-name> /bin/bash
 ```
 
-Run a new [image] with [name] and as a bash session:
+Run a new [image] with and as a bash session:
 ```
-docker run -it --name <name> <image> /bin/bash
+docker run -it --rm <image> /bin/bash
+```
+
+Run a new image and keep it in the background to log into later:
+```
+docker run -dt --name <name> <image>
+docker exec -it <name> /bin/bash
 ```
