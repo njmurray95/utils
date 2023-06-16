@@ -25,3 +25,8 @@ Find dynamically-loaded libraries and missing dependencies:
 ```
 ldd /path/to/exe
 ```
+
+Check cpu / architecture / endian info:
+```
+lscpu
+```
