@@ -45,3 +45,39 @@ Run a new image and keep it in the background to log into later:
 docker run -dt --name <name> <image>
 docker exec -it <name> /bin/bash
 ```
+
+##### Investigating a failed build
+
+Every time Docker executes a RUN command it creates a new layer. These layers all have saved IDs and can be spun-up as desired to investigate the state of a build somewhere before the final outcome.
+
+Setting the (deprecated) `DOCKER_BUILDKIT=0` option will show the IDs of all intermediate builds in the chain:
+```
+DOCKER_BUILDKIT=0 docker build -t docker-test-1 .
+```
+
+Find the build before the command that failed and spin up that image:
+
+```
+docker run --rm -it <CONTAINER-ID> [/bin/bash]      
+```
+
+There is a more robust way to log into the very container that failed, after the failstate (if, for example, the command takes several hours and it isn't desired to run it again):
+
+1. Find the contianer that broke the build:
+
+```
+docker ps -a
+```
+
+Commit the container to an image:
+```
+docker commit <CONTAINER-ID>
+sha256:<HASH>
+```
+
+And now log onto the image:
+```
+docker run --rm -it 7015687976a4 [/bin/bash]
+```
+
+See this stack overflow answer for all: https://stackoverflow.com/questions/26220957/how-can-i-inspect-the-file-system-of-a-failed-docker-build
