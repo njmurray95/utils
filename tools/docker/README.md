@@ -48,7 +48,9 @@ docker exec -it <name> /bin/bash
 
 ##### Investigating a failed build
 
-Every time Docker executes a RUN command it creates a new layer. These layers all have saved IDs and can be spun-up as desired to investigate the state of a build somewhere before the final outcome.
+Your first bet is to run the build command with the `--progress=plain` flag, which will suppress all Docker's attempts at suppressing error messages from within the build.
+
+If that doesn't work, the next approach is to log onto one of the intermediate layers in the build. Every time Docker executes a RUN command it creates a new layer. These layers all have saved IDs and can be spun-up as desired to investigate the state of a build somewhere before the final outcome.
 
 Setting the (deprecated) `DOCKER_BUILDKIT=0` option will show the IDs of all intermediate builds in the chain:
 ```
