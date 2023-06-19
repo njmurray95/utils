@@ -69,13 +69,13 @@ There is a more robust way to log into the very container that failed, after the
 docker ps -a
 ```
 
-Commit the container to an image:
+2. Commit the container to an image:
 ```
 docker commit <CONTAINER-ID>
 sha256:<HASH>
 ```
 
-And now log onto the image:
+3. And now log onto the image:
 ```
 docker run --rm -it 7015687976a4 [/bin/bash]
 ```
