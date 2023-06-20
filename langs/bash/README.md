@@ -9,6 +9,8 @@ List all available key shortcuts:
 bind -lp
 ```
 
+---
+
 #### File Operators
 
 * `-e`: file exists
