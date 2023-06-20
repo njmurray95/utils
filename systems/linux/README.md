@@ -21,6 +21,11 @@ https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for
 
 ## Misc.
 
+Find information about a file's type and structure (see `man magic`):
+```
+file /path/to/file
+```
+
 Find dynamically-loaded libraries and missing dependencies:
 ```
 ldd /path/to/exe
