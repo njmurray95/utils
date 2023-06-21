@@ -21,6 +21,11 @@ https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for
 
 ## Misc.
 
+Version information about the distrol:
+```
+cat /etc/issue
+```
+
 Find information about a file's type and structure (see `man magic`):
 ```
 file /path/to/file
