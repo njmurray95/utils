@@ -18,6 +18,10 @@ And without an `INPUTFILE` sed will actually read directly from stdin.
 
 In most cases it's easier to pipe into and out of `sed` than to invoke it directly. (There is also the `-i` for "inplace" to make `sed` read from and write to the same file.)
 
+`Sed` commands also comes built into vim within the `:` operator, i.e.:
+
+`:s/one/two/g/'`
+
 ### Misc.
 
 Find replace all:
