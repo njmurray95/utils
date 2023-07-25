@@ -1,4 +1,42 @@
-# bash / bsh
+# tools
+
+Notes on miscellanoeous useful tools (still to be sorted)
+
+
+## The easiest ways to get everything working on a new system
+
+Everything should live under `$XDG_CONFIG_HOME`, which should be defined as `$HOME/.config`. Bash refuses to adopt, so the workaround is to modify `/etc/bash.bashrc`:
+
+`/etc/bash.bashrc/` (Under everything else)
+```
+### USER MODIFIED
+export XDG_CONFIG_HOME="$HOME/.config"
+source "$XDG_CONFIG_HOME/bash/bashrc"
+```
+
+`~/.config/bash/bashrc` should then contain all local redefinitions and aliases. (I.e., `vim` -> `nvim`, `readline`, etc.)
+
+### Readline
+
+If readline doesn't read from `$XDG_CONFIG_HOME` by default, it should always read from `INPUTRC`:
+
+`bashrc`
+```
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+```
+
+### neovim
+
+Neovim is robust and should work with `$XDG_CONFIG_HOME` by default.
+
+For plugins, install: `https://github.com/junegunn/vim-plug`
+
+Then open a vim session and execute:
+```
+:PlugInstall<cr>
+```
+
+### bash / bsh
 
 General:
 * Key bindings: `bind` (readline)
@@ -7,13 +45,13 @@ Startup config order:
 * `/etc/bashrc`
 * `~/.bashrc`
 
-# zsh
+### zsh
 
 **zsh** is a newer shell (c. 1990) which has lately grown popular for its improved quality of life features. Zsh is completely backwards-compatible with bash -- though not by default but only when `emulate sh` is set. Given that zsh is rarely installed by default anyways, it's mostly better to stick with `bash` defaults.
 
 `zsh` does not bind with `readline`. By default it will scan `$EDITOR` and `$VISUAL` for the string `"vi"` and use vi keys if found, emacs otherwise. `bindkey -e` and `bindkey -v` can set these manually, respectively.
 
-# tcsh / csh
+### tcsh / csh
 
 **tcsh**, an extension of **csh**, a shell with """c-like syntax""". It is not POSIX-compatible. It's old (c. 1975) and this generally explains most of its builtin redefinitions and other assorted oddities.
 
@@ -53,7 +91,7 @@ set: Variable name must begin with a letter.
 
 In general tcsh/csh should be avoided.
 
-# Miscellaneous
+### Miscellaneous
 cat /proc/cpuinfo -- Check stats about core
 Note: if only one processor shows, check `uname -a` for SMP.
         Non-SMP kernals may not handle multiple processors.
@@ -146,7 +184,7 @@ for i in {0..255} ; do     printf "\x1b[38;5;${i}mcolour${i}\n"; done
 
 ssh-keygen -lv -f $FILE # Print randomart representation of ssh key
 
-# Use heredoc to read from stdin
+### Use heredoc to read from stdin
     ssh-keygen -lvf /dev/stdin <<<$(ssh-keyscan $HOST)
 
 iptables -S # list all iptable rules
@@ -178,12 +216,7 @@ Things to look into:
 ### Reverse shell w/ ncat (nmap version)
     ncat -vl -p $PORT -e /bin/bash
 
+### tcpdump
+
 https://danielmiessler.com/study/tcpdump/
 
-### Reading Material
-
-http://www.thegeekstuff.com/2011/06/iptables-rules-examples/
-"The Art of Deception: Controlling the Human Element of Security"
-"Social Engineering: The Art of Human Hacking"
-
-#EOF
