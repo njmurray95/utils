@@ -18,4 +18,22 @@ SSH is a protocol and *per se* cannot be installed. For specific clients such as
 
 ## Files
 
-* Most clients use `~/.ssh` for config.
+* Most clients use `~/.ssh/*` for config.
+
+Make sure that this dir has the proper permissions:
+
+```
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+```
+
+## ssh-keygen
+
+```
+$ ssh-keygen
+```
+
+This will generate:
+
+* `~/.ssh/id_rsa`
+* `~/.ssh/id_rsa.pub`
