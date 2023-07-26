@@ -34,4 +34,11 @@ Nothing. Works by default.
 bind-key -T vi-copy 'v' begin-selection
 ```
 
+## Misc.
 
+Magic two lines should restore tmux to default keybindings:
+
+```
+tmux -f /dev/null -L temp start-server \; list-keys > ~/.tmux.tmp.conf
+tmux source ~/.tmux.tmp.conf
+```
