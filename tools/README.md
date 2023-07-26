@@ -164,10 +164,6 @@ for i in {0..255} ; do     printf "\x1b[38;5;${i}mcolour${i}\n"; done
 
 `script` -- enter interactive shell that leves an lpr-compatible print record of session
 
-
-### Use heredoc to read from stdin
-    ssh-keygen -lvf /dev/stdin <<<$(ssh-keyscan $HOST)
-
 iptables -S # list all iptable rules
 
 Things to look into:
