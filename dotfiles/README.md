@@ -11,3 +11,11 @@ https://wiki.archlinux.org/title/XDG_Base_Directory
 ```
 
 Notably, `bash` and `ssh` will not read from `$XDG_CONFIG_HOME` and require work-arounds.
+
+Lots of miscellaneous tools take minor config but these are the most important:
+
+* bash
+* neovim (`nvim` and `nvim-qt`)
+* readline
+* tmux
+
