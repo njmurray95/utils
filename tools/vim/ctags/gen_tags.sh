@@ -7,6 +7,4 @@ set -o errexit
 repo="$1"
 [[ ! -d "${repo}" ]] && echo "Repo '${repo}' does not exist." && exit 1
 echo "Building tags file for '${repo}' ..."
-cd "${repo}"
-ctags -R -f ./tags . >/dev/null 2>&1
-cd $OLDPWD
+ctags -R -f "${repo}/tags" "${repo}" >/dev/null 2>&1
