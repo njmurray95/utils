@@ -1,8 +1,22 @@
+# lua
 
+Small fast programming language written in ~20k lines of C. Used as config for many different projects (now notably neovim).
+
+## Installation
+
+```
+$ apt-get install lua[5.4]
+```
+
+## Use
+
+```
+lua
+```
 
 ## Interpreter
 
-* Old Lua interpreters does not normally display values:
+* Old Lua interpreters do not normally display values:
 ```
 > "hello world"
 stdin:1: unexpected symbol near '"hello world"'
