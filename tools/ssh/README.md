@@ -37,3 +37,18 @@ This will generate:
 
 * `~/.ssh/id_rsa`
 * `~/.ssh/id_rsa.pub`
+
+## Misc.
+
+
+Print randomart representation of ssh key:
+```
+ssh-keygen -lv -f /path/to/key
+```
+
+(What is this?)
+Use heredoc to read from stdin:
+```
+ssh-keygen -lvf /dev/stdin <<<$(ssh-keyscan $HOST)
+```
+

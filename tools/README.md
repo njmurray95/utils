@@ -164,7 +164,6 @@ for i in {0..255} ; do     printf "\x1b[38;5;${i}mcolour${i}\n"; done
 
 `script` -- enter interactive shell that leves an lpr-compatible print record of session
 
-ssh-keygen -lv -f $FILE # Print randomart representation of ssh key
 
 ### Use heredoc to read from stdin
     ssh-keygen -lvf /dev/stdin <<<$(ssh-keyscan $HOST)
