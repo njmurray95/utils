@@ -2,7 +2,13 @@
 # A good generic list of files to have git ignore
 #
 # List all files excluded by project:
-# git ls-files --others --exclude-from=.git/info/exclude
+#    git ls-files --others --exclude-from=.git/info/exclude
+
+# List all files ignored by git
+#    git status --ignored
+
+# Explain which rule is blocking a particular file
+#    git check-ignore -v <filename>
 
 # C assembly and object files
 *.[oa]
