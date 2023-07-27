@@ -9,7 +9,21 @@ A vim rewrite with new or different features. Many have since been backported in
 Documentation: https://neovim.io/doc/user/index.html
 (Also try: `:help` and `:help starting`)
 
-# General 
+## Install
+
+Linux:
+```
+[apt install] nvim
+[apt install] nvim-qt
+```
+
+These aliases in bashrc are useful:
+```
+alias vim="nvim-qt"
+alias nvim="nvim-qt"
+```
+
+## General 
 
 The config file `init.vim` should live:
 

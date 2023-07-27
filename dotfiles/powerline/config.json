@@ -1,0 +1,9 @@
+{
+    "log_file": "~/.config/powerline/err.log",
+    "ext": {
+        "tmux": {
+            "colorscheme": "default",
+            "theme": "newton"
+        }
+    }
+}

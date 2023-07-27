@@ -42,10 +42,18 @@ $ git config [--local|--global] user.name VALUE
 $ git config [--local|--global] user.password VALUE
 ```
 
-Update https certificates:
+### Update https certificates:
+
 ```
 $ openssl s_client -connect <DOMAIN>:443 -showcerts </dev/null 2>/dev/null | openssl x509 -outform PEM >mi-gitlab.pem
 $ git config --global /full/path/to/mi-gitlab.pen
+```
+
+### Configure global git ignore
+
+```
+mkdir -p ~/.config/git/
+git config --global core.excludesFiles ~/.config/git/gitignore
 ```
 
 List all git configurations:

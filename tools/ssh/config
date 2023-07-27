@@ -1,0 +1,5 @@
+# Cache all passwords for 15 minutes
+Host *
+  ControlPath ~/.ssh/S.%r@%h:%p
+  ControlMaster auto
+  ControlPersist 15m

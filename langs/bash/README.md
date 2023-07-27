@@ -2,7 +2,16 @@
 
 Notes on bash.
 
-## File Operators
+## Misc.
+
+List all available key shortcuts:
+```
+bind -lp
+```
+
+---
+
+#### File Operators
 
 * `-e`: file exists
 * `-a`: file exists (deprecated `-e`)

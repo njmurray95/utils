@@ -23,14 +23,25 @@ Download from source or install `gdb` from any CLI package manager.
 
 Invoke gdb:
 
-`gdb ./program`
+```
+gdb ./program
+```
 
 With arguments:
 
-`gdb ./program arg1 arg2...`
+```
+gdb ./program arg1 arg...
+```
 
 With corefile:
 
-`gdb ./program corefile`
+```
+gdb ./program corefile
+```
 
+### Misc.
 
+Useful bash alias (if $XDG_CONFIG_HOME not set):
+```
+gdb='gdb --init-command=/path/to/my/config.gdb`
+```

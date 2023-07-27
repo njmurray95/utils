@@ -6,6 +6,8 @@
 
 ### Running
 
+`sed` should be installed on all unix systems, by default.
+
 By default `sed` assumes editing is done on a stream. Hence, it prints directly to stdout:
 
 ```
@@ -14,12 +16,15 @@ $ sed SCRIPT INPUTFILE
 
 And without an `INPUTFILE` sed will actually read directly from stdin.
 
-In most cases it's easier to use the `-i` (for "inplace") option to make `sed` read from and write to the same file.
+In most cases it's easier to pipe into and out of `sed` than to invoke it directly. (There is also the `-i` for "inplace" to make `sed` read from and write to the same file.)
 
-### Common Uses
+`Sed` commands also comes built into vim within the `:` operator, i.e.:
+
+`:s/one/two/g/'`
+
+### Misc.
 
 Find replace all:
-
 ```
 sed -i  's/a\.example\.com/b.example.com/g' [files]
 ```
