@@ -24,6 +24,6 @@ To query information about the config `ossim` is using:
 $ ossim-info [-P /path/to/ossim_preferences] --config
 ```
 
-By default `ossim` will read from `$OSSIM_PREFS_FILE`.
+By default `ossim` will read from: `$OSSIM_PREFS_FILE`.
 
 https://trac.osgeo.org/ossim/wiki/ossimElevationSetup
