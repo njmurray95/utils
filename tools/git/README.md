@@ -30,7 +30,7 @@ $ git init
 
 ## Files
 
-* `~/.gitconfig`: Global config file for all git projects
+* `~/.gitconfig`: Default global config file for all git projects (easy to override)
 * `.git/`: Per-project folder for git metadata
 * `.gitignore`: per-project list of string patterns of filenames that git will ignore (i.e., not track changes to)
 
@@ -42,21 +42,18 @@ $ git config [--local|--global] user.name VALUE
 $ git config [--local|--global] user.password VALUE
 ```
 
-Update https certificates:
-```
-$ openssl s_client -connect <DOMAIN>:443 -showcerts </dev/null 2>/dev/null | openssl x509 -outform PEM >mi-gitlab.pem
-$ git config --global /full/path/to/mi-gitlab.pen
-```
-
 Configure global git ignore:
 ```
 mkdir -p ~/.config/git/
 git config --global core.excludesFile ~/.config/git/gitignore
+# Query to validate:
+git config --global core.excludesFile
 ```
 
-To query:
+Update https certificates:
 ```
-git config --global core.excludesFile
+$ openssl s_client -connect <DOMAIN>:443 -showcerts </dev/null 2>/dev/null | openssl x509 -outform PEM >mi-gitlab.pem
+$ git config --global /full/path/to/mi-gitlab.pen
 ```
 
 List all git configurations:
