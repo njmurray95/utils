@@ -40,3 +40,8 @@ Check cpu / architecture / endian info:
 ```
 lscpu
 ```
+
+Remount all drives:
+```
+sudo mount -av
+```
