@@ -54,13 +54,13 @@ PROMPT_COMMAND="$EXIT_STATUS"
 ################################################################################
 #  => Aliases (XXX)
 
-alias py="ipython"
-alias py2="ipython2"
-alias py3="ipython3"
+# This forces sudo to evaluate aliases
+# See: https://linuxhandbook.com/run-alias-as-sudo/
+alias sudo="sudo "
 
 alias info="info --vi-keys"
 alias ls="ls -F"                # Show line endings
-alias rm="rm -dv"               # -d for directories, -v vesbore
+alias rm="rm -dv"               # -d for directories, -v verbose
 
 # cd lists directory names
 cd ()
