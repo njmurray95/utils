@@ -1,0 +1,79 @@
+# yabairc
+#
+# This file is really just an executable shell script
+# These commands are run before yabai
+#
+# see: https://github.com/koekeishiya/yabai/wiki/Configuration#configuration-file
+
+#TODO: when yabai fixed for arm64, uncomment this
+#sudo yabai --load-sa
+
+# Grab the colors we're using
+source ~/.config/yabai/yabaifall
+
+# Set yabai to binary tree mode
+# bsp or float (default: bsp)
+yabai -m config layout bsp
+
+# Set all padding and gaps to 10pt (default: 0)
+# All padding is between windows and the edge of the screen.
+# The gap is between windows and other windows.
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10
+
+# Make yabai play nice with spacebar (the "external_bar")
+yabai -m config external_bar main:26:0
+
+# # Set a border to distinguish the active window
+# yabai -m config window_border on
+# yabai -m config window_border_width 5
+# yabai -m config active_window_border_color ${color["active"]}
+# yabai -m config normal_window_border_color ${color["normal"]}
+
+# TODO: Disable SIP so border windows are on top
+# https://github.com/koekeishiya/yabai/issues/310
+
+# Auto Balance would make all windows occupy same amount of space
+# on or off (default: off)
+yabai -m config auto_balance off
+
+# Determines how much space new window takes from old window
+# (i.e., 0.5 -> new window takes 50% from old window)
+# Floating point value between 0 and 1 (default: 0.5)
+yabai -m config split_ratio 0.5
+
+# floating windows are always on top (default: off)
+yabai -m config window_topmost on
+
+# float system preferences
+yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" manage=off
+yabai -m rule --add label="System Preferences" app="^System Preferences$" manage=off
+yabai -m rule --add title="Float*" manage=off
+
+# Because macbooks have changed to arm64, yabai currently cannot inject code
+# to enable certain features; these are currently impossible:
+
+# focus/create/destroy space without animation
+# move space (and its windows) left, right or to another display
+# remove window shadows
+# enable window transparency
+# control window layers (make windows appear topmost)
+# sticky windows (make windows appear on all spaces)
+# move window by clicking anywhere in its frame
+# toggle picture-in-picture for any given window
+# border for focused and inactive windows
+
+# TODO:
+# Reinstall yabai when fix is posted
+# Make active windows less transparent than active windows
+# Make active windows border different
+#
+# TODO:
+# Idea: When SIP disable yabai --load-sa works correctly:
+# One display with 7 open Alacritty instances
+# Jerry-rig so always in BSP mode
+# Whichever window is active gets moved to slot 1; all others get demoted

@@ -1,0 +1,12 @@
+# skhd config file
+# Trigger a reload with:
+#   Running manually: `skhd --reload`
+#   Using brew: brew services restart skhd
+cmd -  h : yabai -m window --focus west
+cmd -  j : yabai -m window --focus south
+cmd -  k : yabai -m window --focus north
+cmd -  l : yabai -m window --focus east
+
+.blacklist [
+    "brave browser"
+]

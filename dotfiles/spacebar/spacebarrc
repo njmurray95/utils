@@ -1,0 +1,25 @@
+# spacebarrc
+#
+# This file is really just an executable shell script
+# These commands are run on spacebar startup
+#
+# brew services [start | restart] spacebar
+# see: https://github.com/cmacrae/spacebar
+
+# Adjust bar height
+spacebar -m config height 26
+
+# Font
+spacebar -m config text_font "Helvetica Neue:Bold:14.0"
+
+# Clock format (uses c-standard strftime codes)
+# Add a Latin Cross to the end (V^u271D)
+spacebar -m config clock_format %A %B %m %l:%M%t✝
+
+# Colors
+# Spacebar like yabai uses: 0xAARRGGBB (Note Alpha values first)
+spacebar -m config foreground_color 0xfff0c674 # 100% Opaque #f0c674
+spacebar -m config background_color 0xe61d1f21 # 90% Opaque #1d1f21
+
+# Roman Numerals for space icons
+spacebar -m config space_icon_strip I II III IV V VI VII VIII IX X

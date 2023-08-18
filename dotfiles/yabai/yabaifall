@@ -1,0 +1,12 @@
+declare -A color
+color["fall_black"]='0xFF1d1f21'    #1d1f21'
+color["fall_red"]='0xFFcc6666'      #cc6666'
+color["fall_green"]='0xFFb5bd68'    #b5bd68'
+color["fall_yellow"]='0xFFf0c674'   #f0c674'
+color["fall_blue"]='0xFF81a2be'     #81a2be'
+color["fall_magenta"]='0xFFb294bb'  #b294bb'
+color["fall_cyan"]='0xFF8abeb7'     #8abeb7'
+color["fall_white"]='0xFFc5c8c6'    #c5c8c6'
+
+color["active"]=${color["fall_red"]}
+color["normal"]=${color["fall_yellow"]}
