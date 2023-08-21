@@ -38,6 +38,12 @@ This will generate:
 * `~/.ssh/id_rsa`
 * `~/.ssh/id_rsa.pub`
 
+To add that key to a remote server:
+
+```
+ssh-copy-id -i /path/to/key.pub <username@hostname>
+```
+
 ## Misc.
 
 
