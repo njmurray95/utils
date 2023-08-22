@@ -146,6 +146,12 @@ git checkout `git rev-list -1 --before="<date>" [branch]`
 
 ---
 
+Checkout a specific file from a different branch:
+```
+git checkout <branch> /path/to/file
+```
+---
+
 ### Diff
 
 Diff two commits:
