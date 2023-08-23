@@ -2,7 +2,7 @@
 
 # Installation
 
-Everything related to installing and configuring bash the way we want it.
+Bash comes installed on everything. Usually not how we want it.
 
 Bash doesn't respect `$XDG_CONFIG_HOME` and has no plans to, which means using the following workaround:
 
@@ -18,6 +18,14 @@ In `/etc/bash.bashrc` append the following lines:
 export XDG_CONFIG_HOME="$HOME/.config"
 [[ -f "$XDG_CONFIG_HOME/bash/bashrc" ]] && source "$XDG_CONFIG_HOME/bash/bashrc"
 ```
+
+After this:
+```
+mkdir -p ~/.config/bash/scripts
+```
+
+Copy over `bashrc` to `~/.config/bash/bashrc`, and copy over any alias scripts to `~/.config/bash/scripts`.
+
 
 ### Hello World
 
@@ -40,48 +48,6 @@ bind -lp
 ```
 
 ---
-
-#### File Operators
-
-* `-e`: file exists
-* `-a`: file exists (deprecated `-e`)
-* `-f`: file is file (not dir or device)
-* `-s`: file is not zero size
-* `-d`: file is a directory
-* `-b`: file is a block device
-* `-c`: file is a character device
-* `-p`: file is a pipe
-* `-h`: file is a symbolic link
-* `-L`: file is a symbolic link
-* `-S`: file is a socket
-* `-t`: file is associated with terminal device (i.e., test stdin/stdout is from terminal)
-* `-r`: file has read permission (for current user)
-* `-w`: file has write permission (for current user)
-* `-x`: file has execute permission (for current user)
-* `-g`: file has set-group-id flag set
-* `-u`: file has set-user-id flag set
-* `-k`: file has sticky bit set
-* `-O`: file is owned by current user
-* `-G`: file has same group-id as current user
-* `-N`: file modified since last read
-* `-nt`: file A is newer than file B
-* `-ot`: file A is older than file B
-* `-er`: file A and file B are hard links to the same file
-
-i.e.,
-
-```
-if [ -e "$file" ]; then
-  # Do something
-else
-  # Do something else
-fi;
-```
-```
-[[ -d "$folder" ]] && # Do something
-```
-
-(See Linux Documentation Project [Bash Guide, Chapter 7.2](http://tldp.org/LDP/abs/html/fto.html))
 
 ## Getopts (argparsing)
 
@@ -192,24 +158,6 @@ Equivalent:
 
 ## expect (???)
 
-# Powerful tools
-
-## pandoc
-
-Convert files between different formats:
-`pandoc file.old -o file.new`
-
-Format is specified by default by the extension on the filetype.
-
-## Imagemagick
-
-Convert image to another format:
-`convert a.jpg b.pdf`
-`convert a.png b.jpg`
-
-Convert multiple images into one pdf:
-`convert a.jpg b.jpg ... out.pdf`
-
 ## Figlet
 
 Make big letters:
@@ -224,4 +172,3 @@ $ figlet "test"
 
 $
 ```
-
