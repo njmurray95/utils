@@ -62,6 +62,9 @@ alias info="info --vi-keys"
 alias ls="ls -F"                # Show line endings
 alias rm="rm -dv"               # -d for directories, -v verbose
 
+# fzf
+alias fzf="fzf --preview=\"head -$LINES {}\""
+
 # cd lists directory names
 cd ()
 {
