@@ -76,9 +76,9 @@ while getopts "ab:" opt; do
   esac
 done
 ```
-# Bash Builtins
+### Bash Builtins
 
-### compgen
+#### compgen
 
 [Docs](https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html)
 
@@ -115,14 +115,14 @@ Main options:
 * signal
 * variable
 
-### diff
+#### diff
 
 Diff two file systems or folders:
 `$ diff -rq A B`
 
-# coreutils
+### coreutils
 
-### timeout
+#### timeout
 
 Run a command with a time limit. `timeout [limit] command` will run 'command' until it terminates or the time limit is reached, whichever happens first. (Time limit defaults to seconds.)
 
@@ -130,7 +130,7 @@ Timeout [complicates signal handling](https://unix.stackexchange.com/questions/5
 
 The simplest solution is to background the timeout call and invoke `wait` on its pid, so that a trap can be set to kill the job on CTRL-C or some other signal.
 
-### wait
+#### wait
 
 `wait` pauses execution until jobs have completed. This is useful for backgrounding processes, but if you want to maintain exit status you need to actually specify the process id when invoking `wait`.
 
@@ -139,14 +139,9 @@ This hack only preserves the exit status of the last job finished but is simpler
 ```wait $(jobs -l | awk '{print $2}')```
 
 
-# binutils
+### Scripting commands
 
-## objdump
-
-
-# Scripting commands
-
-## xargs
+#### xargs
 
 Remove all files from a find command:
 `find . -name "test" | xargs echo`
@@ -156,9 +151,9 @@ Equivalent:
 
 `-I` defines a "replstr" which is replaced by xargs in the subsequent command with each line of input piped into xargs.
 
-## expect (???)
+#### expect (???)
 
-## Figlet
+#### Figlet
 
 Make big letters:
 
