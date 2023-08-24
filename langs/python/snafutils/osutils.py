@@ -15,7 +15,7 @@ def basename(path):
     'env'
     >>> basename("one/two/three/")
     'three'
-    >>> basename("C:\Users\admin\notes.txt")
+    >>> basename("C:\\Users\\admin\\notes.txt")
     'notes.txt'
     """
     import os
@@ -33,8 +33,8 @@ def get_cur_filepath():
         return os.getcwd()
     else:
         os.path.abspath(__file__)
-        
-    
+
+
 def noisefile(filename, bytesize=1, zero=False):
     """
     Write a file of arbitrary or null data for n bytes.
