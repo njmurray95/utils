@@ -16,6 +16,17 @@ breakpoint()
 import pdb; pdb.set_trace()
 ```
 
+Invoke from commandline:
+```
+$ python -m pdb [file.py]
+```
+
+Invoke from python terminal:
+```
+>>> import pdb
+>>> pdb.run([module])
+```
+
 ---
 
 PDB sometimes gets stuck in a loop if you try to quit within an exception. To always force quit:

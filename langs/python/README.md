@@ -1,13 +1,40 @@
 # Python
 
-Above are some useful functions and tricks I've picked up over time. They're grouped by topic, roughly according to what tasks call for each. Each is intended to be backwards-compatible as much as possible, anything with a generic shebang of "python" should run in python2. Many can be tested by invoking the files as main, although some don't lend themselves well to docstrings. Most imports are handled on a per-function basis, to make dependencies obvious when copy-pasting.
+Python 3 should come installed on all new systems. Check for `which python` or `which python3` to check which name it lives under.
 
-<<<<<<< HEAD
-# Installing Python
+The biggest issue is legacy systems with Python2 vs Python3... If this is an issue add a few aliases to bash:
 
-The biggest install problem is legacy issues with Python2 vs Python3... Usually the easiest solution is to install both and symlink python2 and python3 to their respective versions, with `python` symlinking to python3.
+`bashrc:`
+```
+alias python2='/path/to/python2'
+alias python3='/path/to/python3'
+alias python='/path/to/python3'
+```
 
-## Anaconda (Managing Versions)
+#### pip
+
+To install a package:
+```
+python -m pip install <module>
+```
+
+For some reason, python's package manager `pip` does not always come installed. Documentation on how to install is found here:
+
+https://pip.pypa.io/en/stable/installation/
+
+Usually, however, it's proven more reliable to download `get-pip.py` and run manually instead of relying on the `ensurepip` module being present:
+```
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+```
+
+Or for python 2:
+```
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python get-pip.py
+```
+
+#### Anaconda (Managing Versions)
 
 If you have installed `anaconda` you can switch between different python environments like this:
 
@@ -27,71 +54,10 @@ To deactivate:
 source deactivate
 ```
 
-## Pip (Installing modules)
-
-Pip should come installed with python and can usually be used like this:
-
-```
-python -m pip install <module>
-```
-
-If pip isn't available for some reason it can be installed manually per the python docs:
-
-```
-wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-```
-
-Or for python 2:
-
-```
-wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
-python get-pip.py
-```
-
-## General notes
-=======
-## Installation
->>>>>>> e8d0008fe2715e849a03cc8703eaae90be3462e3
-
-Python 3 should come installed on all new systems. Check for `which python` or `which python3` to check which name it lives under.
-
-The package manager pip does not always come installed (for some reason). Documentation on how to install is found here:
-
-https://pip.pypa.io/en/stable/installation/
-
-(Although usually it's proven more reliable to download `get-pip.py` and run manually instead of relying on the `ensurepip` module being present.)
-
-## Profiling
+#### Profiling
 
 Python should come with `profile` and `cProfile` by default:
 
 ```
 python -m cProfile ./path/to/script
 ```
-
-## Debugging (PDB -- the Python Debugger)
-
-* Set a breakpoint in file
-
-```
-# Python 2-3.6
-import pdb
-pdb.set_trace()
-# Python 3.7 and higher:
-breakpoint()
-```
-
-* Invoke from commandline
-
-```
-$ python -m pdb [file.py]
-```
-
-* Invoke from python terminal
-
-```
->>> import pdb
->>> pdb.run([module])
-```
-
