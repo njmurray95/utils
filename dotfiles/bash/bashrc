@@ -19,8 +19,9 @@ export XDG_STATE_HOME="$HOME/.local/state"  # User-specific state files
 # Misc
 export VISUAL="vim"                         # Use vim as system editor
 export EDITOR="$VISUAL"                     # Some programs use this too
-export PATH="$PATH:~/bin/"                  # Local binaries
+export PATH="$PATH:$HOME/.local/bin"        # Local binaries
 
+export BASHRC="$XDG_CONFIG_HOME/bash/bashrc"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 
 ################################################################################
@@ -29,8 +30,14 @@ export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 # Ignore commands begun with spaces and duplicates
 export HISTCONTROL="ignorespace:ignoredups"
 
+export HISTSIZE=10000
+export HISTFILESIZE=200000
+
 # Format history as: Month/date - xx:xx:xx
 export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
 
 # Write all commands to common file
 export HISTFILE="$XDG_STATE_HOME/bash/history"
@@ -40,12 +47,9 @@ touch "$HISTFILE"
 ################################################################################
 #  => Prompt (XXX)
 
-# Change terminal prompt
-# if isRoot; then
-#     export PS1="# "
-# else
-#     export PS1="$ "
-# fi
+# username@machine:/current/path
+# $
+export PS1="\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ "
 
 # Echo all non-zero exit codes to caller
 EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo err: \$l; fi;"
@@ -58,9 +62,13 @@ PROMPT_COMMAND="$EXIT_STATUS"
 # See: https://linuxhandbook.com/run-alias-as-sudo/
 alias sudo="sudo "
 
+alias vim="nvim-qt"
+alias nvim="nvim-qt"
+alias python="python3"
+
 alias info="info --vi-keys"
 alias ls="ls -F"                # Show line endings
-alias rm="rm -dv"               # -d for directories, -v verbose
+alias rm="rm -dv"               # -d for directories, -v vesbore
 
 # cd lists directory names
 cd ()
@@ -79,3 +87,7 @@ man ()
     esac
 }
 
+# Source all scripts in a subfolder
+for script in "$XDG_CONFIG_HOME/bash/scripts/"*.sh; do
+    source $script;
+done
