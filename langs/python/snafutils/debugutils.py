@@ -74,7 +74,6 @@ def tracer(delay=0):
             @delay -> optional delay to slow program execution
     '''
     import linecache
-    from printutils import dprint
 
     def trace(frame, event, arg):
         # Only report function calls
