@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+# Useful
+
+beep()
+{
+    msg=${1:-"Task done."}
+    spd-say "Done" && zenity --info --text "${msg}: $(date)" &
+}
+
+gen-tags()
+{
+    [[ -z "$1" ]] && echo "usage: gen-tags <repo>" && return 1
+    repo="$1"
+    [[ ! -d "${repo}" ]] && echo "Repo '${repo}' does not exist." && return 1
+    echo "Building tags file for '${repo}' ..."
+    ctags -R -f "${repo}/tags" "${repo}" >/dev/null 2>&1
+}
+
 # Permission utilities
 
 isRoot()
@@ -57,3 +74,4 @@ bool()
     # i.e., `bool onWindows`, `bool onLinux`
     "$@" && echo "true" || echo "false"
 }
+
