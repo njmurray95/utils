@@ -118,7 +118,14 @@ Main options:
 #### diff
 
 Diff two file systems or folders:
-`$ diff -rq A B`
+```
+$ diff -rq A B
+```
+
+Diff two commands in place (process substitution):
+```
+diff <(cmd) <(cmd)
+```
 
 ### coreutils
 
