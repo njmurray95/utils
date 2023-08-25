@@ -30,24 +30,28 @@ def dprint(*args, **kwargs):
     print(prefix, *args, **kwargs)
 
 
-def getstack():
+def getstack(trim=(0,0)):
     """
     Return the stack as a string at time this function is called.
-    >>> (lambda: stack())() # doctest: +SKIP
-    '<module> -> <lambda> -> stack'
-    >>> (lambda: (lambda: stack())())() # doctest: +SKIP
-    '<module> -> <lambda> -> <lambda> -> stack'
-    >>> (lambda: (lambda: (lambda: stack())())())() # doctest: +SKIP
-    '<module> -> <lambda> -> <lambda> -> <lambda> -> stack'
+    >>> (lambda: getstack(trim=((4,0))))()
+    '<module> -> <lambda> -> getstack'
+    >>> (lambda: (lambda: getstack(trim=(4,0)))())()
+    '<module> -> <lambda> -> <lambda> -> getstack'
+    >>> (lambda: (lambda: (lambda: getstack())())())() # doctest: +SKIP
+    >>> (lambda: (lambda: (lambda: getstack(trim=(4,0)))())())()
+    '<module> -> <lambda> -> <lambda> -> <lambda> -> getstack'
 
     (Note: doctest would prepend '<module> -> testmod -> run -> __run -> ' if we did not skip.)
     """
     import inspect
     # inspect.stack() returns a list of frames, [3] is the function name
     # Index from [::-1] -- reverse the sort
-    stack = [s[3] for s in inspect.stack()][::-1]
-    breakpoint()
-    return " -> ".join([s[3] for s in inspect.stack()][::-1])
+    # These are equivalent
+    # stack = [t[2] for t in traceback.extract_stack()]
+    # [::-1] -- Reverse the list
+    # [:-len(stack)+1-trim:] -- Keep all elements on back up to the trim
+    # [-(trim+1)::] -- Keep all elements on front after the trim
+    return " -> ".join([s[3] for s in inspect.stack()][-(trim[0]+1):-(len(inspect.stack())+1-trim[1]):-1])
 
 
 def subTracer():
@@ -62,6 +66,29 @@ def subTracer():
         if name != 'communicate':
             return
         print(frame.f_locals['self'].args)
+
+    sys.settrace(trace)
+
+
+def addDelay(delay=1):
+    def outer(func):
+        def inner(*args, **kwargs):
+            func(*args, **kwargs)
+            time.sleep(delay)
+        return inner
+    return outer
+
+
+def stackTracer():
+    '''
+    Debug by printing all the programs farmed out to subprocess.Popen.communicate()
+    '''
+    @addDelay(1)
+    def trace(frame, event, arg):
+        if event != 'call':
+            return
+        # Trim length = decorator calls and this function from the stack
+        print(getstack(trim=(0,3)))
 
     sys.settrace(trace)
 
@@ -128,6 +155,4 @@ def name(var):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-
-    breakpoint()
     print(getstack())
