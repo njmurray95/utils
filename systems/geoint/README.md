@@ -4,7 +4,7 @@ gdal, ossim, RV / Socet, etc.
 
 ## Downloading Data
 
-[SRTM](https://sbordwtkns.com/srtm30m/)
+[SRTM](https://dwtkns.com/srtm30m/)
 
 ## Postgis
 
