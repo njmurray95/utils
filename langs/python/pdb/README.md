@@ -34,3 +34,10 @@ PDB sometimes gets stuck in a loop if you try to quit within an exception. To al
 import os
 os._exit(0)
 ```
+
+---
+
+PDB doesn't handle multi-line comments. Workaround, which starts an interactive python session with locals passed through:
+```
+(pdb) !import code; code.interact(local=vars())
+```
