@@ -30,16 +30,73 @@ def dprint(*args, **kwargs):
     print(prefix, *args, **kwargs)
 
 
-def getstack(trim=(0,0)):
+def showStacks(trim=(1,1)):
+
+    argstack = getArgstack(trim)
+    localstack = getLocalstack(trim)
+
+    import side_by_side
+    import pprint
+    side_by_side.print_side_by_side("Args: ", "Locals: ")
+    for a, l in zip(argstack, localstack):
+        side_by_side.print_side_by_side(
+                pprint.pformat(a),
+                pprint.pformat(l)
+        )
+
+
+def getArgstack(trim=(1,1)):
+    """
+    Return a string representing the current stack of args passed therein.
+    >>> getArgstack(trim=(4,1))
+    [('<module>', ([], None, None))]
+    >>> (lambda x: getArgstack(trim=((4,1))))(x=5)
+    [('<module>', ([], None, None)), ('<lambda>', (['x'], None, None))]
+    """
+    st = -1 * (trim[0] + 1)
+    et = -1 * (len(inspect.stack()) + 1 - trim[1])
+    stack = [s for s in inspect.stack()[st:et:-1]]
+    namestack = [s[3] for s in stack]
+    varstack = [inspect.getargvalues(s[0])[0:3] for s in stack]
+
+    argstack = [(n, a) for n, a in zip(namestack, varstack)]
+    return argstack
+
+
+def getLocalstack(trim=(1,1)):
+    """
+    Return a string representing the current stack with locals at calltime.
+
+    :param trim: Tuple of (unwanted) stack frames to remove from (start, end)
+    >>> getArgstack(trim=(5,1))
+    []
+    >>> (lambda x: getLocalstack(trim=(5,1)))(x=5)
+    [('<lambda>', {'x': 5})]
+    >>> (lambda a, b: (lambda c : (getLocalstack(trim=(5,1))))(c=5))(a=1,b=3)
+    [('<lambda>', {'a': 1, 'b': 3}), ('<lambda>', {'c': 5})]
+    """
+    st = -1 * (trim[0] + 1)
+    et = -1 * (len(inspect.stack()) + 1 - trim[1])
+    stack = [s for s in inspect.stack()[st:et:-1]]
+    namestack = [s[3] for s in stack]
+    varstack = [s.frame.f_locals for s in stack]
+
+    localstack = [(n, a) for n, a in zip(namestack, varstack)]
+    # import pprint
+    # pprint.pprint(varstack)
+    return localstack
+
+
+def getStack(trim=(0,0)):
     """
     Return the stack as a string at time this function is called.
-    >>> (lambda: getstack(trim=((4,0))))()
-    '<module> -> <lambda> -> getstack'
-    >>> (lambda: (lambda: getstack(trim=(4,0)))())()
-    '<module> -> <lambda> -> <lambda> -> getstack'
-    >>> (lambda: (lambda: (lambda: getstack())())())() # doctest: +SKIP
-    >>> (lambda: (lambda: (lambda: getstack(trim=(4,0)))())())()
-    '<module> -> <lambda> -> <lambda> -> <lambda> -> getstack'
+    >>> (lambda: getStack(trim=((4,0))))()
+    '<module> -> <lambda> -> getStack'
+    >>> (lambda: (lambda: getStack(trim=(4,0)))())()
+    '<module> -> <lambda> -> <lambda> -> getStack'
+    >>> (lambda: (lambda: (lambda: getStack())())())() # doctest: +SKIP
+    >>> (lambda: (lambda: (lambda: getStack(trim=(4,0)))())())()
+    '<module> -> <lambda> -> <lambda> -> <lambda> -> getStack'
 
     (Note: doctest would prepend '<module> -> testmod -> run -> __run -> ' if we did not skip.)
     """
@@ -48,10 +105,18 @@ def getstack(trim=(0,0)):
     # Index from [::-1] -- reverse the sort
     # These are equivalent
     # stack = [t[2] for t in traceback.extract_stack()]
+    # stack = [s[3] for s in inspect.stack()]
+    # argstack = inspect.getargvalues(
+
     # [::-1] -- Reverse the list
     # [:-len(stack)+1-trim:] -- Keep all elements on back up to the trim
     # [-(trim+1)::] -- Keep all elements on front after the trim
-    return " -> ".join([s[3] for s in inspect.stack()][-(trim[0]+1):-(len(inspect.stack())+1-trim[1]):-1])
+    st = -1 * (trim[0] + 1)
+    et = -1 * (len(inspect.stack()) + 1 - trim[1])
+    return " -> ".join([s[3] for s in inspect.stack()][st:et:-1])
+
+    # The one-liner looks cool
+    # return " -> ".join([s[3] for s in inspect.stack()][st:-(len(inspect.stack())+1-trim[1]):-1])
 
 
 def subTracer():
@@ -78,20 +143,16 @@ def addDelay(delay=1):
         return inner
     return outer
 
+def setTracer(fn, delay=0):
 
-def stackTracer():
-    '''
-    Debug by printing all the programs farmed out to subprocess.Popen.communicate()
-    '''
-    @addDelay(1)
+    @addDelay(delay)
     def trace(frame, event, arg):
         if event != 'call':
             return
         # Trim length = decorator calls and this function from the stack
-        print(getstack(trim=(0,3)))
+        fn()
 
     sys.settrace(trace)
-
 
 
 def tracer(delay=0):
@@ -136,7 +197,7 @@ def varAttrs(someVar):
 
 
 
-def pdb_kill():
+def killForPDB():
     '''Run pdb on a KeyboardInterrupt (which maps to SIGINT)'''
     import signal
     import pdb
@@ -144,15 +205,21 @@ def pdb_kill():
         pdb.set_trace()
     signal.signal(signal.SIGINT, pdb_handler)
 
-def name(var):
+def namestr(var):
     '''
     Hack to get the name of the variable passed in.
     '''
     import inspect
     local_vars = inspect.currentframe().f_locals.items()
-    return [ name for name, val in local_vars if name is var ][0]
+    # This actually doesn't work because of a list comprehension scope issue
+    # TODO: FIX (go for the simple loop?)
+    return [ name for name, val in local_vars if name is var ]
+
+def test():
+    int_variable = 76
+    breakpoint()
+    return [name for name in locals() if locals()[name] == 76 ]
 
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    print(getstack())

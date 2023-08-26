@@ -19,6 +19,7 @@ def dict_print(dictionary):
 
 def side_by_side_diff(a, b):
     '''Return a side-by-side diff of the texts.'''
+    breakpoint()
     from side_by_side import print_side_by_side
     import io
     import sys
