@@ -30,7 +30,7 @@ def dprint(*args, **kwargs):
     print(prefix, *args, **kwargs)
 
 
-def showStacks(trim=(1,1)):
+def showStacks(trim=(1,2)):
 
     argstack = getArgstack(trim)
     localstack = getLocalstack(trim)
@@ -217,7 +217,6 @@ def namestr(var):
 
 def test():
     int_variable = 76
-    breakpoint()
     return [name for name in locals() if locals()[name] == 76 ]
 
 if __name__ == "__main__":
