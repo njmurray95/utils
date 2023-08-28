@@ -47,7 +47,10 @@ def getstack(trim=(0,0)):
     # inspect.stack() returns a list of frames, [3] is the function name
     # Index from [::-1] -- reverse the sort
     # These are equivalent
+    # TODO: Make args an optional add-on
     # stack = [t[2] for t in traceback.extract_stack()]
+    # argstack = [inspect.getargvalues(s[0]) for s in inspect.stack()][::-1]
+    # pprint.pprint([{s: a[0:3]} for s, a in zip(stack, argstack)])
     # [::-1] -- Reverse the list
     # [:-len(stack)+1-trim:] -- Keep all elements on back up to the trim
     # [-(trim+1)::] -- Keep all elements on front after the trim
