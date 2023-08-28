@@ -6,7 +6,7 @@ To """install""":
 
 1) Find the place where python puts packages
 
-(`/usr/lib/python3/dist-packages` or thereabouts)
+(`/usr/lib/python3/dist-packages`, `/opt/homebrew/anaconda3/lib/python3.9/site-packages/snafutils/` or thereabouts)
 
 2)
 

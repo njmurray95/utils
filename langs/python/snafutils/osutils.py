@@ -50,7 +50,7 @@ def noisefile(filename, bytesize=1, zero=False):
         else:
             f.write(os.urandom(bytesize))
 
-def zip(dir):
+def zipdir(dir):
     '''
     Zip all the files in a directory.
     '''
