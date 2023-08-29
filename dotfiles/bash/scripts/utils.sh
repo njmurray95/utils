@@ -17,6 +17,17 @@ gen-tags()
     ctags -R -f "${repo}/tags" "${repo}" >/dev/null 2>&1
 }
 
+always()
+{
+    # [[ -z "$1" ]] && return "Must specify command"
+    while true
+    do
+        echo ">>> $@"
+        eval "$@"
+        sleep 1
+    done
+}
+
 # Permission utilities
 
 isRoot()
