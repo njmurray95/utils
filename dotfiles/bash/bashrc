@@ -19,7 +19,7 @@ export XDG_STATE_HOME="$HOME/.local/state"  # User-specific state files
 # Misc
 export VISUAL="vim"                         # Use vim as system editor
 export EDITOR="$VISUAL"                     # Some programs use this too
-export PATH="$PATH:$HOME/.local/bin"        # Local binaries
+export PATH="$PATH:$HOME/.local/bin"                  # Local binaries
 
 export BASHRC="$XDG_CONFIG_HOME/bash/bashrc"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
@@ -39,6 +39,10 @@ export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
+# Check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # Write all commands to common file
 export HISTFILE="$XDG_STATE_HOME/bash/history"
 mkdir -p "$XDG_STATE_HOME/bash"
@@ -47,13 +51,25 @@ touch "$HISTFILE"
 ################################################################################
 #  => Prompt (XXX)
 
-# username@machine:/current/path
-# $
-export PS1="\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ "
+# \[\e[0;31m\]    -- Set text to red
+# \d-\t           -- date-time
+# \[\033[00m\]    -- Set text default (white)
+# :
+# \[\033[01;33m\] -- Set text to yellow
+# \w              -- working directory
+# \[\033[00m\]    -- Set text default (white)
+# \n\$            -- newline, prompt '$ '
+export PS1="\[\033[01;31m\]\d-\t\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\n\$ "
 
 # Echo all non-zero exit codes to caller
 EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo err: \$l; fi;"
 PROMPT_COMMAND="$EXIT_STATUS"
+
+################################################################################
+#  => Style (XXX)
+
+# Set colors used by ls
+eval $(dircolors -b "$XDG_CONFIG_HOME/dir_colors")
 
 ################################################################################
 #  => Aliases (XXX)
@@ -66,12 +82,10 @@ alias vim="nvim-qt"
 alias nvim="nvim-qt"
 alias python="python3"
 
-alias info="info --vi-keys"
-alias ls="ls -F"                # Show line endings
-alias rm="rm -dv"               # -d for directories, -v vesbore
 
-# fzf
-alias fzf="fzf --preview=\"head -$LINES {}\""
+alias info="info --vi-keys"
+alias ls="ls -F --color=auto"                # Show line endings
+alias rm="rm -dv"               # -d for directories, -v verbose
 
 # cd lists directory names
 cd ()
@@ -90,7 +104,13 @@ man ()
     esac
 }
 
+
 # Source all scripts in a subfolder
 for script in "$XDG_CONFIG_HOME/bash/scripts/"*.sh; do
     source $script;
 done
+
+# It's a hack but it works for now
+# Do the xcape CapsLock remap
+source $XDG_CONFIG_HOME/xcape/xcape.conf
+
