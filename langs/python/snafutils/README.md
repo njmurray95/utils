@@ -1,5 +1,12 @@
 # snafutils
 
+TODO:
+
+* Push the timing decorator with functools.wraps
+* Copy the get-tag stuff from regression
+* wrap around exceptions, measures failures and successes separately
+* write log report for each failure and success, average, summary
+
 A folder for some useful utils when using python. (`snafu` + `utils` -- a unique name not likely to conflict with actual python packaes.)
 
 To """install""":
