@@ -1,14 +1,23 @@
+# A global config file for git
+# (set in ~/.config/git/config)
+#
+[user]
+	name = Nick Murray
+	email = njmurray@umich.edu
+[core]
+    # macos / linux
+	excludesFile = ~/.config/git/gitignore
+    # Windows
+    # excludesFile =  %LOCALAPPDATA%\git\gitignore
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user]
-	name = Nick Murray
-	email = nick.murray@avinc.com
-[core]
-	excludeFiles = /home/nmurray/.config/git/gitignore
-	excludesFiles = /home/nmurray/.config/git/gitignore
-	excludesFile = /home/nmurray/.config/git/gitignore
+[http]
+    # Ignore ssl checks
+	sslVerify = false
+	# Ignore Windows/Linux line ending differences
+	autocrlf = true
 [alias]
 	find = "!git log --color -p -S "
