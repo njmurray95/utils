@@ -1,4 +1,5 @@
 
+import sys
 import time
 import datetime
 import functools
@@ -7,54 +8,61 @@ def getTag(tag=""):
     '''
     Generic method to get a tag for certain outputs. To be extended.
     '''
-    tag = tag + "_" + datetime.datetime.now().strftime('%Y-%m-%d_%H-%m-%S')
+    # breakpoint()
+    tag = '_'.join([
+            tag,
+            '-'.join([s.replace('-', '') for s in sys.argv[1:]]),
+            datetime.datetime.now().strftime('%Y-%m-%d_%H-%m-%S')
+    ])
+
     return tag
 
-def timeExec(func):
+def timeExec(func, suppressErrors=False):
     '''
     Decorator to time trial an inner function every time it is run.
     Intended for use on complex functions that must be profiled in a working environment.
+    >>> time.sleep = timeExec(time.sleep)
+    >>> time.sleep(1)
+    >>> timeExec._records # doctest: +ELLIPSIS
+    [{'finished': True, 'return': None, 'runtime': ...}]
+    >>> len(timeExec._records)
+    1
+    >>> time.sleep('lkjlkj') # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: an integer is required (got type str)
+    >>> timeExec._records[1] # doctest: +ELLIPSIS
+    {'finished': False, 'error': TypeError('an integer is required (got type str)'), 'runtime': ...}
     '''
-    timeExec._run = 0
-    timeExec._totalRuntime = 0
+
     timeExec._records = []
 
     @functools.wraps(func)
     def inner(*args, **kwargs):
-        timeExec._run += 1
         starttime = time.time()
         try:
             output = func(*args, **kwargs)
-            error = None
-            finished = True
+            rec = {
+                'finished': True,
+                'return': output
+            }
         except Exception as e:
-            error = e
-            finished = False
-            output = None
+            rec = {
+                'finished': False,
+                'error': e
+            }
+            if not suppressErrors:
+                raise(e)
         finally:
-            runtime = time.time() - starttime
-            timeExec._records.append({
-                'runtime': runtime,
-                'finished': finished,
-                'error': error,
-                'return': str(output)
-            })
+            rec['runtime'] = time.time() - starttime
+            timeExec._records.append(rec)
 
-        print("Runtime: {}".format(runtime))
+        # print("Runtime: {}".format(runtime))
         return output
     return inner
 
 if __name__ == "__main__":
 
-    import time
-    time.sleep = timeExec(time.sleep)
-    time.sleep(1)
-    time.sleep(1)
-    time.sleep('lkjlkj')
+    import doctest
+    doctest.testmod()
 
-    print(timeExec._records)
-
-    goodtimes = sum([r['runtime'] for r in timeExec._records if r['finished']])
-    badtimes = sum([r['runtime'] for r in timeExec._records if not r['finished']])
-    print("Good times: {}".format(goodtimes))
-    print("Bad times: {}".format(badtimes))
