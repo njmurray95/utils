@@ -6,9 +6,10 @@
 
 ## Use
 
-`ossim` comes with a lot of binaries. For a full list (you won't need one), run: `compgen -c | grep 'ossim' | sort`
+`ossim` comes with a lot of binaries. For a full list (you won't need one), run: `compgen -c 'ossim' | sort`
 
 ```
+$ ossim-cli [info | orthoigen | ...]
 $ ossim-info
 $ ossim-orthoigen
 ```
