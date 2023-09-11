@@ -23,6 +23,15 @@ docker-login ()
 }
 ```
 
+---
+
+## Build
+
+```
+docker build -f /path/to/dockerfile [-t test_tag_name] /path/to/output/
+docker build -f filename .
+```
+
 ## Misc.
 
 Check that the `docker` (including the `dockerd` daemon) are installed correctly:
