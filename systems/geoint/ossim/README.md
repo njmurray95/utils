@@ -7,9 +7,14 @@
 ## Use
 
 ```
-> ossim-info
+$ ossim-info
+$ ossim-orthoigen
 ```
 
+Check available installed writers:
+```
+$ ossim-info --writers
+```
 
 
 ### Elevation Setup
