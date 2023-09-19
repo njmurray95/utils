@@ -1,0 +1,27 @@
+# Minimal / Useful Docker Compose File
+# Invoked with: `docker-compose up [-d]`
+version: "3"
+
+# Example of default options applied to everyone
+x-opts: &default-opts
+  # read_only: true
+  security_opt:
+    - no-new-privileges
+  mem_limit: 30gb
+  pids_limitP 8192
+
+services:
+
+  mymainserver:
+  # Add default options to this image
+  <<: *default-opts
+    # Specify dir for the dockerfile
+    build: .
+    # or: specify the image to run
+    # image: "ubuntu:latest"
+    command: ["sleep","infinity"]
+    volumes:
+      - './Docker/Data/Ubuntu_Test:/exchange:rw'
+    ports:
+      - "5555:22"
+    network_mode: bridge

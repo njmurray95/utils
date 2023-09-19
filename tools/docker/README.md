@@ -23,6 +23,15 @@ docker-login ()
 }
 ```
 
+---
+
+## Build
+
+```
+docker build -f /path/to/dockerfile [-t test_tag_name] /path/to/output/
+docker build -f filename .
+```
+
 ## Misc.
 
 Check that the `docker` (including the `dockerd` daemon) are installed correctly:
@@ -57,7 +66,13 @@ Setting the (deprecated) `DOCKER_BUILDKIT=0` option will show the IDs of all int
 DOCKER_BUILDKIT=0 docker build -t docker-test-1 .
 ```
 
-Find the build before the command that failed and spin up that image:
+Find the build before the command that failed:
+
+```
+docker images
+```
+
+And spin up that image:
 
 ```
 docker run --rm -it <CONTAINER-ID> [/bin/bash]      

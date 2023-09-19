@@ -6,10 +6,18 @@
 
 ## Use
 
+`ossim` comes with a lot of binaries. For a full list (you won't need one), run: `compgen -c 'ossim' | sort`
+
 ```
-> ossim-info
+$ ossim-cli [info | orthoigen | ...]
+$ ossim-info
+$ ossim-orthoigen
 ```
 
+Check available installed writers:
+```
+$ ossim-info --writers
+```
 
 
 ### Elevation Setup
