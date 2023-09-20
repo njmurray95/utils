@@ -17,12 +17,16 @@ export XDG_DATA_HOME="$HOME/.local/share"   # User-specific data files
 export XDG_STATE_HOME="$HOME/.local/state"  # User-specific state files
 
 # Misc
-export VISUAL="vim"                         # Use vim as system editor
-export EDITOR="$VISUAL"                     # Some programs use this too
+export VISUAL="nvim-qt"                     # Use nvim as visual editor
+export EDITOR="nvim"                        # Or the non-GUI verson for CLI
 export PATH="$PATH:$HOME/.local/bin"                  # Local binaries
 
 export BASHRC="$XDG_CONFIG_HOME/bash/bashrc"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python" # Store .pyc files here
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"       # User site-packages here
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/site.py" # Python start here
 
 ################################################################################
 #  => History (XXX)
@@ -82,26 +86,13 @@ alias vim="nvim-qt"
 alias nvim="nvim-qt"
 alias python="python3"
 
-
-alias info="info --vi-keys"
 alias ls="ls -F --color=auto"                # Show line endings
 alias rm="rm -dv"               # -d for directories, -v verbose
 
-# cd lists directory names
-cd ()
+# Reload
+bash-reload()
 {
-    builtin cd "$@"
-    (($?)) || echo "$OLDPWD --> $PWD"
-}
-
-# Add help pages to man
-man ()
-{
-    case "`type -tf $1 2>/dev/null`" in
-        builtin)      help "$1" | less            ;;
-        function)     command -p man "$@"         ;;
-        *)            command -p man "$@"         ;;
-    esac
+    source "$XDG_CONFIG_HOME/bash/bashrc"
 }
 
 

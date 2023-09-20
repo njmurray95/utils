@@ -1,22 +1,13 @@
 #!/usr/bin/env bash
 
-# Useful
-
+# Notification when something is done
 beep()
 {
     msg=${1:-"Task done."}
     spd-say "Done" && zenity --info --text "${msg}: $(date)" &
 }
 
-gen-tags()
-{
-    [[ -z "$1" ]] && echo "usage: gen-tags <repo>" && return 1
-    repo="$1"
-    [[ ! -d "${repo}" ]] && echo "Repo '${repo}' does not exist." && return 1
-    echo "Building tags file for '${repo}' ..."
-    ctags -R -f "${repo}/tags" "${repo}" >/dev/null 2>&1
-}
-
+# Repeat something forever
 always()
 {
     # [[ -z "$1" ]] && return "Must specify command"
@@ -26,6 +17,56 @@ always()
         eval "$@"
         sleep 1
     done
+}
+
+# cd lists directory names
+cd ()
+{
+    builtin cd "$@"
+    (($?)) || echo "$OLDPWD --> $PWD"
+}
+
+# Add help pages to man
+man ()
+{
+    case "`type -tf $1 2>/dev/null`" in
+        builtin)      help "$1" | less            ;;
+        function)     command -p man "$@"         ;;
+        *)            command -p man "$@"         ;;
+    esac
+}
+
+# Wrapper for fzf, "find files"
+ff()
+{
+    [[ -n "$1" ]] && builtin cd $1 # Go to folder or noop
+    AG_DEFAULT_COMMAND="ag --ignore-case --files-with-matches --hidden"
+    IFS=$'\n'
+    selected=($(
+        fzf \
+        -m \
+        -e \
+        --ansi \
+        --disabled \
+        --reverse \
+        --print-query \
+        --bind "change:reload:$AG_DEFAULT_COMMAND {q} || true" \
+        --preview "ag -i --color --context=2 {q} {}"))
+    # TODO: this fails if no search is loaded into fzf
+    [[ -n "$selected" ]] && "$VISUAL" ${selected[1]:-${selected[0]}} -- -c "/${selected[1]:+${selected[0]}}"
+    # echo "$VISUAL" ${selected[1]:-${selected[0]}} -- -c "/${selected[1]:+${selected[0]}}"
+
+    [[ -n "$1" ]] && builtin cd - || return 0 # Return if we changed dirs
+}
+
+# Run ctags to generate output for vim
+gen-tags()
+{
+    [[ -z "$1" ]] && echo "usage: gen-tags <repo>" && return 1
+    repo="$1"
+    [[ ! -d "${repo}" ]] && echo "Repo '${repo}' does not exist." && return 1
+    echo "Building tags file for '${repo}' ..."
+    ctags -R -f "${repo}/tags" "${repo}" >/dev/null 2>&1
 }
 
 # Permission utilities
