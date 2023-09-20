@@ -54,7 +54,8 @@ if __name__ == "__main__":
 
     with open('test.txt', 'w') as testlog:
         with open('testtwo.txt', 'w') as testtwolog:
-            sys.stdout = Tee([sys.stdout, testlog, testtwolog])
+            testthreelog = open('testthree.txt', 'w')
+            sys.stdout = Tee([sys.stdout, testlog, testtwolog, testthreelog])
             print('test')
 
 

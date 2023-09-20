@@ -20,9 +20,18 @@ def gettime():
     return time.time() - stime
 
 def settime():
-    """Set the start of the timer.""" 
+    """Set the start of the timer."""
     global stime
     stime = time.time()
+
+def timefunc(func):
+    def inner(*args, **kwargs):
+        starttime = time.time()
+        output = func(*args, **kwargs)
+        runtime = time.time() - starttime
+        print("HELLO: {}".format(runtime))
+        return output
+    return inner
 
 def timecmd(cmd, quiet=False):
     """Time some system command."""
@@ -30,8 +39,14 @@ def timecmd(cmd, quiet=False):
         output="stdout=PIPE, stderr=PIPE,"
     else:
         output=""
-    
+
     setup = "from subprocess import Popen, PIPE"
     cmd = "p = Popen('{}', {} shell=True); p.communicate()".format(cmd, output)
     timeit.timeit(setup=setup, stmt=cmd, number=1)
-    
+
+if __name__ == "__main__":
+    import time
+
+    time.sleep = timefunc(time.sleep)
+
+    time.sleep(4)
