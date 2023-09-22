@@ -8,13 +8,13 @@ x-opts: &default-opts
   security_opt:
     - no-new-privileges
   mem_limit: 30gb
-  pids_limitP 8192
+  pids_limit: 8192
 
 services:
 
   mymainserver:
+  # <<: *default-opts
   # Add default options to this image
-  <<: *default-opts
     # Specify dir for the dockerfile
     build: .
     # or: specify the image to run
