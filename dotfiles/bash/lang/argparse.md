@@ -43,11 +43,42 @@ while :; do
         *)               # Default case: No more options, so break out of the loop.
             break
     esac
-
     shift
 done
 ```
 
+```
+# This works better for specifying an arbitrary list of values
+# ./program.sh [ONE] [TWO] [THREE] [...]
+DO_SOMETHING=""
+DEFAULT_VALUE="default"
+ARR=( )
+# No need for `break` statements, will continue until shifted all the way to end of argslist
+while [[ "$1" ]]; do
+    case $1 in
+        -h | --help)
+            echo "$0: <usage>
+            ;;
+        -s | --some-value)
+            if [[ "$2" ]]; then
+                DEFAULT_VALUE="$2"
+                shift
+            else
+                echo "Error: --some-value argument requires a value."
+                exit 1
+            fi
+            ;;
+        -?*)
+            echo "Unknown optin: $1"
+            exit 1
+            ;;
+        *)
+            ARR+=("$1")
+            ;;
+    esac
+    shift
+done
+```        
 ---
 
 # Menu Selection
