@@ -89,8 +89,13 @@ Bash has a `select` tool that is finnicky but basically fine:
 ```
 DIRLIST=()
 select item in `ls`; do
+    # Will produce something like:
+    # 1) file.txt				  12) test.sh
+    # 2) readme.md			      13) directory/
+    # #?
     # $REPLY maps to the number selected
-    # The <var> passed into `select` maps to the value selected
+    # The <var> passed into `select` ("$item" in this example) maps to the value selected
+
     DIRLIST+=($item)
 
     echo "Continue selecting?"
