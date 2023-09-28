@@ -53,6 +53,7 @@ done
 DO_SOMETHING=""
 DEFAULT_VALUE="default"
 ARR=( )
+
 # No need for `break` statements, will continue until shifted all the way to end of argslist
 while [[ "$1" ]]; do
     case $1 in
