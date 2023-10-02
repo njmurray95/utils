@@ -39,10 +39,14 @@ Check that the `docker` (including the `dockerd` daemon) are installed correctly
 docker run hello-world
 ```
 
+---
+
 Login to a given container:
 ```
 docker exec -it <container-name> /bin/bash
 ```
+
+---
 
 Run a new [image] with and as a bash session:
 ```
@@ -54,6 +58,19 @@ Run a new image and keep it in the background to log into later:
 docker run -dt --name <name> <image>
 docker exec -it <name> /bin/bash
 ```
+
+Find generic images from public repositories:
+
+```
+$ docker search <term>
+$ docker search "redhat"
+redhat/ubi8
+redhat/ubi8-minimal
+...
+$ docker run -it --rm redhat/ubi8 /bin/bash/
+```
+
+---
 
 ##### Investigating a failed build
 
