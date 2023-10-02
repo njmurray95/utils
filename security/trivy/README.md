@@ -11,10 +11,15 @@ https://aquasecurity.github.io/trivy/v0.45/getting-started/installation/
 
 ## Use
 
+---
+
 Generate a config file to manipulate (note: trivy requires the command and target be specified here):
 ```
 trivy <command> <target> --generate-default-config
 ```
+See: https://github.com/aquasecurity/trivy/blob/main/docs/docs/references/configuration/config-file.md
+
+---
 
 Run trivy on a docker image and only report severe vulnerabilities;
 ```
