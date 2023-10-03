@@ -24,7 +24,7 @@ In most cases it's easier to pipe into and out of `sed` than to invoke it direct
 
 ### Misc.
 
-Find replace all:
+Editing a file (say, some config) in-place (`-i`):
 ```
-sed -i  's/a\.example\.com/b.example.com/g' [files]
+sed -i  's/a\.example\.com/b.example.com/g' /path/to/file
 ```
