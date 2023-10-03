@@ -244,3 +244,10 @@ $ git checkout master
 $ # edit, save, commit the file to conflict
 $ git merge conflict_branch
 ```
+
+---
+
+Merge in a single file from a branch (i.e. from `master`):
+```
+git checkout <branch> /path/to/file
+```
