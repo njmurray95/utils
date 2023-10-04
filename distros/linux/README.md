@@ -2,6 +2,12 @@
 
 ## Config
 
+Make the global Xsession config file `/etc/X11/Xsession` source scripts in `$XDG_CONFIG_HOME/xsession`):
+
+```
+$ sudo sed -i 's/\(SESSIONFILES=$([^)]*\)\()\)/\1 \&\& run-parts --list \$XDG_CONFIG_HOME\/xsession)/g' /etc/X11/Xsession
+```
+
 ### GNOME
 
 Install the GNOME shell integration chrome extension:
@@ -21,7 +27,7 @@ https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for
 
 ## Misc.
 
-Version information about the distrol:
+Version information about the distro:
 ```
 cat /etc/issue
 ```

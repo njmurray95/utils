@@ -1,3 +1,4 @@
+#!/bin/sh
 # CapsLock -> Control + Escape
 # This works 'well-enough' on Linux
 
