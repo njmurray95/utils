@@ -2,10 +2,10 @@
 
 ## Config
 
-Make the global Xsession config file `/etc/X11/Xsession` source scripts in `$XDG_CONFIG_HOME/xsession`):
+Make the global Xsession config file `/etc/X11/Xsession` source scripts in `$HOME/.config/xsession`):
 
 ```
-$ sudo sed -i 's/\(SESSIONFILES=$([^)]*\)\()\)/\1 \&\& run-parts --list \$XDG_CONFIG_HOME\/xsession)/g' /etc/X11/Xsession
+$ sudo sed -i 's/\(SESSIONFILES=$([^)]*\)\()\)/\1 \&\& run-parts --list \$HOME\/\.config\/xsession)/g' /etc/X11/Xsession
 ```
 
 ### GNOME
