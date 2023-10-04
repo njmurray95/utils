@@ -170,7 +170,6 @@ Things to look into:
 
 * iptables
 * ident/identd
-* nmap
 * nc
 * telnet
 * tcpdump
