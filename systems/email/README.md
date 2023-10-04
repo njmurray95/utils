@@ -56,6 +56,11 @@ vi /etc/postfix/main.cf
 # inet_protocols = ipv4
 ```
 
+or:
+```
+RUN sed -i 's/inet_protocols = all/inet_protocols = ipv4/g' /etc/postfix/main.cf
+```
+
 ---
 
 Checking the status of the mail queue (`postqueue -p`) shows this error:
