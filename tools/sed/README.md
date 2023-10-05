@@ -28,3 +28,12 @@ Editing a file (say, some config) in-place (`-i`):
 ```
 sed -i  's/a\.example\.com/b.example.com/g' /path/to/file
 ```
+
+Edit an arbitrary line (`[0-9]*` before the `s`):
+```
+$ echo -e "one\ntwo" > test.txt
+$ sed -i '2s/two/three/' test.txt
+$ cat test.txt
+one
+three
+```
