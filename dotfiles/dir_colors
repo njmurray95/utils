@@ -1,4 +1,7 @@
 # See: https://github.com/trapd00r/LS_COLORS/blob/master/LS_COLORS
+#
+# Generate here: https://geoff.greer.fm/lscolors/
+
 BLK                   38;5;68             # core
 CAPABILITY            38;5;17             # core
 CHR                   38;5;113;1          # core
