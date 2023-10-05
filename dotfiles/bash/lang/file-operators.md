@@ -1,4 +1,6 @@
-# File operators
+Single bracket `[ ]` notation is compliant on all shells, double-bracket `[[ ]]` notation is bash-specific.
+
+## File operators
 
 * `-e`: file exists
 * `-a`: file exists (deprecated `-e`)
@@ -24,6 +26,14 @@
 * `-nt`: file A is newer than file B
 * `-ot`: file A is older than file B
 * `-er`: file A and file B are hard links to the same file
+
+## Misc.
+
+`-t fd`: True if `fd` is an open terminal file descriptor
+```
+[[ -t 0 ]] && echo "This command was invoked on shell" || echo "This command is on a pipe"
+```
+
 
 i.e.,
 
