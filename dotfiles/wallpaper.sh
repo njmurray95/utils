@@ -60,8 +60,13 @@ if [[ "$QUIET" -ne 1 ]]; then
 fi
 
 # Set it
-if [[ $XDG_CURRENT_DESKTOP == *"GNOME" ]]; then
-    # Have to use gsettings
+if [[ `ps -ef | pgrep "gnome"` ]]; then
+# if [[ $XDG_CURRENT_DESKTOP == *"GNOME" ]]; then
+    # Using gnome, have to use gsettings
+
+    # Necessary on crontab
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+
     gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPER"
     gsettings set org.gnome.desktop.background picture-options "scaled"
     # For other options, see:
