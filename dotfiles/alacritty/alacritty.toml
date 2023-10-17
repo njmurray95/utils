@@ -1,0 +1,60 @@
+import = ["/home/nmurray/.config/alacritty/fall.toml"]
+
+[bell]
+animation = "EaseOutSine"
+color = "#dba40d"
+duration = 300
+
+[cursor]
+blink_interval = 750
+thickness = 0.5
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Underline"
+# unfocused_hollow = true
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "UbuntuMono"
+style = "Bold"
+
+[font.italic]
+family = "UbuntuMono"
+style = "Italic"
+
+[font.normal]
+family = "UbuntuMono"
+style = "Regular"
+
+# [[keyboard.bindings]]
+# action = "ToggleSimpleFullScreen"
+# key = "Return"
+# mods = "Command"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["-n", "/Applications/Alacritty.app"]
+program = "open"
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Right"
+
+[shell]
+program = "/usr/bin/bash"
+# program = "/opt/homebrew/bin/bash"
+args = ["--login"]
+
+[window]
+# decorations = "buttonless"
+
+[window.padding]
+x = 10
+y = 10
