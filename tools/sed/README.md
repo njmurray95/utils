@@ -37,3 +37,12 @@ $ cat test.txt
 one
 three
 ```
+
+---
+
+#### Old Examples
+
+Change all colors in fahrenheit vim colorscheme to transparent
+```
+sed -i 's/ctermbg=0/ctermbg=none/g' ~/.local/share/nvimplugged/vim-colorschemes/colors/fahrenheit.vim
+```
