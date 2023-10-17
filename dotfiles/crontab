@@ -1,6 +1,9 @@
 # Crontab
 
-Copy-paste the below into cron:
+# Run:
+# ```
+# crontab /path/to/this/file
+# ```
 
 ```
 # Crontab
