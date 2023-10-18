@@ -25,6 +25,9 @@ Then plugins can be installed from the (Gnome Extensions List)[https://extension
 Windows 10 Tiling for GNOME (adds quarter-tiling by button clicks)
 https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for-gnome/
 
+GNOME window graphics:
+https://github.com/Schneegans/Burn-My-Windows
+
 ## Misc.
 
 Version information about the distro:
