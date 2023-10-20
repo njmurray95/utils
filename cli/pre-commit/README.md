@@ -1,6 +1,6 @@
 # Pre-Commit
 
->  A framework for managing and maintaining multi-language pre-commit hooks. 
+>  A framework for managing and maintaining multi-language pre-commit hooks.
 >
 > -- https://pre-commit.com/
 

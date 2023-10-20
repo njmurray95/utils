@@ -3,9 +3,9 @@
 # "01;34;40m" for light blue on grey background
 set prompt \033[1;34;40m(gdb)\033[0m
 
-# Save up to 256 commands in ~/.gdb_history
+# Save up to 256 commands
 set history save on
-set history filename ~/.gdb_history
+set history filename ~/.local/share/gdb_history
 
 # Coloring commands through hooks
 
