@@ -20,3 +20,4 @@ Install packages:
 $ npm i[nstall] package@<version>
 ```
 
+npx gulp finalize

@@ -11,11 +11,20 @@ alias python3='/path/to/python3'
 alias python='/path/to/python3'
 ```
 
-#### pip
+#### pip + venv
 
 To install a package:
 ```
 python -m pip install <module>
+```
+
+To install packages specific to a particular virtual environment:
+
+```
+python -m venv </path/to/python/venv/folder/>
+# ~/.config/python/venv/<projname>
+source </path/to/python/venv/folder>/bin/activate
+python -m pip install -r </path/to/requirements.txt>
 ```
 
 For some reason, python's package manager `pip` does not always come installed. Documentation on how to install is found here:
