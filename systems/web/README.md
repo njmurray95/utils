@@ -6,6 +6,30 @@ htaccess redirects: https://gist.github.com/ScottPhillips/1721489
 
 web resources: https://gist.github.com/bradtraversy/61171a9b81586f5bc4c0ca1e2beb59ab
 
+# ip
+
+Tools relating to all things ip.
+
+Get your own IP address (unix):
+
+```
+ifconfig [-a]
+```
+
+Get your own IP address (windows):
+```
+ipconfig
+```
+
+---
+
+DNS:
+
+```
+dnslookup <website-url>
+```
+
+
 ### Misc.
 
 Open the console:
