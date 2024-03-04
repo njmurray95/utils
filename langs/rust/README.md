@@ -1,5 +1,12 @@
 # Rust
 
+## Hello World
+
+```
+rustc hello.rs
+./hello
+```
+
 ## Misc.
 
 Rustup has a config file in:
