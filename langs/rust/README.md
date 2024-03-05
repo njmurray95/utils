@@ -1,11 +1,30 @@
 # Rust
 
+## Cargo
+
+```
+cargo new
+cargo build [--release]
+# Build and run
+cargo run
+# Status
+cargo check
+```
+
 ## Hello World
 
 ```
 rustc hello.rs
 ./hello
 ```
+
+Or:
+```
+cargo new <proj>
+cd <proj>
+cargo run
+```
+
 
 ## Misc.
 
