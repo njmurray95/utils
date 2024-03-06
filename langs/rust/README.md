@@ -1,5 +1,9 @@
 # Rust
 
+[Rust Performance Book](https://nnethercote.github.io/perf-book/)
+
+[Making Python 100 times faster with Rust](https://ohadravid.github.io/posts/2023-03-rusty-python/)
+
 ## Cargo
 
 ```
