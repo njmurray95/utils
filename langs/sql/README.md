@@ -38,3 +38,13 @@ Get current hostname:
 =# SELECT boot_val, reset_val FROM pg_settings WHERE name='listen_addresses';
 ```
 
+Describe schema of table:
+```
+SELECT
+    column_name,
+    data_type
+FROM
+    information_schema.columns
+WHERE
+    table_name = 'table_name';
+```
