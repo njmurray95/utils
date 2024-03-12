@@ -23,6 +23,11 @@ psql -U postgres
 
 * `\conninfo`: Show connection info
 
+Show current database:
+```
+=# SELECT current_database();
+```
+
 Show all settings:
 ```
 =# SHOW ALL;
