@@ -41,3 +41,13 @@ List the current architecture that rust will attempt to build for (by default):
 ```
 rustc -vV | sed -n 's|host: ||p'
 ```
+
+### Macros
+
+Stub a function for later:
+
+```
+fn do_nothing() -> Result<i32, Box<dyn Error>> {
+    todo!();
+}
+```
