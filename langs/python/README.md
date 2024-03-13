@@ -11,14 +11,14 @@ alias python3='/path/to/python3'
 alias python='/path/to/python3'
 ```
 
-#### pip + venv
+#### Installing packages (pip + venv)
 
 To install a package:
 ```
 python -m pip install <module>
 ```
 
-To install packages specific to a particular virtual environment:
+It's almost always easier to install packages specific to a particular virtual environment:
 
 ```
 python -m venv </path/to/python/venv/folder/>
@@ -26,6 +26,19 @@ python -m venv </path/to/python/venv/folder/>
 source </path/to/python/venv/folder>/bin/activate
 python -m pip install -r </path/to/requirements.txt>
 ```
+
+#### Troubleshooting installs
+
+The first step is to make sure `pip` is up to date:
+
+```
+pip install --upgrade pip setuptools wheel
+# OR
+python -m pip install --upgrade pip setuptools wheel
+```
+(Note that the instance of pip invoked can change depending on whether the binary shortcut in the user's path and the pip invoked by the python module are in sync or not.)
+
+---
 
 For some reason, python's package manager `pip` does not always come installed. Documentation on how to install is found here:
 
