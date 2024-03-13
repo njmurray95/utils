@@ -32,7 +32,15 @@ docker build -f /path/to/dockerfile [-t test_tag_name] /path/to/output/
 docker build -f filename .
 ```
 
-## Misc.
+### Spin up a postgres server
+
+```
+docker run --name ml_db -e POSTGRES_DB=ml_db \
+-e POSTGRES_USER=ml_db -e POSTGRES_PASSWORD=ml_db -d -p 5432:5432 postgres
+```
+[Source](https://applied-math-coding.medium.com/data-science-crunching-data-with-postgresql-and-rust-fa6aee0b0c4c)
+
+### Misc.
 
 Check that the `docker` (including the `dockerd` daemon) are installed correctly:
 ```
