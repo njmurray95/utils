@@ -29,6 +29,9 @@ DNS:
 dnslookup <website-url>
 ```
 
+## Useful websites
+
+[Bugmenot: Shared Logins](https://bugmenot.com/)
 
 ### Misc.
 
