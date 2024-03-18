@@ -18,7 +18,7 @@ And install whichever version of the config host matches the distro:
 
 https://wiki.gnome.org/action/show/Projects/GnomeShellIntegration/Installation
 
-Then plugins can be installed from the (Gnome Extensions List)[https://extensions.gnome.org/] by clicking-through on the website.
+Then plugins can be installed from the [Gnome Extensions List](https://extensions.gnome.org/) by clicking-through on the website.
 
 #### Useful extensions
 
