@@ -4,6 +4,11 @@
 >
 > -- https://protobuf.dev/
 
+```
+apt-get install protobuf-compiler
+protoc --version
+```
+
 
 How-to (Python):
 https://medium.com/engineering-semantics3/a-simplified-guide-to-grpc-in-python-6c4e25f0c506
