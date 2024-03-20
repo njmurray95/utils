@@ -30,6 +30,17 @@ cargo run
 cargo check
 ```
 
+Run a test case without suppressing output:
+
+```
+cargo test -- --nocapture
+```
+
+This allows you to show stdout from a test-case that is normally suppressed:
+```
+println!("{:#?}", value);
+```
+
 ## Misc.
 
 Rustup has a config file in:
