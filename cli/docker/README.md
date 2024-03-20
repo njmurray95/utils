@@ -32,6 +32,18 @@ docker build -f /path/to/dockerfile [-t test_tag_name] /path/to/output/
 docker build -f filename .
 ```
 
+## Status
+
+```
+docker ps [--format "format-string"]
+docker container ls # same as above
+```
+
+See all available options for the format string:
+```
+docker ps --format='{{json .}}'
+```
+
 ### Spin up a postgres server
 
 ```
