@@ -32,6 +32,7 @@ dnslookup <website-url>
 ## Useful websites
 
 [Bugmenot: Shared Logins](https://bugmenot.com/)
+[Google's Rich Results Test](https://search.google.com/test/rich-results?url=)
 
 ### Misc.
 
