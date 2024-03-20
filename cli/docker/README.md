@@ -41,7 +41,7 @@ docker container ls # same as above
 
 See all available options for the format string:
 ```
-docker ps --format='{{json .}}'
+docker ps --format='{{json .}}' | head -n 1 | jq 'keys[]'
 ```
 
 ### Spin up a postgres server
