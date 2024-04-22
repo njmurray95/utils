@@ -73,11 +73,21 @@ Run a new [image] with and as a bash session:
 docker run -it --rm <image> /bin/bash
 ```
 
+---
+
 Run a new image and keep it in the background to log into later:
 ```
 docker run -dt --name <name> <image>
 docker exec -it <name> /bin/bash
 ```
+
+Later:
+
+```
+docker container stop <name>
+```
+
+---
 
 Find generic images from public repositories:
 
