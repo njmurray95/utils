@@ -1,0 +1,560 @@
+[2024-01-30T16:21:18.933Z] Start: Resolving Remote
+[2024-01-30T16:21:18.933Z] Dev Containers 0.327.0 in VS Code 1.85.1 (0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2).
+[2024-01-30T16:21:18.944Z] Setting up container for folder or workspace: /home/nmurray/code/spotrflow
+[2024-01-30T16:21:18.945Z] Start: Check Docker is running
+[2024-01-30T16:21:18.945Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2024-01-30T16:21:18.961Z] Stop (16 ms): Run: docker version --format {{.Server.APIVersion}}
+[2024-01-30T16:21:18.961Z] Server API version: 1.43
+[2024-01-30T16:21:18.961Z] Stop (16 ms): Check Docker is running
+[2024-01-30T16:21:18.961Z] Start: Run: docker volume ls -q
+[2024-01-30T16:21:18.978Z] Stop (17 ms): Run: docker volume ls -q
+[2024-01-30T16:21:18.978Z] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/home/nmurray/code/spotrflow --filter label=vsch.quality=stable
+[2024-01-30T16:21:18.988Z] Stop (10 ms): Run: docker ps -q -a --filter label=vsch.local.folder=/home/nmurray/code/spotrflow --filter label=vsch.quality=stable
+[2024-01-30T16:21:18.988Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:19.001Z] Stop (13 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:19.001Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.015Z] Stop (14 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.016Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow
+[2024-01-30T16:21:19.027Z] Stop (11 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow
+[2024-01-30T16:21:19.027Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.039Z] Stop (12 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.039Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-01-30T16:21:19.181Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-01-30T16:21:19.181Z] Start: Run: git rev-parse --show-cdup
+[2024-01-30T16:21:19.186Z] Stop (5 ms): Run: git rev-parse --show-cdup
+[2024-01-30T16:21:19.186Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:19.196Z] Stop (10 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:19.196Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.206Z] Stop (10 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.211Z] Stop (172 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-01-30T16:21:19.271Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/nmurray/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523 --workspace-folder /home/nmurray/code/spotrflow --workspace-mount-consistency cached --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root
+[2024-01-30T16:21:19.410Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-01-30T16:21:19.410Z] Start: Run: docker buildx version
+[2024-01-30T16:21:19.449Z] Stop (39 ms): Run: docker buildx version
+[2024-01-30T16:21:19.449Z] github.com/docker/buildx v0.11.2 9872040
+[2024-01-30T16:21:19.449Z] 
+[2024-01-30T16:21:19.449Z] Start: Resolving Remote
+[2024-01-30T16:21:19.451Z] Start: Run: git rev-parse --show-cdup
+[2024-01-30T16:21:19.454Z] Stop (3 ms): Run: git rev-parse --show-cdup
+[2024-01-30T16:21:19.494Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:19.508Z] Stop (14 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:19.508Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.518Z] Stop (10 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:19.519Z] Start: Starting container
+[2024-01-30T16:21:19.519Z] Start: Run: docker start 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.012Z] Stop (493 ms): Run: docker start 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.012Z] Stop (493 ms): Starting container
+[2024-01-30T16:21:20.013Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:20.030Z] Stop (17 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-01-30T16:21:20.030Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:20.040Z] Stop (10 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-01-30T16:21:20.041Z] Start: Inspecting container
+[2024-01-30T16:21:20.041Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.051Z] Stop (10 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.051Z] Stop (10 ms): Inspecting container
+[2024-01-30T16:21:20.052Z] Start: Run in container: /bin/sh
+[2024-01-30T16:21:20.054Z] Start: Run in container: uname -m
+[2024-01-30T16:21:20.125Z] x86_64
+[2024-01-30T16:21:20.125Z] 
+[2024-01-30T16:21:20.125Z] Stop (71 ms): Run in container: uname -m
+[2024-01-30T16:21:20.125Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-01-30T16:21:20.126Z] NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+[2024-01-30T16:21:20.126Z] 
+[2024-01-30T16:21:20.126Z] Stop (1 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-01-30T16:21:20.126Z] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'developer' || grep -E '^developer|^[^:]*:[^:]*:developer:' /etc/passwd || true)
+[2024-01-30T16:21:20.128Z] Stop (2 ms): Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'developer' || grep -E '^developer|^[^:]*:[^:]*:developer:' /etc/passwd || true)
+[2024-01-30T16:21:20.128Z] Start: Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[2024-01-30T16:21:20.128Z] 
+[2024-01-30T16:21:20.128Z] 
+[2024-01-30T16:21:20.128Z] Stop (0 ms): Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[2024-01-30T16:21:20.128Z] Start: Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[2024-01-30T16:21:20.129Z] 
+[2024-01-30T16:21:20.129Z] 
+[2024-01-30T16:21:20.129Z] Stop (1 ms): Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[2024-01-30T16:21:20.129Z] Stop (680 ms): Resolving Remote
+[2024-01-30T16:21:20.132Z] Stop (861 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/nmurray/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523 --workspace-folder /home/nmurray/code/spotrflow --workspace-mount-consistency cached --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root
+[2024-01-30T16:21:20.132Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.144Z] Stop (12 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.144Z] Start: Run: docker exec -i -u root 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb /bin/sh -c echo "New container started. Keep-alive process started." ; export VSCODE_REMOTE_CONTAINERS_SESSION=d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523 ; /bin/sh
+[2024-01-30T16:21:20.147Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --include-merged-configuration --mount-workspace-git-root
+[2024-01-30T16:21:20.242Z] New container started. Keep-alive process started.
+[2024-01-30T16:21:20.288Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-01-30T16:21:20.288Z] Start: Run: git rev-parse --show-cdup
+[2024-01-30T16:21:20.293Z] Stop (5 ms): Run: git rev-parse --show-cdup
+[2024-01-30T16:21:20.294Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.304Z] Stop (10 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.309Z] Stop (162 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --include-merged-configuration --mount-workspace-git-root
+[2024-01-30T16:21:20.309Z] Start: Inspecting container
+[2024-01-30T16:21:20.309Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.321Z] Stop (12 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.321Z] Stop (12 ms): Inspecting container
+[2024-01-30T16:21:20.322Z] Start: Run in container: /bin/sh
+[2024-01-30T16:21:20.326Z] Start: Run in container: uname -m
+[2024-01-30T16:21:20.401Z] x86_64
+[2024-01-30T16:21:20.402Z] 
+[2024-01-30T16:21:20.402Z] Stop (76 ms): Run in container: uname -m
+[2024-01-30T16:21:20.402Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-01-30T16:21:20.403Z] NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+[2024-01-30T16:21:20.403Z] 
+[2024-01-30T16:21:20.403Z] Stop (1 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-01-30T16:21:20.403Z] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'developer' || grep -E '^developer|^[^:]*:[^:]*:developer:' /etc/passwd || true)
+[2024-01-30T16:21:20.404Z] Stop (1 ms): Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'developer' || grep -E '^developer|^[^:]*:[^:]*:developer:' /etc/passwd || true)
+[2024-01-30T16:21:20.405Z] Start: Setup shutdown monitor
+[2024-01-30T16:21:20.405Z] Forking shutdown monitor: /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/shutdown/shutdownMonitorProcess /run/user/798000122/vscode-remote-containers-5dc345a3-855e-4097-8ee6-bdb1dfe4fd33.sock singleContainer Debug /home/nmurray/.config/Code/logs/20240130T112118/window1/exthost/ms-vscode-remote.remote-containers 1706631678916
+[2024-01-30T16:21:20.409Z] Stop (4 ms): Setup shutdown monitor
+[2024-01-30T16:21:20.410Z] Start: Run in container: test -d /home/developer/.vscode-server
+[2024-01-30T16:21:20.410Z] 
+[2024-01-30T16:21:20.411Z] 
+[2024-01-30T16:21:20.411Z] Stop (1 ms): Run in container: test -d /home/developer/.vscode-server
+[2024-01-30T16:21:20.411Z] Start: Run in container: test ! -f '/home/developer/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/home/developer/.vscode-server/data/Machine' && { > '/home/developer/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[2024-01-30T16:21:20.418Z] 
+[2024-01-30T16:21:20.419Z] 
+[2024-01-30T16:21:20.419Z] Exit code 1
+[2024-01-30T16:21:20.419Z] Stop (8 ms): Run in container: test ! -f '/home/developer/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/home/developer/.vscode-server/data/Machine' && { > '/home/developer/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[2024-01-30T16:21:20.419Z] Start: Run in container: cat /home/developer/.vscode-server/data/Machine/settings.json
+[2024-01-30T16:21:20.420Z] {
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "bash"
+		}
+	},
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"remote.autoForwardPorts": false
+}
+[2024-01-30T16:21:20.420Z] 
+[2024-01-30T16:21:20.420Z] Stop (1 ms): Run in container: cat /home/developer/.vscode-server/data/Machine/settings.json
+[2024-01-30T16:21:20.421Z] Start: Run in container: test -d /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2
+[2024-01-30T16:21:20.422Z] 
+[2024-01-30T16:21:20.422Z] 
+[2024-01-30T16:21:20.422Z] Stop (1 ms): Run in container: test -d /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2
+[2024-01-30T16:21:20.422Z] Start: Run in container: test -d /vscode/vscode-server/bin/linux-x64/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2
+[2024-01-30T16:21:20.423Z] 
+[2024-01-30T16:21:20.423Z] 
+[2024-01-30T16:21:20.423Z] Stop (1 ms): Run in container: test -d /vscode/vscode-server/bin/linux-x64/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2
+[2024-01-30T16:21:20.423Z] Start: Run in container: /bin/sh
+[2024-01-30T16:21:20.426Z] Start: Launching Dev Containers helper.
+[2024-01-30T16:21:20.426Z] ssh-agent: SSH_AUTH_SOCK in container (/tmp/vscode-ssh-auth-d3dd1af7-98d4-4073-a856-59318b09232f.sock) forwarded to local host (/run/user/798000122/keyring/ssh).
+[2024-01-30T16:21:20.426Z] Start: Run in container: test -e /tmp/.X11-unix/X0
+[2024-01-30T16:21:20.426Z] Start: Run in container: touch '/vscode/vscode-server/bin/linux-x64/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2'
+[2024-01-30T16:21:20.427Z] 
+[2024-01-30T16:21:20.427Z] 
+[2024-01-30T16:21:20.427Z] Exit code 1
+[2024-01-30T16:21:20.427Z] Stop (1 ms): Run in container: test -e /tmp/.X11-unix/X0
+[2024-01-30T16:21:20.427Z] Start: Run in container: mkdir -p '/tmp/.X11-unix'
+[2024-01-30T16:21:20.429Z] 
+[2024-01-30T16:21:20.429Z] 
+[2024-01-30T16:21:20.429Z] Stop (2 ms): Run in container: mkdir -p '/tmp/.X11-unix'
+[2024-01-30T16:21:20.429Z] X11 forwarding: DISPLAY in container (:0) forwarded to local host (:1).
+[2024-01-30T16:21:20.429Z] Start: Run in container: gpgconf --list-dir agent-socket
+[2024-01-30T16:21:20.431Z] /home/developer/.gnupg/S.gpg-agent
+[2024-01-30T16:21:20.431Z] 
+[2024-01-30T16:21:20.431Z] Stop (2 ms): Run in container: gpgconf --list-dir agent-socket
+[2024-01-30T16:21:20.431Z] Start: Run in container: gpgconf --list-dir homedir
+[2024-01-30T16:21:20.432Z] /home/developer/.gnupg
+[2024-01-30T16:21:20.432Z] 
+[2024-01-30T16:21:20.432Z] Stop (1 ms): Run in container: gpgconf --list-dir homedir
+[2024-01-30T16:21:20.432Z] Start: Run in container: ls '/home/developer/.gnupg/private-keys-v1.d' 2>/dev/null
+[2024-01-30T16:21:20.433Z] 
+[2024-01-30T16:21:20.434Z] 
+[2024-01-30T16:21:20.434Z] Exit code 2
+[2024-01-30T16:21:20.434Z] Stop (2 ms): Run in container: ls '/home/developer/.gnupg/private-keys-v1.d' 2>/dev/null
+[2024-01-30T16:21:20.434Z] Start: Run: gpgconf --list-dir agent-extra-socket
+[2024-01-30T16:21:20.444Z] Stop (10 ms): Run: gpgconf --list-dir agent-extra-socket
+[2024-01-30T16:21:20.444Z] /run/user/798000122/gnupg/S.gpg-agent.extra
+[2024-01-30T16:21:20.444Z] 
+[2024-01-30T16:21:20.444Z] Start: Run in container: mkdir -p -m 700 '/home/developer/.gnupg'
+[2024-01-30T16:21:20.444Z] gpg-agent: Socket in container (/home/developer/.gnupg/S.gpg-agent) forwarded to local host (/run/user/798000122/gnupg/S.gpg-agent.extra).
+[2024-01-30T16:21:20.445Z] Start: Run in container: /bin/sh
+[2024-01-30T16:21:20.445Z] Stop (19 ms): Launching Dev Containers helper.
+[2024-01-30T16:21:20.448Z] userEnvProbe: loginInteractiveShell (default)
+[2024-01-30T16:21:20.448Z] Start: Run in container: echo ~
+[2024-01-30T16:21:20.449Z] 
+[2024-01-30T16:21:20.449Z] 
+[2024-01-30T16:21:20.449Z] Stop (5 ms): Run in container: mkdir -p -m 700 '/home/developer/.gnupg'
+[2024-01-30T16:21:20.449Z] Start: Run in container: test -f '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json'
+[2024-01-30T16:21:20.449Z] Start: Run: gpgconf --list-dir homedir
+[2024-01-30T16:21:20.451Z] Stop (2 ms): Run: gpgconf --list-dir homedir
+[2024-01-30T16:21:20.452Z] /home/nmurray/.gnupg
+[2024-01-30T16:21:20.452Z] 
+[2024-01-30T16:21:20.452Z] 
+[2024-01-30T16:21:20.452Z] 
+[2024-01-30T16:21:20.452Z] Exit code 1
+[2024-01-30T16:21:20.452Z] Stop (3 ms): Run in container: test -f '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json'
+[2024-01-30T16:21:20.452Z] Start: Run in container: gpgconf --list-dir homedir
+[2024-01-30T16:21:20.452Z] userEnvProbe: not found in cache
+[2024-01-30T16:21:20.452Z] userEnvProbe shell: /bin/bash
+[2024-01-30T16:21:20.453Z] /home/developer/.gnupg
+[2024-01-30T16:21:20.453Z] 
+[2024-01-30T16:21:20.453Z] Stop (1 ms): Run in container: gpgconf --list-dir homedir
+[2024-01-30T16:21:20.453Z] Start: Run in container: # Test for /home/developer/.ssh/known_hosts and ssh
+[2024-01-30T16:21:20.454Z] /home/developer/.ssh/known_hosts exists
+[2024-01-30T16:21:20.454Z] 
+[2024-01-30T16:21:20.454Z] Exit code 1
+[2024-01-30T16:21:20.454Z] Stop (1 ms): Run in container: # Test for /home/developer/.ssh/known_hosts and ssh
+[2024-01-30T16:21:20.454Z] Start: Run in container: # Test for /home/developer/.gnupg/pubring.kbx and gpg
+[2024-01-30T16:21:20.454Z] /home/developer/.gnupg/pubring.kbx exists
+[2024-01-30T16:21:20.454Z] 
+[2024-01-30T16:21:20.454Z] Exit code 1
+[2024-01-30T16:21:20.454Z] Stop (0 ms): Run in container: # Test for /home/developer/.gnupg/pubring.kbx and gpg
+[2024-01-30T16:21:20.455Z] Start: Run in container: # Test for /home/developer/.gnupg/trustdb.gpg and gpg
+[2024-01-30T16:21:20.455Z] /home/developer/.gnupg/trustdb.gpg exists
+[2024-01-30T16:21:20.455Z] 
+[2024-01-30T16:21:20.455Z] Exit code 1
+[2024-01-30T16:21:20.455Z] Stop (0 ms): Run in container: # Test for /home/developer/.gnupg/trustdb.gpg and gpg
+[2024-01-30T16:21:20.455Z] Start: Run: gpg-connect-agent updatestartuptty /bye
+[2024-01-30T16:21:20.517Z] Stop (62 ms): Run: gpg-connect-agent updatestartuptty /bye
+[2024-01-30T16:21:20.546Z] 
+[2024-01-30T16:21:20.546Z] 
+[2024-01-30T16:21:20.546Z] Stop (120 ms): Run in container: touch '/vscode/vscode-server/bin/linux-x64/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2'
+[2024-01-30T16:21:20.546Z] Start: Run in container: command -v git >/dev/null 2>&1 && git config --system --replace-all credential.helper '!f() { /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js git-credential-helper $*; }; f' || true
+[2024-01-30T16:21:20.554Z] 
+[2024-01-30T16:21:20.554Z] 
+[2024-01-30T16:21:20.554Z] Stop (8 ms): Run in container: command -v git >/dev/null 2>&1 && git config --system --replace-all credential.helper '!f() { /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js git-credential-helper $*; }; f' || true
+[2024-01-30T16:21:20.554Z] Start: Run in container: for pid in `cd /proc && ls -d [0-9]*`; do { echo $pid ; readlink /proc/$pid/cwd || echo ; readlink /proc/$pid/ns/mnt || echo ; cat /proc/$pid/stat | tr "
+[2024-01-30T16:21:20.554Z] /home/developer
+[2024-01-30T16:21:20.554Z] 
+[2024-01-30T16:21:20.555Z] Stop (107 ms): Run in container: echo ~
+[2024-01-30T16:21:20.555Z] Start: Run in container: cat <<'EOF-/tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js' >/tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js
+[2024-01-30T16:21:20.555Z] 
+[2024-01-30T16:21:20.556Z] 
+[2024-01-30T16:21:20.556Z] Stop (1 ms): Run in container: cat <<'EOF-/tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js' >/tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js
+[2024-01-30T16:21:20.556Z] Start: Run in container: cat <<'EOF-/tmp/vscode-remote-containers-server-d3dd1af7-98d4-4073-a856-59318b09232f.js' >/tmp/vscode-remote-containers-server-d3dd1af7-98d4-4073-a856-59318b09232f.js_1706631680556
+[2024-01-30T16:21:20.558Z] 
+[2024-01-30T16:21:20.558Z] 
+[2024-01-30T16:21:20.558Z] Stop (2 ms): Run in container: cat <<'EOF-/tmp/vscode-remote-containers-server-d3dd1af7-98d4-4073-a856-59318b09232f.js' >/tmp/vscode-remote-containers-server-d3dd1af7-98d4-4073-a856-59318b09232f.js_1706631680556
+[2024-01-30T16:21:20.578Z] Stop (24 ms): Run in container: for pid in `cd /proc && ls -d [0-9]*`; do { echo $pid ; readlink /proc/$pid/cwd || echo ; readlink /proc/$pid/ns/mnt || echo ; cat /proc/$pid/stat | tr "
+[2024-01-30T16:21:20.579Z] Start: Run in container: cat '/home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/product.json'
+[2024-01-30T16:21:20.580Z] Stop (1 ms): Run in container: cat '/home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/product.json'
+[2024-01-30T16:21:20.581Z] Start: Run in container: cat '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2' 2>/dev/null || (umask 377 && echo 'f85554e3-3272-40d2-bf15-55826216c140' >'/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2-4e19ef92-d77b-42ea-b815-a728036077cc' && mv -n '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2-4e19ef92-d77b-42ea-b815-a728036077cc' '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2' && rm -f '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2-4e19ef92-d77b-42ea-b815-a728036077cc' && cat '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2')
+[2024-01-30T16:21:20.582Z] e7eb9bd5-dfd8-49be-a848-aa24deb11403
+[2024-01-30T16:21:20.582Z] 
+[2024-01-30T16:21:20.582Z] Stop (1 ms): Run in container: cat '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2' 2>/dev/null || (umask 377 && echo 'f85554e3-3272-40d2-bf15-55826216c140' >'/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2-4e19ef92-d77b-42ea-b815-a728036077cc' && mv -n '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2-4e19ef92-d77b-42ea-b815-a728036077cc' '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2' && rm -f '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2-4e19ef92-d77b-42ea-b815-a728036077cc' && cat '/home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2')
+[2024-01-30T16:21:20.582Z] Start: Starting VS Code Server
+[2024-01-30T16:21:20.582Z] Start: Preparing Extensions
+[2024-01-30T16:21:20.583Z] Start: Run in container: test ! -f '/home/developer/.vscode-server/data/Machine/.installExtensionsMarker' && set -o noclobber && mkdir -p '/home/developer/.vscode-server/data/Machine' && { > '/home/developer/.vscode-server/data/Machine/.installExtensionsMarker' ; } 2> /dev/null
+[2024-01-30T16:21:20.583Z] 
+[2024-01-30T16:21:20.583Z] 
+[2024-01-30T16:21:20.583Z] Exit code 1
+[2024-01-30T16:21:20.583Z] Stop (0 ms): Run in container: test ! -f '/home/developer/.vscode-server/data/Machine/.installExtensionsMarker' && set -o noclobber && mkdir -p '/home/developer/.vscode-server/data/Machine' && { > '/home/developer/.vscode-server/data/Machine/.installExtensionsMarker' ; } 2> /dev/null
+[2024-01-30T16:21:20.584Z] Extensions cache, install extensions: None
+[2024-01-30T16:21:20.584Z] Start: Run in container: test -d /home/developer/.vscode-server/extensionsCache && ls /home/developer/.vscode-server/extensionsCache || true
+[2024-01-30T16:21:20.586Z] donjayamanne.githistory-0.6.20
+eamodio.gitlens-14.7.0
+golang.go-0.40.3
+mhutchie.git-graph-1.30.0
+ms-azuretools.vscode-docker-1.28.0
+ms-python.python-2023.22.1
+ms-python.vscode-pylance-2023.12.1
+ms-vscode.cmake-tools-1.16.32
+ms-vscode.cpptools-1.18.5-linux-x64
+ms-vscode.cpptools-extension-pack-1.3.0
+ms-vscode.cpptools-themes-2.0.0
+rogalmic.bash-debug-0.3.9
+ryanlaws.toggle-case-1.0.2
+twxs.cmake-0.0.17
+yzhang.markdown-all-in-one-3.6.2
+zxh404.vscode-proto3-0.5.5
+[2024-01-30T16:21:20.586Z] 
+[2024-01-30T16:21:20.586Z] Stop (2 ms): Run in container: test -d /home/developer/.vscode-server/extensionsCache && ls /home/developer/.vscode-server/extensionsCache || true
+[2024-01-30T16:21:20.586Z] Start: Run in container: test -d /vscode/vscode-server/extensionsCache && ls /vscode/vscode-server/extensionsCache || true
+[2024-01-30T16:21:20.587Z] donjayamanne.githistory-0.6.20
+eamodio.gitlens-14.5.2
+eamodio.gitlens-14.6.0
+eamodio.gitlens-14.6.1
+eamodio.gitlens-14.7.0
+golang.go-0.39.1
+golang.go-0.40.0
+golang.go-0.40.1
+golang.go-0.40.3
+mhutchie.git-graph-1.30.0
+ms-azuretools.vscode-docker-1.27.0
+ms-azuretools.vscode-docker-1.28.0
+ms-python.python-2023.20.0
+ms-python.python-2023.22.0
+ms-python.python-2023.22.1
+ms-python.vscode-pylance-2023.11.10
+ms-python.vscode-pylance-2023.12.1
+ms-vscode.cmake-tools-1.15.31
+ms-vscode.cmake-tools-1.16.29
+ms-vscode.cmake-tools-1.16.31
+ms-vscode.cmake-tools-1.16.32
+ms-vscode.cpptools-1.17.5-linux-x64
+ms-vscode.cpptools-1.18.3-linux-x64
+ms-vscode.cpptools-1.18.4-linux-x64
+ms-vscode.cpptools-1.18.5-linux-x64
+ms-vscode.cpptools-extension-pack-1.3.0
+ms-vscode.cpptools-themes-2.0.0
+rogalmic.bash-debug-0.3.9
+ryanlaws.toggle-case-1.0.2
+twxs.cmake-0.0.17
+yzhang.markdown-all-in-one-3.5.1
+yzhang.markdown-all-in-one-3.6.1
+yzhang.markdown-all-in-one-3.6.2
+zxh404.vscode-proto3-0.5.5
+[2024-01-30T16:21:20.587Z] 
+[2024-01-30T16:21:20.588Z] Stop (2 ms): Run in container: test -d /vscode/vscode-server/extensionsCache && ls /vscode/vscode-server/extensionsCache || true
+[2024-01-30T16:21:20.588Z] Extensions cache, link in container: None
+[2024-01-30T16:21:20.588Z] Optimizing extensions for quality: stable
+[2024-01-30T16:21:20.588Z] Stop (6 ms): Preparing Extensions
+[2024-01-30T16:21:20.588Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/bin/code-server --log debug --force-disable-user-env --server-data-dir /home/developer/.vscode-server --use-host-proxy --telemetry-level all --accept-server-license-terms --host 127.0.0.1 --port 0 --connection-token-file /home/developer/.vscode-server/data/Machine/.connection-token-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2 --extensions-download-dir /home/developer/.vscode-server/extensionsCache --start-server --disable-websocket-compression
+[2024-01-30T16:21:20.640Z] *
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+[2024-01-30T16:21:20.643Z] Server bound to 127.0.0.1:35707 (IPv4)
+Extension host agent listening on 35707
+
+[2024-01-30T16:21:20.644Z] Stop (62 ms): Starting VS Code Server
+[2024-01-30T16:21:20.644Z] Start: Run in container: echo 35707 >'/home/developer/.vscode-server/data/Machine/.devport-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2'
+[2024-01-30T16:21:20.644Z] 
+[2024-01-30T16:21:20.644Z] 
+[2024-01-30T16:21:20.644Z] Stop (0 ms): Run in container: echo 35707 >'/home/developer/.vscode-server/data/Machine/.devport-0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2'
+[2024-01-30T16:21:20.645Z] Port forwarding for container port 35707 starts listening on local port.
+[2024-01-30T16:21:20.645Z] Port forwarding local port 41545 to container port 35707
+[2024-01-30T16:21:20.648Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js run-user-commands --user-data-folder /home/nmurray/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523 --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --default-user-env-probe loginInteractiveShell --skip-non-blocking-commands false --prebuild false --stop-for-personalization true --remote-env REMOTE_CONTAINERS_IPC=/tmp/vscode-remote-containers-ipc-d3dd1af7-98d4-4073-a856-59318b09232f.sock --remote-env SSH_AUTH_SOCK=/tmp/vscode-ssh-auth-d3dd1af7-98d4-4073-a856-59318b09232f.sock --remote-env REMOTE_CONTAINERS_DISPLAY_SOCK=/tmp/.X11-unix/X0 --remote-env REMOTE_CONTAINERS=true --mount-workspace-git-root --dotfiles-target-path ~/dotfiles
+[2024-01-30T16:21:20.673Z] userEnvProbe PATHs:
+Probe:     '/home/developer/.local/bin:/home/developer/git-subrepo/lib:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/usr/local/go/bin:/home/developer/go/bin'
+Container: '/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/usr/local/go/bin:/home/developer/go/bin'
+[2024-01-30T16:21:20.673Z] Start: Run in container: mkdir -p '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523' && cat > '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json' << 'envJSON'
+[2024-01-30T16:21:20.675Z] 
+[2024-01-30T16:21:20.676Z] 
+[2024-01-30T16:21:20.676Z] Stop (3 ms): Run in container: mkdir -p '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523' && cat > '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json' << 'envJSON'
+[2024-01-30T16:21:20.678Z] Stop (1745 ms): Resolving Remote
+[2024-01-30T16:21:20.684Z] Port forwarding connection from 37420 > 41545 > 35707 in the container.
+[2024-01-30T16:21:20.685Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T16:21:20.734Z] [16:21:20] 
+
+
+
+
+[2024-01-30T16:21:20.753Z] [16:21:20] Extension host agent started.
+[2024-01-30T16:21:20.780Z] [16:21:20] No uninstalled extensions found.
+[2024-01-30T16:21:20.800Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-01-30T16:21:20.800Z] Start: Run: docker buildx version
+[2024-01-30T16:21:20.826Z] Port forwarding 37420 > 41545 > 35707 stderr: Connection established
+[2024-01-30T16:21:20.839Z] Stop (39 ms): Run: docker buildx version
+[2024-01-30T16:21:20.839Z] github.com/docker/buildx v0.11.2 9872040
+[2024-01-30T16:21:20.839Z] 
+[2024-01-30T16:21:20.841Z] Start: Run: git rev-parse --show-cdup
+[2024-01-30T16:21:20.844Z] Stop (3 ms): Run: git rev-parse --show-cdup
+[2024-01-30T16:21:20.844Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.845Z] Port forwarding connection from 37422 > 41545 > 35707 in the container.
+[2024-01-30T16:21:20.845Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T16:21:20.853Z] [16:21:20] [127.0.0.1][a352231b][ManagementConnection] New connection established.
+[2024-01-30T16:21:20.855Z] Stop (11 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.856Z] Start: Inspecting container
+[2024-01-30T16:21:20.856Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.865Z] [16:21:20] Log level changed to info
+[2024-01-30T16:21:20.868Z] Stop (12 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T16:21:20.868Z] Stop (12 ms): Inspecting container
+[2024-01-30T16:21:20.868Z] Start: Run in container: /bin/sh
+[2024-01-30T16:21:20.871Z] Start: Run in container: uname -m
+[2024-01-30T16:21:20.968Z] x86_64
+[2024-01-30T16:21:20.968Z] 
+[2024-01-30T16:21:20.968Z] Stop (97 ms): Run in container: uname -m
+[2024-01-30T16:21:20.968Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-01-30T16:21:20.969Z] NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+[2024-01-30T16:21:20.969Z] 
+[2024-01-30T16:21:20.969Z] Stop (1 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2024-01-30T16:21:20.970Z] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'developer' || grep -E '^developer|^[^:]*:[^:]*:developer:' /etc/passwd || true)
+[2024-01-30T16:21:20.971Z] Stop (1 ms): Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'developer' || grep -E '^developer|^[^:]*:[^:]*:developer:' /etc/passwd || true)
+[2024-01-30T16:21:20.972Z] userEnvProbe: loginInteractiveShell (default)
+[2024-01-30T16:21:20.972Z] Start: Run in container: test -f '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json'
+[2024-01-30T16:21:20.972Z] 
+[2024-01-30T16:21:20.972Z] 
+[2024-01-30T16:21:20.972Z] Stop (0 ms): Run in container: test -f '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json'
+[2024-01-30T16:21:20.972Z] Start: Run in container: mkdir -p '/home/developer/.devcontainer' && CONTENT="$(cat '/home/developer/.devcontainer/.onCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-01-10T22:00:07.409741455Z}" != '2024-01-10T22:00:07.409741455Z' ] && echo '2024-01-10T22:00:07.409741455Z' > '/home/developer/.devcontainer/.onCreateCommandMarker'
+[2024-01-30T16:21:20.975Z] 
+[2024-01-30T16:21:20.975Z] 
+[2024-01-30T16:21:20.975Z] Exit code 1
+[2024-01-30T16:21:20.975Z] Stop (3 ms): Run in container: mkdir -p '/home/developer/.devcontainer' && CONTENT="$(cat '/home/developer/.devcontainer/.onCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-01-10T22:00:07.409741455Z}" != '2024-01-10T22:00:07.409741455Z' ] && echo '2024-01-10T22:00:07.409741455Z' > '/home/developer/.devcontainer/.onCreateCommandMarker'
+[2024-01-30T16:21:20.975Z] Start: Run in container: cat '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json'
+[2024-01-30T16:21:20.976Z] {
+	"NV_LIBCUBLAS_VERSION": "12.2.5.6-1",
+	"NVIDIA_VISIBLE_DEVICES": "all",
+	"NV_NVML_DEV_VERSION": "12.2.140-1",
+	"NV_CUDNN_PACKAGE_NAME": "libcudnn8",
+	"NV_LIBNCCL_DEV_PACKAGE": "libnccl-dev=2.18.5-1+cuda12.2",
+	"NV_LIBNCCL_DEV_PACKAGE_VERSION": "2.18.5-1",
+	"HOSTNAME": "dev-nmurray02",
+	"NVIDIA_REQUIRE_CUDA": "cuda>=12.2 brand=tesla,driver>=450,driver<451 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526",
+	"NV_LIBCUBLAS_DEV_PACKAGE": "libcublas-dev-12-2=12.2.5.6-1",
+	"NV_NVTX_VERSION": "12.2.140-1",
+	"NV_CUDA_CUDART_DEV_VERSION": "12.2.140-1",
+	"NV_LIBCUSPARSE_VERSION": "12.1.2.141-1",
+	"REMOTE_CONTAINERS_IPC": "/tmp/vscode-remote-containers-ipc-d3dd1af7-98d4-4073-a856-59318b09232f.sock",
+	"NV_LIBNPP_VERSION": "12.2.1.4-1",
+	"NCCL_VERSION": "2.18.5-1",
+	"GOBIN": "/home/developer/go/bin",
+	"NV_CUDNN_PACKAGE": "libcudnn8=8.9.4.25-1+cuda12.2",
+	"GIT_SUBREPO_ROOT": "/home/developer/git-subrepo",
+	"NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+	"MANPATH": "/home/developer/git-subrepo/man:",
+	"NV_NVPROF_DEV_PACKAGE": "cuda-nvprof-12-2=12.2.142-1",
+	"NV_LIBNPP_PACKAGE": "libnpp-12-2=12.2.1.4-1",
+	"NV_LIBNCCL_DEV_PACKAGE_NAME": "libnccl-dev",
+	"NV_LIBCUBLAS_DEV_VERSION": "12.2.5.6-1",
+	"NVIDIA_PRODUCT_NAME": "CUDA",
+	"NV_LIBCUBLAS_DEV_PACKAGE_NAME": "libcublas-dev-12-2",
+	"NV_CUDA_CUDART_VERSION": "12.2.140-1",
+	"HOME": "/home/developer",
+	"LS_COLORS": "",
+	"CUDA_VERSION": "12.2.2",
+	"NV_LIBCUBLAS_PACKAGE": "libcublas-12-2=12.2.5.6-1",
+	"NV_CUDA_NSIGHT_COMPUTE_DEV_PACKAGE": "cuda-nsight-compute-12-2=12.2.2-1",
+	"NV_LIBNPP_DEV_PACKAGE": "libnpp-dev-12-2=12.2.1.4-1",
+	"GOROOT": "/usr/local/go",
+	"NV_LIBCUBLAS_PACKAGE_NAME": "libcublas-12-2",
+	"NV_LIBNPP_DEV_VERSION": "12.2.1.4-1",
+	"LESSCLOSE": "/usr/bin/lesspipe %s %s",
+	"NV_LIBCUSPARSE_DEV_VERSION": "12.1.2.141-1",
+	"REMOTE_CONTAINERS_SOCKETS": "[\"/tmp/vscode-ssh-auth-d3dd1af7-98d4-4073-a856-59318b09232f.sock\",\"/tmp/.X11-unix/X0\",\"/home/developer/.gnupg/S.gpg-agent\"]",
+	"LESSOPEN": "| /usr/bin/lesspipe %s",
+	"LIBRARY_PATH": "/usr/local/cuda/lib64/stubs",
+	"NV_CUDNN_VERSION": "8.9.4.25",
+	"DISPLAY": ":1",
+	"SHLVL": "1",
+	"NV_CUDA_LIB_VERSION": "12.2.2-1",
+	"NVARCH": "x86_64",
+	"NV_CUDNN_PACKAGE_DEV": "libcudnn8-dev=8.9.4.25-1+cuda12.2",
+	"NV_CUDA_COMPAT_PACKAGE": "cuda-compat-12-2",
+	"NV_LIBNCCL_PACKAGE": "libnccl2=2.18.5-1+cuda12.2",
+	"LD_LIBRARY_PATH": "/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/lib64:/usr/local/lib:/usr/local/cuda/lib64:/usr/local/3rdparty/fast-dds/install/lib",
+	"NV_CUDA_NSIGHT_COMPUTE_VERSION": "12.2.2-1",
+	"NV_NVPROF_VERSION": "12.2.142-1",
+	"PATH": "/home/developer/.local/bin:/home/developer/git-subrepo/lib:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/usr/local/go/bin:/home/developer/go/bin",
+	"NV_LIBNCCL_PACKAGE_NAME": "libnccl2",
+	"NV_LIBNCCL_PACKAGE_VERSION": "2.18.5-1",
+	"HOST_WORKSPACE_DIR": "/home/nmurray/code/spotrflow",
+	"DEBIAN_FRONTEND": "noninteractive",
+	"GOPATH": "/home/developer/go",
+	"_": "/usr/bin/cat"
+}
+[2024-01-30T16:21:20.976Z] 
+[2024-01-30T16:21:20.976Z] Stop (1 ms): Run in container: cat '/tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523/env-loginInteractiveShell.json'
+[2024-01-30T16:21:20.976Z] Start: Run in container: mkdir -p '/home/developer/.devcontainer' && CONTENT="$(cat '/home/developer/.devcontainer/.updateContentCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-01-10T22:00:07.409741455Z}" != '2024-01-10T22:00:07.409741455Z' ] && echo '2024-01-10T22:00:07.409741455Z' > '/home/developer/.devcontainer/.updateContentCommandMarker'
+[2024-01-30T16:21:20.978Z] 
+[2024-01-30T16:21:20.978Z] 
+[2024-01-30T16:21:20.978Z] Exit code 1
+[2024-01-30T16:21:20.978Z] Stop (2 ms): Run in container: mkdir -p '/home/developer/.devcontainer' && CONTENT="$(cat '/home/developer/.devcontainer/.updateContentCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-01-10T22:00:07.409741455Z}" != '2024-01-10T22:00:07.409741455Z' ] && echo '2024-01-10T22:00:07.409741455Z' > '/home/developer/.devcontainer/.updateContentCommandMarker'
+[2024-01-30T16:21:20.978Z] Start: Run in container: mkdir -p '/home/developer/.devcontainer' && CONTENT="$(cat '/home/developer/.devcontainer/.postCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-01-10T22:00:07.409741455Z}" != '2024-01-10T22:00:07.409741455Z' ] && echo '2024-01-10T22:00:07.409741455Z' > '/home/developer/.devcontainer/.postCreateCommandMarker'
+[2024-01-30T16:21:20.980Z] 
+[2024-01-30T16:21:20.980Z] 
+[2024-01-30T16:21:20.980Z] Exit code 1
+[2024-01-30T16:21:20.980Z] Stop (2 ms): Run in container: mkdir -p '/home/developer/.devcontainer' && CONTENT="$(cat '/home/developer/.devcontainer/.postCreateCommandMarker' 2>/dev/null || echo ENOENT)" && [ "${CONTENT:-2024-01-10T22:00:07.409741455Z}" != '2024-01-10T22:00:07.409741455Z' ] && echo '2024-01-10T22:00:07.409741455Z' > '/home/developer/.devcontainer/.postCreateCommandMarker'
+[2024-01-30T16:21:20.982Z] Port forwarding 37422 > 41545 > 35707 stderr: Connection established
+[2024-01-30T16:21:20.983Z] Stop (335 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js run-user-commands --user-data-folder /home/nmurray/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-d4803baa-e34c-4769-a87b-e8ac5e58c9121706631678523 --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --default-user-env-probe loginInteractiveShell --skip-non-blocking-commands false --prebuild false --stop-for-personalization true --remote-env REMOTE_CONTAINERS_IPC=/tmp/vscode-remote-containers-ipc-d3dd1af7-98d4-4073-a856-59318b09232f.sock --remote-env SSH_AUTH_SOCK=/tmp/vscode-ssh-auth-d3dd1af7-98d4-4073-a856-59318b09232f.sock --remote-env REMOTE_CONTAINERS_DISPLAY_SOCK=/tmp/.X11-unix/X0 --remote-env REMOTE_CONTAINERS=true --mount-workspace-git-root --dotfiles-target-path ~/dotfiles
+[2024-01-30T16:21:20.984Z] Start: Run in container: # Test for /home/developer/.gitconfig and git
+[2024-01-30T16:21:20.985Z] /home/developer/.gitconfig exists
+[2024-01-30T16:21:20.985Z] 
+[2024-01-30T16:21:20.985Z] Exit code 1
+[2024-01-30T16:21:20.985Z] Stop (1 ms): Run in container: # Test for /home/developer/.gitconfig and git
+[2024-01-30T16:21:20.986Z] Start: Run in container: # Test for /home/developer/.config/git/config and git
+[2024-01-30T16:21:20.986Z] /home/developer/.config/git/config exists
+[2024-01-30T16:21:20.986Z] 
+[2024-01-30T16:21:20.986Z] Exit code 1
+[2024-01-30T16:21:20.986Z] Stop (0 ms): Run in container: # Test for /home/developer/.config/git/config and git
+[2024-01-30T16:21:20.986Z] Start: Run in container: # Cleaning up git config
+[2024-01-30T16:21:20.991Z] 
+[2024-01-30T16:21:20.991Z] 
+[2024-01-30T16:21:20.991Z] Stop (5 ms): Run in container: # Cleaning up git config
+[2024-01-30T16:21:20.992Z] Start: Run in container: command -v git >/dev/null 2>&1 && git config --global --replace-all credential.helper '!f() { /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js git-credential-helper $*; }; f' || true
+[2024-01-30T16:21:20.993Z] 
+[2024-01-30T16:21:20.994Z] error: could not write config file /home/developer/.gitconfig: Device or resource busy
+[2024-01-30T16:21:20.994Z] Stop (2 ms): Run in container: command -v git >/dev/null 2>&1 && git config --global --replace-all credential.helper '!f() { /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node /tmp/vscode-remote-containers-d3dd1af7-98d4-4073-a856-59318b09232f.js git-credential-helper $*; }; f' || true
+[2024-01-30T16:21:21.137Z] Port forwarding connection from 37434 > 41545 > 35707 in the container.
+[2024-01-30T16:21:21.137Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T16:21:21.199Z] Port forwarding connection from 37448 > 41545 > 35707 in the container.
+[2024-01-30T16:21:21.200Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T16:21:21.248Z] Port forwarding 37434 > 41545 > 35707 stderr: Connection established
+[2024-01-30T16:21:21.275Z] Port forwarding 37448 > 41545 > 35707 stderr: Connection established
+[2024-01-30T16:21:21.442Z] [16:21:21] [127.0.0.1][3c8fee35][ExtensionHostConnection] New connection established.
+[2024-01-30T16:21:21.446Z] [16:21:21] [127.0.0.1][3c8fee35][ExtensionHostConnection] <361> Launched Extension Host Process.
+[2024-01-30T16:21:22.449Z] Start: Run in container: cat /proc/420/environ
+[2024-01-30T16:21:22.450Z] Stop (1 ms): Run in container: cat /proc/420/environ
+[2024-01-30T16:21:26.259Z] Port forwarding 37434 > 41545 > 35707 stderr: Remote close
+[2024-01-30T16:21:26.263Z] Stop (5126 ms): Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T16:21:26.264Z] Port forwarding 37434 > 41545 > 35707 terminated with code 0 and signal null.
+[2024-01-30T16:21:28.545Z] Port forwarding 37448 > 41545 > 35707 stderr: Remote close
+[2024-01-30T16:21:28.549Z] Stop (7349 ms): Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T16:21:28.549Z] Port forwarding 37448 > 41545 > 35707 terminated with code 0 and signal null.
+[2024-01-30T16:21:29.188Z] Port forwarding 37448 > 41545 > 35707: Local close
+[2024-01-30T16:21:29.188Z] Port forwarding 37434 > 41545 > 35707: Local close
+[2024-01-30T18:56:40.370Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-01-30T18:56:40.534Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-01-30T18:56:40.534Z] Error: Dev container config (/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json) not found.
+    at _eA (/home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js:612:34628)
+[2024-01-30T18:56:40.538Z] Stop (168 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-01-30T18:56:40.538Z] Exit code 1
+[2024-01-30T18:56:41.539Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-01-30T18:56:41.678Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-01-30T18:56:41.678Z] Error: Dev container config (/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json) not found.
+    at _eA (/home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js:612:34628)
+[2024-01-30T18:56:41.682Z] Stop (143 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --container-id 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-01-30T18:56:41.683Z] Exit code 1
+[2024-01-30T22:44:19.196Z] Port forwarding 37420 > 41545 > 35707: Local close
+[2024-01-30T22:44:19.198Z] Port forwarding 37422 > 41545 > 35707: Local close
+[2024-01-30T22:44:19.216Z] Port forwarding 37422 > 41545 > 35707 stderr: Remote stdin close
+[2024-01-30T22:44:19.217Z] Port forwarding 37420 > 41545 > 35707 stderr: Remote stdin close
+[2024-01-30T22:44:19.237Z] Start: Reconnection attempt 1
+[2024-01-30T22:44:19.237Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T22:44:19.265Z] Stop (28 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-01-30T22:44:19.266Z] Stop (29 ms): Reconnection attempt 1
+[2024-01-30T22:44:19.268Z] Stop (22978583 ms): Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T22:44:19.268Z] Port forwarding 37420 > 41545 > 35707 terminated by extension (closed) with code 0 and signal null.
+[2024-01-30T22:44:19.268Z] Stop (22978423 ms): Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T22:44:19.268Z] Port forwarding 37422 > 41545 > 35707 terminated by extension (closed) with code 0 and signal null.
+[2024-01-30T22:44:19.275Z] Port forwarding connection from 51112 > 41545 > 35707 in the container.
+[2024-01-30T22:44:19.276Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T22:44:19.399Z] Port forwarding 51112 > 41545 > 35707 stderr: Connection established
+[2024-01-30T22:44:19.417Z] Port forwarding connection from 51126 > 41545 > 35707 in the container.
+[2024-01-30T22:44:19.418Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-30T22:44:19.429Z] [22:44:19] [127.0.0.1][a352231b][ManagementConnection] The client has reconnected.
+[2024-01-30T22:44:19.563Z] Port forwarding 51126 > 41545 > 35707 stderr: Connection established
+[2024-01-30T22:44:19.578Z] [22:44:19] [127.0.0.1][3c8fee35][ExtensionHostConnection] The client has reconnected.
+[2024-01-31T17:56:11.122Z] Port forwarding connection from 34154 > 41545 > 35707 in the container.
+[2024-01-31T17:56:11.125Z] Start: Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-31T17:56:11.400Z] Port forwarding 34154 > 41545 > 35707 stderr: Connection established
+[2024-01-31T17:56:16.427Z] Port forwarding 34154 > 41545 > 35707 stderr: Remote close
+[2024-01-31T17:56:16.455Z] Stop (5330 ms): Run in container: /home/developer/.vscode-server/bin/0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2/node -e 
+[2024-01-31T17:56:16.456Z] Port forwarding 34154 > 41545 > 35707 terminated with code 0 and signal null.
+[2024-01-31T17:56:57.105Z] Start: Run in container: cat /proc/38516/environ
+[2024-01-31T17:56:57.109Z] Stop (4 ms): Run in container: cat /proc/38516/environ
+[2024-01-31T17:59:21.440Z] Port forwarding 34154 > 41545 > 35707: Local close
+[2024-01-31T18:01:35.344Z] [18:01:35] [127.0.0.1][a352231b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.

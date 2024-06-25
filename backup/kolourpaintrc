@@ -1,0 +1,47 @@
+[General Settings]
+Color Similarity=0
+First Time=false
+Last Document Size=2479,1334
+Open Images in the Same Window=false
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Documents/Spotr_Geo_Guides/watchlist_with_rectangles.png,file:$HOME/Documents/Spotr_Geo_Guides/watchlist_with_rectangles.png
+Recent URLs[$e]=file:$HOME/Documents/Spotr_Geo_Guides/
+detailViewIconSize=16
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAQAAAAMAAAszAAAAY/wBAAAAAfsAAAASAEMAbwBsAG8AcgAgAEIAbwB4AQAAAVUAAAszAAACDQD///8AAAszAAADnQAAAAQAAAAEAAAAAQAAAAL8AAAAAgAAAAAAAAABAAAAEABUAG8AbwBsACAAQgBvAHgDAAAAAP////8AAAAAAAAAAAAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdABlAHgAdABUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1 HDMI-1-0 Height 3440x1440=1113
+eDP-1 HDMI-1-0 Width 3440x1440=3208
+eDP-1 HDMI-1-0 XPosition 2560x1440=174
+eDP-1 HDMI-1-0 XPosition 3440x1440=2655
+eDP-1 HDMI-1-0 YPosition 2560x1440=164
+eDP-1 HDMI-1-0 YPosition 3440x1440=132
+
+[MainWindow][Toolbar Tool Box]
+ToolButtonStyle=IconOnly
+
+[Recent Files]
+File1[$e]=$HOME/Documents/Spotr_Geo_Guides/watchlist_with_rectangles.png
+Name1[$e]=watchlist_with_rectangles.png
+
+[Tool Settings]
+Last Used Tool=13
+Tool Widget Brush Col=0
+Tool Widget Brush Row=0
+Tool Widget Eraser Size Col=0
+Tool Widget Eraser Size Row=1
+Tool Widget Fill Style Col=0
+Tool Widget Fill Style Row=0
+Tool Widget Line Width Col=0
+Tool Widget Line Width Row=2
+Tool Widget Opaque/Transparent Col=0
+Tool Widget Opaque/Transparent Row=1
+Tool Widget Spraycan Size Col=0
+Tool Widget Spraycan Size Row=0
+
+[Undo/Redo Settings]
+Max Limit=500
+Max Limit Size Limit=16777216
+Min Limit=10

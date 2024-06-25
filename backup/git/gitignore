@@ -1,0 +1,44 @@
+# .gitignore
+# A good generic list of files to have git ignore
+#
+# List all files excluded by project:
+# git ls-files --others --exclude-from=.git/info/exclude
+
+# C assembly and object files
+*.[oa]
+
+# Core dumps
+core.*
+
+# Ctags output
+tags
+
+# OSX
+.DS_Store
+
+# Python compiled
+*.pyc
+
+# Vim files
+*.swp
+*.swo
+
+# Visual Studio
+.vs
+.depproj
+*.sln
+
+# docker-compose.yml
+
+# spotr-geo specific
+spotrgeo_server/spotrgeo_server/outputs
+
+# Nitf
+*.ntf
+*.nitf
+
+# Git
+.git
+
+# Javascript
+*.map

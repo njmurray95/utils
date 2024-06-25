@@ -1,0 +1,7 @@
+2024/06/24-14:25:05.051 16b2 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_www.mapchart.net_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/24-14:25:05.051 16b2 Recovering log #4
+2024/06/24-14:25:05.051 16b2 Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_www.mapchart.net_0.indexeddb.leveldb/000004.log 
+2024/06/24-14:25:05.065 16bc Level-0 table #8: started
+2024/06/24-14:25:05.067 16bc Level-0 table #8: 7952 bytes OK
+2024/06/24-14:25:05.070 16bc Delete type=0 #4
+2024/06/24-14:25:05.070 16b2 Manual compaction at level-0 from '\x00\x08\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at (end)

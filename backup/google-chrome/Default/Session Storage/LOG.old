@@ -1,0 +1,24 @@
+2024/06/24-09:01:42.799 4 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/Session Storage/MANIFEST-000001
+2024/06/24-09:01:42.799 4 Recovering log #232
+2024/06/24-09:01:42.800 4 Reusing old log /home/nmurray/.config/google-chrome/Default/Session Storage/000232.log 
+2024/06/24-09:01:49.931 5 Level-0 table #237: started
+2024/06/24-09:01:50.128 5 Level-0 table #237: 36486 bytes OK
+2024/06/24-09:01:50.290 5 Delete type=0 #232
+2024/06/24-09:02:06.422 5 Level-0 table #239: started
+2024/06/24-09:02:08.339 5 Level-0 table #239: 51799 bytes OK
+2024/06/24-09:02:10.521 5 Delete type=0 #236
+2024/06/24-09:03:21.182 5 Level-0 table #241: started
+2024/06/24-09:03:21.354 5 Level-0 table #241: 31527 bytes OK
+2024/06/24-09:03:21.509 5 Delete type=0 #238
+2024/06/24-09:05:47.464 5 Level-0 table #243: started
+2024/06/24-09:05:47.512 5 Level-0 table #243: 29124 bytes OK
+2024/06/24-09:05:47.617 5 Delete type=0 #240
+2024/06/24-09:05:47.618 5 Compacting 4@0 + 1@1 files
+2024/06/24-09:05:47.707 5 Generated table #244@0: 611 keys, 157643 bytes
+2024/06/24-09:05:47.707 5 Compacted 4@0 + 1@1 files => 157643 bytes
+2024/06/24-09:05:47.817 5 compacted to: files[ 0 1 2 0 0 0 0 ]
+2024/06/24-09:05:47.823 5 Delete type=2 #234
+2024/06/24-09:05:47.823 5 Delete type=2 #237
+2024/06/24-09:05:47.823 5 Delete type=2 #243
+2024/06/24-09:05:47.823 5 Delete type=2 #241
+2024/06/24-09:05:47.823 5 Delete type=2 #239

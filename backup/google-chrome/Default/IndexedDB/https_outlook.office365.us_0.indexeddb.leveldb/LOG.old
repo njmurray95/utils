@@ -1,0 +1,28 @@
+2024/06/25-12:59:06.966 16b1 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_outlook.office365.us_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/25-12:59:06.966 16b1 Recovering log #70
+2024/06/25-12:59:06.966 16b1 Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_outlook.office365.us_0.indexeddb.leveldb/000070.log 
+2024/06/25-12:59:06.979 16b1 Level-0 table #76: started
+2024/06/25-12:59:06.981 16b1 Level-0 table #76: 523 bytes OK
+2024/06/25-12:59:06.984 16b1 Delete type=0 #70
+2024/06/25-12:59:06.984 16b1 Manual compaction at level-0 from '\x00\x18\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x19\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/06/25-12:59:07.349 16bd Level-0 table #78: started
+2024/06/25-12:59:07.353 16bd Level-0 table #78: 614 bytes OK
+2024/06/25-12:59:07.357 16bd Delete type=0 #75
+2024/06/25-12:59:07.358 16b1 Manual compaction at level-0 from '\x00\x19\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1a\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1a\x00\x00\x05' @ 482 : 1
+2024/06/25-12:59:07.358 16b1 Compacting 1@0 + 1@1 files
+2024/06/25-12:59:07.360 16b1 Generated table #79@0: 14 keys, 476 bytes
+2024/06/25-12:59:07.360 16b1 Compacted 1@0 + 1@1 files => 476 bytes
+2024/06/25-12:59:07.363 16b1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/25-12:59:07.363 16b1 Delete type=2 #78
+2024/06/25-12:59:07.363 16b1 Manual compaction at level-0 from '\x00\x1a\x00\x00\x05' @ 482 : 1 .. '\x00\x1a\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/06/25-12:59:07.363 16b1 Level-0 table #81: started
+2024/06/25-12:59:07.365 16b1 Level-0 table #81: 494 bytes OK
+2024/06/25-12:59:07.368 16b1 Delete type=2 #76
+2024/06/25-12:59:07.368 16b1 Delete type=0 #77
+2024/06/25-12:59:07.368 16bd Manual compaction at level-0 from '\x00\x1a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1b\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1a\x00\x00\x05' @ 508 : 0
+2024/06/25-12:59:07.368 16bd Compacting 1@0 + 1@1 files
+2024/06/25-12:59:07.370 16bd Generated table #82@0: 16 keys, 592 bytes
+2024/06/25-12:59:07.370 16bd Compacted 1@0 + 1@1 files => 592 bytes
+2024/06/25-12:59:07.374 16bd compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/25-12:59:07.375 16bd Delete type=2 #81
+2024/06/25-12:59:07.375 16b1 Manual compaction at level-0 from '\x00\x1a\x00\x00\x05' @ 508 : 0 .. '\x00\x1b\x00\x00\x00' @ 0 : 0; will stop at (end)

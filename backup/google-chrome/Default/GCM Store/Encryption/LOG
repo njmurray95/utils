@@ -1,0 +1,4 @@
+2024/06/24-14:25:04.872 16b2 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/GCM Store/Encryption/MANIFEST-000001
+2024/06/24-14:25:04.873 16b2 Recovering log #3
+2024/06/24-14:25:04.873 16b2 (ignoring error) /home/nmurray/.config/google-chrome/Default/GCM Store/Encryption/000003.log: dropping 6266 bytes; Corruption: checksum mismatch
+2024/06/24-14:25:04.873 16b2 Reusing old log /home/nmurray/.config/google-chrome/Default/GCM Store/Encryption/000003.log 

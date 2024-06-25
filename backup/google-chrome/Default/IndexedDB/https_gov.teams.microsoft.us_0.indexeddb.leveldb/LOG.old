@@ -1,0 +1,21 @@
+2024/06/24-09:02:35.580 1a37 Creating DB /home/nmurray/.config/google-chrome/Default/IndexedDB/https_gov.teams.microsoft.us_0.indexeddb.leveldb since it was missing.
+2024/06/24-09:02:37.056 1a37 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_gov.teams.microsoft.us_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/24-09:02:48.033 1a37 Level-0 table #5: started
+2024/06/24-09:02:48.216 1a37 Level-0 table #5: 66269 bytes OK
+2024/06/24-09:02:48.329 1a37 Delete type=0 #3
+2024/06/24-09:02:48.329 1a37 Manual compaction at level-0 from '\x00\x0d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0e\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/06/24-09:02:50.061 1a42 Level-0 table #7: started
+2024/06/24-09:02:50.227 1a42 Level-0 table #7: 48858 bytes OK
+2024/06/24-09:02:50.304 1a42 Delete type=0 #4
+2024/06/24-09:02:50.304 1a42 Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/06/24-09:02:50.304 1a42 Manual compaction at level-1 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at '\x002\x02\x02\x01\x1c\x00C\x00u\x00r\x00r\x00e\x00n\x00t\x00A\x00r\x00t\x00i\x00f\x00a\x00c\x00t\x00s\x00T\x00a\x00b\x00l\x00e\x00V\x00e\x00r\x00s\x00i\x00o\x00n' @ 3804 : 1
+2024/06/24-09:02:50.304 1a42 Compacting 1@1 + 1@2 files
+2024/06/24-09:02:50.764 1a42 Generated table #8@1: 1153 keys, 75693 bytes
+2024/06/24-09:02:50.764 1a42 Compacted 1@1 + 1@2 files => 75693 bytes
+2024/06/24-09:02:51.060 1a42 compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/06/24-09:02:51.060 1a42 Delete type=2 #7
+2024/06/24-09:02:51.060 1a42 Manual compaction at level-1 from '\x002\x02\x02\x01\x1c\x00C\x00u\x00r\x00r\x00e\x00n\x00t\x00A\x00r\x00t\x00i\x00f\x00a\x00c\x00t\x00s\x00T\x00a\x00b\x00l\x00e\x00V\x00e\x00r\x00s\x00i\x00o\x00n' @ 3804 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/06/24-09:03:19.670 1a38 Level-0 table #10: started
+2024/06/24-09:03:19.853 1a38 Level-0 table #10: 1329718 bytes OK
+2024/06/24-09:03:20.009 1a38 Delete type=0 #6
+2024/06/24-09:03:20.009 1a38 Delete type=2 #5

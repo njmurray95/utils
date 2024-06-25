@@ -1,0 +1,16 @@
+# Crontab
+#
+#   .-------------------------------------  Minute        0-59
+#   |
+#   |       ------------------------------  Hour          0-23
+#   |       |
+#   |       |       .---------------------  Day of Month: 1-31
+#   |       |       |
+#   |       |       |       .-------------  Month:        1-12
+#   |       |       |       |
+#   |       |       |       |       .-----  Day of Week:  0-7 (0 or 7 is Sun)
+#   |       |       |       |       |
+#   *       *       *       *       *       process
+
+# Change wallpaper every 5 minutes
+    */5     *       *       *       *       /home/nmurray/.config/wallpaper.sh --quiet >> /home/nmurray/.config/cronlog 2>&1

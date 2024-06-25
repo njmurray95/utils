@@ -1,0 +1,4 @@
+2024-01-31 16:28:37.047 [error] electron #42: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2024-02-01 08:36:28.034 [error] electron #91: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_NAME_NOT_RESOLVED
+2024-02-01 08:39:14.223 [error] electron #93: https://az764295.vo.msecnd.net/extensions/marketplace.json - error GET net::ERR_TIMED_OUT
+2024-02-01 08:45:14.200 [error] electron #94: https://az764295.vo.msecnd.net/extensions/marketplace.json - error GET net::ERR_TIMED_OUT

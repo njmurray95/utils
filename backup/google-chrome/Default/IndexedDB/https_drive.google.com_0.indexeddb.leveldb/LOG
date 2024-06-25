@@ -1,0 +1,75 @@
+2024/06/11-10:06:22.120 19e4 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/11-10:06:22.120 19e4 Recovering log #8
+2024/06/11-10:06:22.141 19e4 Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000008.log 
+2024/06/11-10:06:23.059 19e4 Compacting 1@0 + 1@1 files
+2024/06/11-10:06:23.077 19e4 Generated table #11@0: 15608 keys, 2149828 bytes
+2024/06/11-10:06:23.079 19e4 Generated table #12@0: 439 keys, 8148 bytes
+2024/06/11-10:06:23.079 19e4 Compacted 1@0 + 1@1 files => 2157976 bytes
+2024/06/11-10:06:23.082 19e4 compacted to: files[ 0 2 1 0 0 0 0 ]
+2024/06/11-10:06:23.092 19e4 Level-0 table #14: started
+2024/06/11-10:06:23.102 19f1 Current memtable full; waiting...
+2024/06/11-10:06:23.103 19e4 Level-0 table #14: 1346379 bytes OK
+2024/06/11-10:06:23.106 19e4 Delete type=2 #9
+2024/06/11-10:06:23.106 19e4 Delete type=2 #7
+2024/06/11-10:06:23.106 19e4 Delete type=0 #8
+2024/06/11-10:06:23.106 19e4 Level-0 table #16: started
+2024/06/11-10:06:23.118 19e4 Level-0 table #16: 1648227 bytes OK
+2024/06/11-10:06:23.119 19f1 Current memtable full; waiting...
+2024/06/11-10:06:23.121 19e4 Delete type=0 #13
+2024/06/11-10:06:23.122 19e4 Level-0 table #18: started
+2024/06/11-10:06:23.130 19e4 Level-0 table #18: 797847 bytes OK
+2024/06/11-10:06:23.133 19e4 Delete type=0 #15
+2024/06/11-10:06:23.205 19e5 Compacting 3@0 + 2@1 files
+2024/06/11-10:06:23.237 19e5 Generated table #19@0: 27635 keys, 2163018 bytes
+2024/06/11-10:06:23.252 19e5 Generated table #20@0: 7992 keys, 1357815 bytes
+2024/06/11-10:06:23.252 19e5 Compacted 3@0 + 2@1 files => 3520833 bytes
+2024/06/11-10:06:23.255 19e5 compacted to: files[ 0 2 1 0 0 0 0 ]
+2024/06/11-10:06:23.255 19e5 Delete type=2 #14
+2024/06/11-10:06:23.255 19e5 Delete type=2 #12
+2024/06/11-10:06:23.255 19e5 Delete type=2 #11
+2024/06/11-10:06:23.255 19e5 Delete type=2 #18
+2024/06/11-10:06:23.255 19e5 Delete type=2 #16
+2024/06/11-10:06:23.257 19e4 Expanding@1 1+1 (1357815+1279830 bytes) to 2+1 (3520833+1279830 bytes)
+2024/06/11-10:06:23.257 19e4 Compacting 2@1 + 1@2 files
+2024/06/11-10:06:23.265 19e4 Level-0 table #23: started
+2024/06/11-10:06:23.277 19e4 Level-0 table #23: 1019695 bytes OK
+2024/06/11-10:06:23.284 19e4 Delete type=0 #17
+2024/06/11-10:06:23.296 19e4 Generated table #21@1: 9873 keys, 2148297 bytes
+2024/06/11-10:06:23.298 19e4 Level-0 table #26: started
+2024/06/11-10:06:23.307 19e4 Level-0 table #26: 1312991 bytes OK
+2024/06/11-10:06:23.310 19e4 Delete type=0 #22
+2024/06/11-10:06:23.320 19e4 Generated table #24@1: 2095 keys, 1126083 bytes
+2024/06/11-10:06:23.320 19e4 Compacted 2@1 + 1@2 files => 3274380 bytes
+2024/06/11-10:06:23.323 19e4 compacted to: files[ 2 0 2 0 0 0 0 ]
+2024/06/11-10:06:23.323 19e4 Compacting 2@0 + 0@1 files
+2024/06/11-10:06:23.324 19e4 Level-0 table #29: started
+2024/06/11-10:06:23.333 19e4 Level-0 table #29: 1218220 bytes OK
+2024/06/11-10:06:23.336 19e4 Delete type=2 #5
+2024/06/11-10:06:23.336 19e4 Delete type=2 #19
+2024/06/11-10:06:23.336 19e4 Delete type=0 #25
+2024/06/11-10:06:23.336 19e4 Delete type=2 #20
+2024/06/11-10:06:23.358 19e4 Generated table #27@0: 22244 keys, 2155273 bytes
+2024/06/11-10:06:23.362 19e4 Generated table #30@0: 3894 keys, 78432 bytes
+2024/06/11-10:06:23.362 19e4 Compacted 2@0 + 0@1 files => 2233705 bytes
+2024/06/11-10:06:23.365 19e4 compacted to: files[ 1 2 2 0 0 0 0 ]
+2024/06/11-10:06:23.365 19e4 Delete type=2 #23
+2024/06/11-10:06:23.365 19e4 Delete type=2 #26
+2024/06/11-10:06:23.365 19e4 Compacting 1@0 + 2@1 files
+2024/06/11-10:06:23.386 19e4 Generated table #31@0: 24698 keys, 2159739 bytes
+2024/06/11-10:06:23.400 19e4 Generated table #32@0: 7292 keys, 1279300 bytes
+2024/06/11-10:06:23.400 19e4 Compacted 1@0 + 2@1 files => 3439039 bytes
+2024/06/11-10:06:23.403 19e4 compacted to: files[ 0 2 2 0 0 0 0 ]
+2024/06/11-10:06:23.403 19e4 Delete type=2 #29
+2024/06/11-10:06:23.403 19e4 Delete type=2 #27
+2024/06/11-10:06:23.403 19e4 Delete type=2 #30
+2024/06/11-10:06:23.407 19e5 Level-0 table #34: started
+2024/06/11-10:06:23.417 19e5 Level-0 table #34: 525819 bytes OK
+2024/06/11-10:06:23.420 19e5 Delete type=0 #28
+2024/06/11-10:06:36.817 19e5 Compacting 1@0 + 2@1 files
+2024/06/11-10:06:36.857 19e5 Generated table #35@0: 32389 keys, 2161606 bytes
+2024/06/11-10:06:36.873 19e5 Generated table #36@0: 10926 keys, 1138713 bytes
+2024/06/11-10:06:36.873 19e5 Compacted 1@0 + 2@1 files => 3300319 bytes
+2024/06/11-10:06:36.879 19e5 compacted to: files[ 0 2 2 0 0 0 0 ]
+2024/06/11-10:06:36.879 19e5 Delete type=2 #31
+2024/06/11-10:06:36.879 19e5 Delete type=2 #32
+2024/06/11-10:06:36.879 19e5 Delete type=2 #34
