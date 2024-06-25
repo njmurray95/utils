@@ -41,7 +41,7 @@ Get current hostname:
 =# SELECT boot_val, reset_val FROM pg_settings WHERE name='listen_addresses';
 ```
 
-Describe schema of table:
+Describe schema of table (same as `\d table`):
 ```
 SELECT
     column_name,
@@ -49,5 +49,5 @@ SELECT
 FROM
     information_schema.columns
 WHERE
-    table_name = 'table_name';
+    table_name = '<table_name>';
 ```
