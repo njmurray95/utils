@@ -13,3 +13,7 @@ which f77
 which f90
 which f95
 ```
+
+```
+f95 <prog.f[95]> -o prog
+```
