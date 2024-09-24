@@ -1,6 +1,6 @@
 program playground
         implicit none
-        integer::array(-5,5)
+        integer::array(-5:5)
         array(:) = 0
         array(-4) = 1
         array(4) = 1
