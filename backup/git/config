@@ -1,0 +1,15 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Nick Murray
+	email = njmurray@umich.edu
+[core]
+	excludeFiles = /home/nmurray/.config/git/gitignore
+	excludesFiles = /home/nmurray/.config/git/gitignore
+	excludesFile = /home/nmurray/.config/git/gitignore
+[alias]
+	find = "!git log --color -p -S "
+	unpushed = log --branches --not --remotes --no-walk --decorate --oneline

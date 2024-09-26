@@ -1,0 +1,146 @@
+################################################################################
+#   _                 _
+#  | |__   __ _  ___ | |__
+#  |  _ \ / _` |/ __||  _ \
+#  | |_| | |_| |\__ \| | | |
+#  |_^__/ \__^_||___/|_| |_|
+
+################################################################################
+#  => General (XXX)
+
+unalias -a                                  # Clean in case being sourced again
+
+# XDG Config dirs
+export XDG_CONFIG_HOME="$HOME/.config"      # Config files
+export XDG_CACHE_HOME="$HOME/.cache"        # User-specific non-essential cache
+export XDG_DATA_HOME="$HOME/.local/share"   # User-specific data files
+export XDG_STATE_HOME="$HOME/.local/state"  # User-specific state files
+
+# Misc
+export VISUAL="nvim-qt"                     # Use nvim as visual editor
+export EDITOR="nvim"                        # Or the non-GUI verson for CLI
+export PATH="$PATH:$HOME/.local/bin"                  # Local binaries
+
+export BASHRC="$XDG_CONFIG_HOME/bash/bashrc"
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python" # Store .pyc files here
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"       # User site-packages here
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/site.py" # Python start here
+
+################################################################################
+#  => History (XXX)
+
+# Ignore commands begun with spaces and duplicates
+export HISTCONTROL="ignorespace:ignoredups"
+
+export HISTSIZE=10000
+export HISTFILESIZE=200000
+
+# Format history as: Month/date - xx:xx:xx
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Write all commands to common file
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+mkdir -p "$XDG_STATE_HOME/bash"
+touch "$HISTFILE"
+
+################################################################################
+#  => Prompt (XXX)
+
+# \[\e[0;31m\]    -- Set text to red
+# \d-\t           -- date-time
+# \[\033[00m\]    -- Set text default (white)
+# :
+# \[\033[01;33m\] -- Set text to yellow
+# \w              -- working directory
+# \[\033[00m\]    -- Set text default (white)
+# \n\$            -- newline, prompt '$ '
+__set_bash_prompt()
+{
+    __red="\[\033[01;31m\]"
+    __bold_yellow="\[\033[01;33m\]"
+    __clear_color="\[\033[00m\]"
+    __git_branch_color="\[\033[35m\]"
+
+    __git_branch='(`git branch --show-current 2>/dev/null`)'
+    # export PS1="\[\033[01;31m\]\d-\t\[\033[00m\]\n\[\033[01;33m\]\w${__git_branch_color} ${__git_branch}${__clear_color}\n\$ "
+
+    PS1=""
+    PS1="${PS1}${__bold_yellow}| "
+    # PS1="${PS1}${__red}\w "
+    # no abbreviations in pathname
+    PS1="${PS1}${__red}\$PWD "
+    PS1="${PS1}${__bold_yellow}|\n"
+    PS1="${PS1}${__git_branch_color}${__git_branch}\n"
+    PS1="${PS1}${__bold_yellow}\$ "
+    PS1="${PS1}${__clear_color}"
+    export PS1
+    # export PS1="${__bold_yellow}| ${__red}\w ${__bold_yellow}|${__git_branch_color} ${__git_branch}${__clear_color}\n${__bold_yellow}\$\[\033[00m\] "
+}
+__set_bash_prompt
+
+# __set_bash_prompt_right()
+# {
+#     __git_branch_color="\[\033[31m\]"
+#     __git_branch=`'git branch --show-current 2>/dev/null`'
+#     __clear_color="\[\033[00m\]"
+
+# }
+
+# Echo all non-zero exit codes to caller
+EXIT_STATUS="l=\$?; if [[ \$l -ne 0 ]]; then echo err: \$l; fi;"
+# Every terminal will update from the history file after every command
+UPDATE_HISTORY="history -a; history -n"
+PROMPT_COMMAND="$EXIT_STATUS $UPDATE_HISTORY"
+
+################################################################################
+#  => Style (XXX)
+
+# Set colors used by ls
+eval $(dircolors -b "$XDG_CONFIG_HOME/dir_colors")
+
+################################################################################
+#  => Aliases (XXX)
+
+# This forces sudo to evaluate aliases
+# See: https://linuxhandbook.com/run-alias-as-sudo/
+alias sudo="sudo "
+
+alias vim="$EDITOR"
+# alias nvim="$EDITOR"
+alias python="ipython3"
+
+alias ls="ls -F --color=auto"                # Show line endings
+alias rm="rm -dv"               # -d for directories, -v verbose
+
+# Reload
+bash-reload()
+{
+    source "$XDG_CONFIG_HOME/bash/bashrc"
+}
+
+# Source all scripts in a subfolder
+for script in "$XDG_CONFIG_HOME/bash/scripts/"*.sh; do
+    source $script;
+done
+
+source $XDG_CONFIG_HOME/xsession/xcape-config
+
+# It's a hack but it works for now
+# Do the xcape CapsLock remap
+# source $XDG_CONFIG_HOME/xcape/xcape.conf
+
+# source "/home/nmurray/code/git-subrepo/.rc"
+
+export GIT_SUBREPO_ROOT="/home/nmurray/code/git-subrepo"
+export PATH="/home/nmurray/code/git-subrepo/lib:$PATH"
+export MANPATH="/home/nmurray/code/git-subrepo/man:$MANPATH"
+

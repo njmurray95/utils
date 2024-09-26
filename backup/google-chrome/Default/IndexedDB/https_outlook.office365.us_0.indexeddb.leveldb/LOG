@@ -1,0 +1,15 @@
+2024/06/25-12:59:09.680 16b1 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_outlook.office365.us_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/25-12:59:09.680 16b1 Recovering log #80
+2024/06/25-12:59:09.680 16b1 Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_outlook.office365.us_0.indexeddb.leveldb/000080.log 
+2024/06/25-12:59:09.680 16b1 Delete type=2 #79
+2024/06/25-12:59:19.082 16bc Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/06/25-12:59:19.084 16bc Level-0 table #85: started
+2024/06/25-12:59:19.085 16bc Level-0 table #85: 9371 bytes OK
+2024/06/25-12:59:19.090 16bc Delete type=0 #80
+2024/06/25-12:59:19.091 16b1 Manual compaction at level-0 from '\x00\x1c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1c\x00\x00\x05' @ 553 : 1
+2024/06/25-12:59:19.091 16b1 Compacting 1@0 + 1@1 files
+2024/06/25-12:59:19.093 16b1 Generated table #86@0: 29 keys, 4995 bytes
+2024/06/25-12:59:19.093 16b1 Compacted 1@0 + 1@1 files => 4995 bytes
+2024/06/25-12:59:19.096 16b1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/25-12:59:19.096 16b1 Delete type=2 #85
+2024/06/25-12:59:19.097 16b1 Manual compaction at level-0 from '\x00\x1c\x00\x00\x05' @ 553 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at (end)

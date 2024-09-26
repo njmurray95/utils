@@ -1,0 +1,54 @@
+2024/06/24-09:01:42.408 1a37 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2024/06/24-09:01:42.427 1a37 Recovering log #5794
+2024/06/24-09:01:42.443 1a37 Reusing old log /home/nmurray/.config/google-chrome/Default/Sync Data/LevelDB/005794.log 
+2024/06/24-09:01:44.849 1a46 Level-0 table #5799: started
+2024/06/24-09:01:44.992 1a46 Level-0 table #5799: 125213 bytes OK
+2024/06/24-09:01:45.143 1a46 Delete type=0 #5794
+2024/06/24-09:05:54.210 1a44 Level-0 table #5801: started
+2024/06/24-09:05:54.289 1a44 Level-0 table #5801: 109514 bytes OK
+2024/06/24-09:05:54.452 1a44 Delete type=0 #5798
+2024/06/24-10:30:51.141 1a43 Level-0 table #5803: started
+2024/06/24-10:30:51.245 1a43 Level-0 table #5803: 82787 bytes OK
+2024/06/24-10:30:51.341 1a43 Delete type=0 #5800
+2024/06/24-13:25:30.842 1a38 Level-0 table #5805: started
+2024/06/24-13:25:30.850 1a38 Level-0 table #5805: 82509 bytes OK
+2024/06/24-13:25:30.853 1a38 Delete type=0 #5802
+2024/06/24-13:25:30.853 1a38 Compacting 4@0 + 1@1 files
+2024/06/24-13:25:30.857 1a38 Generated table #5806@0: 515 keys, 69624 bytes
+2024/06/24-13:25:30.857 1a38 Compacted 4@0 + 1@1 files => 69624 bytes
+2024/06/24-13:25:30.860 1a38 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/24-13:25:30.861 1a38 Delete type=2 #5805
+2024/06/24-13:25:30.861 1a38 Delete type=2 #5803
+2024/06/24-13:25:30.861 1a38 Delete type=2 #5801
+2024/06/24-13:25:30.861 1a38 Delete type=2 #5799
+2024/06/24-13:25:30.861 1a38 Delete type=2 #5796
+2024/06/24-13:31:24.933 1a37 Level-0 table #5808: started
+2024/06/24-13:31:24.956 1a37 Level-0 table #5808: 77262 bytes OK
+2024/06/24-13:31:24.962 1a37 Delete type=0 #5804
+2024/06/24-13:37:21.470 1a37 Level-0 table #5810: started
+2024/06/24-13:37:21.481 1a37 Level-0 table #5810: 79174 bytes OK
+2024/06/24-13:37:21.486 1a37 Delete type=0 #5807
+2024/06/24-13:43:19.559 1a37 Level-0 table #5812: started
+2024/06/24-13:43:19.567 1a37 Level-0 table #5812: 78304 bytes OK
+2024/06/24-13:43:19.571 1a37 Delete type=0 #5809
+2024/06/24-13:49:17.663 1a37 Level-0 table #5814: started
+2024/06/24-13:49:17.673 1a37 Level-0 table #5814: 78318 bytes OK
+2024/06/24-13:49:17.677 1a37 Delete type=0 #5811
+2024/06/24-13:49:17.679 1a37 Compacting 4@0 + 1@1 files
+2024/06/24-13:49:17.687 1a37 Generated table #5815@0: 515 keys, 69668 bytes
+2024/06/24-13:49:17.687 1a37 Compacted 4@0 + 1@1 files => 69668 bytes
+2024/06/24-13:49:17.691 1a37 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/24-13:49:17.691 1a37 Delete type=2 #5814
+2024/06/24-13:49:17.691 1a37 Delete type=2 #5812
+2024/06/24-13:49:17.692 1a37 Delete type=2 #5806
+2024/06/24-13:49:17.692 1a37 Delete type=2 #5808
+2024/06/24-13:49:17.692 1a37 Delete type=2 #5810
+2024/06/24-13:55:13.749 1a37 Level-0 table #5817: started
+2024/06/24-13:55:13.762 1a37 Level-0 table #5817: 78263 bytes OK
+2024/06/24-13:55:13.766 1a37 Delete type=0 #5813
+2024/06/24-14:03:41.003 1a37 Level-0 table #5819: started
+2024/06/24-14:03:41.016 1a37 Level-0 table #5819: 78468 bytes OK
+2024/06/24-14:03:41.019 1a37 Delete type=0 #5816
+2024/06/24-14:15:21.368 1a9c Level-0 table #5821: started
+2024/06/24-14:15:21.375 1a9c Level-0 table #5821: 73414 bytes OK
+2024/06/24-14:15:21.379 1a9c Delete type=0 #5818

@@ -1,0 +1,7 @@
+2024/06/25-14:30:26.255 16b1 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_gov.teams.microsoft.us_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/25-14:30:26.256 16b1 Recovering log #9
+2024/06/25-14:30:26.257 16b1 Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_gov.teams.microsoft.us_0.indexeddb.leveldb/000009.log 
+2024/06/25-14:30:26.390 16b2 Compacting 1@1 + 1@2 files
+2024/06/25-14:30:26.399 16b2 Generated table #12@1: 3471 keys, 670149 bytes
+2024/06/25-14:30:26.399 16b2 Compacted 1@1 + 1@2 files => 670149 bytes
+2024/06/25-14:30:26.402 16b2 compacted to: files[ 0 0 1 0 0 0 0 ]

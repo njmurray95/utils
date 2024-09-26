@@ -1,0 +1,905 @@
+2024-01-12 09:41:01.344 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'registerIssueDataProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2024-01-12 09:41:01.604 [info] Started local extension host with pid 2641431.
+2024-01-12 09:41:01.836 [info] Invoking resolveAuthority(dev-container)...
+2024-01-12 09:41:01.836 [info] [LocalProcess0][resolveAuthority(dev-container,1)][0ms] obtaining proxy...
+2024-01-12 09:41:01.836 [info] [LocalProcess0][resolveAuthority(dev-container,1)][0ms] invoking...
+2024-01-12 09:41:02.821 [info] [LocalProcess0][resolveAuthority(dev-container,1)][1000ms] waiting...
+2024-01-12 09:41:03.590 [info] [LocalProcess0][resolveAuthority(dev-container,1)][1770ms] returned WebSocket(127.0.0.1:39243)
+2024-01-12 09:41:03.591 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 1770 ms
+2024-01-12 09:41:03.591 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-12 09:41:03.592 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-12 09:41:03.756 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 164 ms.
+2024-01-12 09:41:03.967 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 374 ms.
+2024-01-12 09:41:04.036 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2024-01-12 09:41:04.890 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarVisibility.variant.description.
+2024-01-12 09:41:06.251 [info] [perf] Render performance baseline is 19ms
+2024-01-12 09:41:07.604 [error] [Extension Host] [CMakeTools] 2024-01-12T14:41:07.601Z [error] [cmake] Detected Multi-Config Generator. Project Binary dir: /workspaces/spotrflow/Build, Make program: /usr/bin/ninja
+2024-01-12 15:24:04.380 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-12 15:24:04.384 [error] {"isTrusted":true}
+2024-01-12 15:24:04.384 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-12 15:24:04.384 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-12 15:24:04.384 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-12 15:24:04.384 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-12 15:24:04.387 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-12 15:24:04.387 [error] {"isTrusted":true}
+2024-01-12 15:24:04.387 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-12 15:24:04.388 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-12 15:24:04.388 [info] Invoking resolveAuthority(dev-container)...
+2024-01-12 15:24:04.388 [info] [LocalProcess0][resolveAuthority(dev-container,2)][0ms] obtaining proxy...
+2024-01-12 15:24:04.388 [info] [LocalProcess0][resolveAuthority(dev-container,2)][0ms] invoking...
+2024-01-12 15:24:04.423 [info] [LocalProcess0][resolveAuthority(dev-container,2)][35ms] returned WebSocket(127.0.0.1:39243)
+2024-01-12 15:24:04.424 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 35 ms
+2024-01-12 15:24:04.424 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-12 15:24:04.424 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-12 15:24:04.536 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 153 ms.
+2024-01-12 15:24:04.552 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-12 15:24:04.652 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 228 ms.
+2024-01-12 15:24:04.663 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-12 17:11:46.147 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-12 17:11:46.151 [error] {"isTrusted":true}
+2024-01-12 17:11:46.151 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-12 17:11:46.151 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-12 17:11:46.151 [info] Invoking resolveAuthority(dev-container)...
+2024-01-12 17:11:46.151 [info] [LocalProcess0][resolveAuthority(dev-container,3)][0ms] obtaining proxy...
+2024-01-12 17:11:46.151 [info] [LocalProcess0][resolveAuthority(dev-container,3)][0ms] invoking...
+2024-01-12 17:11:46.158 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-12 17:11:46.158 [error] {"isTrusted":true}
+2024-01-12 17:11:46.158 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-12 17:11:46.158 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-12 17:11:46.221 [info] [LocalProcess0][resolveAuthority(dev-container,3)][70ms] returned WebSocket(127.0.0.1:39243)
+2024-01-12 17:11:46.222 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 70 ms
+2024-01-12 17:11:46.222 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-12 17:11:46.222 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-12 17:11:46.225 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-12 17:11:46.225 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-12 17:11:46.386 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 163 ms.
+2024-01-12 17:11:46.394 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-12 17:11:46.514 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 290 ms.
+2024-01-12 17:11:46.520 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-15 09:07:09.691 [info] Extension host (Remote) is unresponsive.
+2024-01-15 09:07:09.714 [info] Extension host (Remote) is responsive.
+2024-01-15 12:51:14.879 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-15 12:51:14.883 [error] {"isTrusted":true}
+2024-01-15 12:51:14.883 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-15 12:51:14.884 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-15 12:51:14.884 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-15 12:51:14.884 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-15 12:51:14.886 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-15 12:51:14.886 [error] {"isTrusted":true}
+2024-01-15 12:51:14.886 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-15 12:51:14.887 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-15 12:51:14.887 [info] Invoking resolveAuthority(dev-container)...
+2024-01-15 12:51:14.887 [info] [LocalProcess0][resolveAuthority(dev-container,4)][0ms] obtaining proxy...
+2024-01-15 12:51:14.888 [info] [LocalProcess0][resolveAuthority(dev-container,4)][0ms] invoking...
+2024-01-15 12:51:14.928 [info] [LocalProcess0][resolveAuthority(dev-container,4)][40ms] returned WebSocket(127.0.0.1:39243)
+2024-01-15 12:51:14.928 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 41 ms
+2024-01-15 12:51:14.928 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-15 12:51:14.928 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-15 12:51:15.054 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 170 ms.
+2024-01-15 12:51:15.063 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-15 12:51:15.202 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 274 ms.
+2024-01-15 12:51:15.217 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-15 12:51:18.749 [info] Extension host (Remote) is unresponsive.
+2024-01-15 12:51:18.759 [info] Extension host (Remote) is responsive.
+2024-01-15 19:10:41.154 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-15 19:10:41.154 [error] {"isTrusted":true}
+2024-01-15 19:10:41.154 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-15 19:10:41.155 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-15 19:10:41.155 [info] Invoking resolveAuthority(dev-container)...
+2024-01-15 19:10:41.155 [info] [LocalProcess0][resolveAuthority(dev-container,5)][0ms] obtaining proxy...
+2024-01-15 19:10:41.155 [info] [LocalProcess0][resolveAuthority(dev-container,5)][0ms] invoking...
+2024-01-15 19:10:41.159 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-15 19:10:41.159 [error] {"isTrusted":true}
+2024-01-15 19:10:41.159 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-15 19:10:41.159 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-15 19:10:41.175 [info] [LocalProcess0][resolveAuthority(dev-container,5)][20ms] returned WebSocket(127.0.0.1:39243)
+2024-01-15 19:10:41.175 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 20 ms
+2024-01-15 19:10:41.175 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-15 19:10:41.176 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-15 19:10:41.176 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-15 19:10:41.176 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-15 19:10:41.228 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 53 ms.
+2024-01-15 19:10:41.233 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-15 19:10:41.360 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 184 ms.
+2024-01-15 19:10:41.366 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-16 09:30:13.897 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at new T (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70825)
+    at q (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:75301)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:75446)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:30:14.483 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:30:15.915 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at new T (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70825)
+    at q (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:75301)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:75446)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:30:15.917 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:30:17.479 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at new T (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70825)
+    at q (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:75301)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:75446)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:30:17.482 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:30:31.315 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async Fe (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:15058)
+    at async E.u (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:147:24167)
+    at async E.run (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:147:24091)
+    at async m.r (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1176:34617)
+2024-01-16 09:30:53.089 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74226)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async ee.replaceEditors (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:29184)
+2024-01-16 09:45:04.261 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:45:06.815 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:45:09.719 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:45:11.329 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:45:12.783 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 09:45:13.408 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 12:33:52.597 [error] Unable to read file 'vscode-remote://dev-container+7b22686f737450617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f77222c226c6f63616c446f636b6572223a66616c73652c22636f6e66696746696c65223a7b22246d6964223a312c22667350617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c2270617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c22736368656d65223a2266696c65227d7d/workspaces/spotrflow/Deployment/Graphs/scripts/2024_01_16_large_image.sh' (Error: Unable to resolve nonexistent file 'vscode-remote://dev-container+7b22686f737450617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f77222c226c6f63616c446f636b6572223a66616c73652c22636f6e66696746696c65223a7b22246d6964223a312c22667350617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c2270617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c22736368656d65223a2266696c65227d7d/workspaces/spotrflow/Deployment/Graphs/scripts/2024_01_16_large_image.sh'): Error: Unable to read file 'vscode-remote://dev-container+7b22686f737450617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f77222c226c6f63616c446f636b6572223a66616c73652c22636f6e66696746696c65223a7b22246d6964223a312c22667350617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c2270617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c22736368656d65223a2266696c65227d7d/workspaces/spotrflow/Deployment/Graphs/scripts/2024_01_16_large_image.sh' (Error: Unable to resolve nonexistent file 'vscode-remote://dev-container+7b22686f737450617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f77222c226c6f63616c446f636b6572223a66616c73652c22636f6e66696746696c65223a7b22246d6964223a312c22667350617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c2270617468223a222f686f6d652f6e6d75727261792f636f64652f73706f7472666c6f772f2e646576636f6e7461696e65722f637564613132322f646576636f6e7461696e65722e6a736f6e222c22736368656d65223a2266696c65227d7d/workspaces/spotrflow/Deployment/Graphs/scripts/2024_01_16_large_image.sh')
+    at n.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:645:18891)
+    at n.D (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:645:18686)
+    at async b.M (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2169:42874)
+    at async b.readStream (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2169:42628)
+    at async P.Cb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2158:6445)
+    at async P.resolve (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2158:4892)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2169:38735
+2024-01-16 12:57:37.511 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-16 13:15:31.597 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+2024-01-16 18:38:24.063 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-16 18:38:24.064 [error] {"isTrusted":true}
+2024-01-16 18:38:24.064 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-16 18:38:24.064 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-16 18:38:24.064 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-16 18:38:24.064 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-16 18:38:24.067 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-16 18:38:24.067 [error] {"isTrusted":true}
+2024-01-16 18:38:24.067 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-16 18:38:24.068 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-16 18:38:24.068 [info] Invoking resolveAuthority(dev-container)...
+2024-01-16 18:38:24.068 [info] [LocalProcess0][resolveAuthority(dev-container,6)][0ms] obtaining proxy...
+2024-01-16 18:38:24.068 [info] [LocalProcess0][resolveAuthority(dev-container,6)][0ms] invoking...
+2024-01-16 18:38:24.096 [info] [LocalProcess0][resolveAuthority(dev-container,6)][28ms] returned WebSocket(127.0.0.1:39243)
+2024-01-16 18:38:24.096 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 28 ms
+2024-01-16 18:38:24.096 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-16 18:38:24.096 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-16 18:38:24.169 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 105 ms.
+2024-01-16 18:38:24.175 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-16 18:38:24.279 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 183 ms.
+2024-01-16 18:38:24.286 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-17 09:22:08.952 [info] Extension host (Remote) is unresponsive.
+2024-01-17 09:22:08.953 [info] Extension host (Remote) is responsive.
+2024-01-17 13:09:00.618 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-17 13:11:56.410 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+2024-01-17 13:16:39.175 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+2024-01-17 17:16:54.770 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-17 17:16:54.770 [error] {"isTrusted":true}
+2024-01-17 17:16:54.771 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-17 17:16:54.772 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-17 17:16:54.772 [info] Invoking resolveAuthority(dev-container)...
+2024-01-17 17:16:54.772 [info] [LocalProcess0][resolveAuthority(dev-container,7)][0ms] obtaining proxy...
+2024-01-17 17:16:54.773 [info] [LocalProcess0][resolveAuthority(dev-container,7)][0ms] invoking...
+2024-01-17 17:16:54.774 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-17 17:16:54.774 [error] {"isTrusted":true}
+2024-01-17 17:16:54.774 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-17 17:16:54.774 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-17 17:16:54.803 [info] [LocalProcess0][resolveAuthority(dev-container,7)][30ms] returned WebSocket(127.0.0.1:39243)
+2024-01-17 17:16:54.803 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 31 ms
+2024-01-17 17:16:54.803 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-17 17:16:54.804 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-17 17:16:54.809 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-17 17:16:54.809 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-17 17:16:54.956 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 151 ms.
+2024-01-17 17:16:54.974 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-17 17:16:55.105 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 295 ms.
+2024-01-17 17:16:55.116 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-18 18:25:44.109 [info] [remote-connection][ExtensionHost][085e7…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-18 18:25:44.109 [error] {"isTrusted":true}
+2024-01-18 18:25:44.109 [info] [remote-connection][ExtensionHost][085e7…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-18 18:25:44.109 [info] [remote-connection][ExtensionHost][085e7…][reconnect] resolving connection...
+2024-01-18 18:25:44.109 [info] [remote-connection][ExtensionHost][085e7…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-18 18:25:44.109 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782)...
+2024-01-18 18:25:44.110 [info] [remote-connection][Management   ][b352d…][reconnect] received socket close event (wasClean: false, code: 1006, reason: ).
+2024-01-18 18:25:44.110 [error] {"isTrusted":true}
+2024-01-18 18:25:44.110 [info] [remote-connection][Management   ][b352d…][reconnect] starting reconnecting loop. You can get more information with the trace log level.
+2024-01-18 18:25:44.111 [info] [remote-connection][Management   ][b352d…][reconnect] resolving connection...
+2024-01-18 18:25:44.111 [info] Invoking resolveAuthority(dev-container)...
+2024-01-18 18:25:44.111 [info] [LocalProcess0][resolveAuthority(dev-container,8)][0ms] obtaining proxy...
+2024-01-18 18:25:44.111 [info] [LocalProcess0][resolveAuthority(dev-container,8)][0ms] invoking...
+2024-01-18 18:25:44.131 [info] [LocalProcess0][resolveAuthority(dev-container,8)][19ms] returned WebSocket(127.0.0.1:39243)
+2024-01-18 18:25:44.131 [info] resolveAuthority(dev-container) returned 'WebSocket(127.0.0.1:39243)' after 20 ms
+2024-01-18 18:25:44.131 [info] [remote-connection][Management   ][b352d…][reconnect] connecting to WebSocket(127.0.0.1:39243)...
+2024-01-18 18:25:44.131 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083)...
+2024-01-18 18:25:44.163 [info] Creating a socket (renderer-ExtensionHost-085e737a-c279-4737-8762-5934dc658782) was successful after 53 ms.
+2024-01-18 18:25:44.169 [info] [remote-connection][ExtensionHost][085e7…][reconnect] reconnected!
+2024-01-18 18:25:44.221 [info] Creating a socket (renderer-Management-b352d5b5-512d-4e93-9dd5-1582a6762083) was successful after 90 ms.
+2024-01-18 18:25:44.226 [info] [remote-connection][Management   ][b352d…][reconnect] reconnected!
+2024-01-22 16:05:58.012 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-22 16:05:59.594 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005
+    at async o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2345:46962)
+2024-01-22 16:06:01.185 [error] TextModelPart is disposed!: Error: TextModelPart is disposed!
+    at f.g (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:121:22521)
+    at f.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:629:119736)
+    at q.getWordAtPosition (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:9052)
+    at L.h (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68579)
+    at new l (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:68454)
+    at new L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69323)
+    at P (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:69855)
+    at T.F (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74429)
+    at T.E (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:74164)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:760:70608)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2036)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:15262)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2119)
+    at I.s (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108250)
+    at I.emitOutgoingEvent (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:108004)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:741:22176)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at E.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:17241)
+    at E.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:15983)
+    at k.setScrollDimensions (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:113878)
+    at v.n (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:115929)
+    at v.onHeightMaybeChanged (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:114949)
+    at v.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:117204)
+    at m.changeWhitespace (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:742:3855)
+    at w.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:132:74226)
+    at U.change (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:723:23918)
+    at x.changeViewZones (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:13687)
+    at vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54116
+    at q.zb (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3415)
+    at q.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:736:3051)
+    at x.changeDecorations (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:9366)
+    at d.x (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:54087)
+    at d.v (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:51921)
+    at o.value (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:764:50582)
+    at u.y (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1902)
+    at u.z (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:1972)
+    at u.fire (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:87:2188)
+    at x.setModel (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:744:400)
+    at M.setInput (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2148:23901)
+    at async b.S (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:23046)
+    at async b.L (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:21637)
+    at async b.openEditor (vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2146:20603)
+    at async vscode-file://vscode-app/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2275:23005

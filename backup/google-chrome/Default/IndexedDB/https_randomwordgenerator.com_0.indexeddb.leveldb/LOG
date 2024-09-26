@@ -1,0 +1,7 @@
+2024/06/20-17:17:39.517 19e5 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_randomwordgenerator.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/20-17:17:39.517 19e5 Recovering log #3
+2024/06/20-17:17:39.517 19e5 Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_randomwordgenerator.com_0.indexeddb.leveldb/000003.log 
+2024/06/20-17:19:37.210 19f1 Level-0 table #5: started
+2024/06/20-17:19:37.273 19f1 Level-0 table #5: 397 bytes OK
+2024/06/20-17:19:37.366 19f1 Delete type=0 #3
+2024/06/20-17:19:37.367 19f1 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

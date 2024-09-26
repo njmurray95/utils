@@ -1,0 +1,39 @@
+2024/06/24-14:25:01.859 16b1 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2024/06/24-14:25:01.862 16b1 Recovering log #5820
+2024/06/24-14:25:01.863 16b1 Reusing old log /home/nmurray/.config/google-chrome/Default/Sync Data/LevelDB/005820.log 
+2024/06/24-14:25:03.472 16b2 Level-0 table #5824: started
+2024/06/24-14:25:03.480 16b2 Level-0 table #5824: 86592 bytes OK
+2024/06/24-14:25:03.484 16b2 Delete type=0 #5820
+2024/06/24-14:25:03.484 16b2 Compacting 4@0 + 1@1 files
+2024/06/24-14:25:03.487 16b2 Generated table #5825@0: 515 keys, 25224 bytes
+2024/06/24-14:25:03.487 16b2 Compacted 4@0 + 1@1 files => 25224 bytes
+2024/06/24-14:25:03.490 16b2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/24-14:25:03.490 16b2 Delete type=2 #5817
+2024/06/24-14:25:03.490 16b2 Delete type=2 #5819
+2024/06/24-14:25:03.490 16b2 Delete type=2 #5815
+2024/06/24-14:25:03.490 16b2 Delete type=2 #5824
+2024/06/24-14:25:03.490 16b2 Delete type=2 #5821
+2024/06/24-14:25:19.152 16be Level-0 table #5827: started
+2024/06/24-14:25:19.158 16be Level-0 table #5827: 121235 bytes OK
+2024/06/24-14:25:19.162 16be Delete type=0 #5823
+2024/06/25-10:36:53.234 16b2 Level-0 table #5829: started
+2024/06/25-10:36:53.238 16b2 Level-0 table #5829: 96981 bytes OK
+2024/06/25-10:36:53.241 16b2 Delete type=0 #5826
+2024/06/25-10:48:43.029 16b1 Level-0 table #5831: started
+2024/06/25-10:48:43.038 16b1 Level-0 table #5831: 105570 bytes OK
+2024/06/25-10:48:43.041 16b1 Delete type=0 #5828
+2024/06/25-12:50:42.168 16b1 Level-0 table #5833: started
+2024/06/25-12:50:42.180 16b1 Level-0 table #5833: 87106 bytes OK
+2024/06/25-12:50:42.183 16b1 Delete type=0 #5830
+2024/06/25-12:50:42.184 16b1 Compacting 4@0 + 1@1 files
+2024/06/25-12:50:42.193 16b1 Generated table #5834@0: 515 keys, 65662 bytes
+2024/06/25-12:50:42.193 16b1 Compacted 4@0 + 1@1 files => 65662 bytes
+2024/06/25-12:50:42.196 16b1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/06/25-12:50:42.196 16b1 Delete type=2 #5825
+2024/06/25-12:50:42.196 16b1 Delete type=2 #5831
+2024/06/25-12:50:42.196 16b1 Delete type=2 #5833
+2024/06/25-12:50:42.196 16b1 Delete type=2 #5827
+2024/06/25-12:50:42.196 16b1 Delete type=2 #5829
+2024/06/25-12:58:30.169 16b2 Level-0 table #5836: started
+2024/06/25-12:58:30.183 16b2 Level-0 table #5836: 75987 bytes OK
+2024/06/25-12:58:30.186 16b2 Delete type=0 #5832

@@ -1,0 +1,11 @@
+2024/05/22-11:59:36.232 2007 Creating DB /home/nmurray/.config/google-chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb since it was missing.
+2024/05/22-11:59:36.238 2007 Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/05/22-11:59:37.341 2008 Level-0 table #5: started
+2024/05/22-11:59:37.357 2008 Level-0 table #5: 1279830 bytes OK
+2024/05/22-11:59:37.360 2008 Delete type=0 #3
+2024/05/22-11:59:37.366 2008 Level-0 table #7: started
+2024/05/22-11:59:37.379 2008 Level-0 table #7: 1460372 bytes OK
+2024/05/22-11:59:37.382 2008 Delete type=0 #4
+2024/05/22-11:59:37.398 2008 Level-0 table #9: started
+2024/05/22-11:59:37.409 2008 Level-0 table #9: 730035 bytes OK
+2024/05/22-11:59:37.412 2008 Delete type=0 #6

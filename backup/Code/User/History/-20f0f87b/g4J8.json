@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "cmake.options.statusBarVisibility": "compact",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": true,
+    "window.zoomLevel": 1,
+    "vim.useSystemClipboard": true,
+    "cmake.configureOnOpen": true
+}

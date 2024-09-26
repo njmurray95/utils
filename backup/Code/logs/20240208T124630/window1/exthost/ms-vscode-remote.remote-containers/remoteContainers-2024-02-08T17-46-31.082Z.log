@@ -1,0 +1,56 @@
+[2024-02-08T17:46:31.108Z] Setting up container for folder or workspace: /home/nmurray/code/spotrflow
+[2024-02-08T17:46:31.099Z] Dev Containers 0.327.0 in VS Code 1.85.1 (0ee08df0cf4527e40edc9aa28f4b5bd38bbff2b2).
+[2024-02-08T17:46:31.099Z] Start: Resolving Remote
+[2024-02-08T17:46:31.110Z] Start: Check Docker is running
+[2024-02-08T17:46:31.110Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2024-02-08T17:46:31.144Z] Stop (34 ms): Run: docker version --format {{.Server.APIVersion}}
+[2024-02-08T17:46:31.144Z] Server API version: 1.43
+[2024-02-08T17:46:31.144Z] Stop (34 ms): Check Docker is running
+[2024-02-08T17:46:31.144Z] Start: Run: docker volume ls -q
+[2024-02-08T17:46:31.161Z] Stop (17 ms): Run: docker volume ls -q
+[2024-02-08T17:46:31.161Z] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/home/nmurray/code/spotrflow --filter label=vsch.quality=stable
+[2024-02-08T17:46:31.177Z] Stop (16 ms): Run: docker ps -q -a --filter label=vsch.local.folder=/home/nmurray/code/spotrflow --filter label=vsch.quality=stable
+[2024-02-08T17:46:31.177Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:31.197Z] Stop (20 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:31.197Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.221Z] Stop (24 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.222Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow
+[2024-02-08T17:46:31.235Z] Stop (13 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow
+[2024-02-08T17:46:31.236Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.247Z] Stop (11 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.247Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-02-08T17:46:31.385Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-02-08T17:46:31.385Z] Start: Run: git rev-parse --show-cdup
+[2024-02-08T17:46:31.390Z] Stop (5 ms): Run: git rev-parse --show-cdup
+[2024-02-08T17:46:31.391Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:31.401Z] Stop (10 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:31.402Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.412Z] Stop (10 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.418Z] Stop (171 ms): Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/nmurray/code/spotrflow --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --mount-workspace-git-root
+[2024-02-08T17:46:31.455Z] Start: Run: /usr/share/code/code --ms-enable-electron-run-as-node /home/nmurray/.vscode/extensions/ms-vscode-remote.remote-containers-0.327.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/nmurray/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --container-session-data-folder /tmp/devcontainers-0815da09-7a00-4949-b6b9-6c70c2097b141707414390685 --workspace-folder /home/nmurray/code/spotrflow --workspace-mount-consistency cached --id-label devcontainer.local_folder=/home/nmurray/code/spotrflow --id-label devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --log-level debug --log-format json --config /home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root
+[2024-02-08T17:46:31.591Z] @devcontainers/cli 0.54.1. Node.js v18.15.0. linux 6.2.0-33-generic x64.
+[2024-02-08T17:46:31.591Z] Start: Run: docker buildx version
+[2024-02-08T17:46:31.682Z] Stop (91 ms): Run: docker buildx version
+[2024-02-08T17:46:31.683Z] github.com/docker/buildx v0.11.2 9872040
+[2024-02-08T17:46:31.683Z] 
+[2024-02-08T17:46:31.683Z] Start: Resolving Remote
+[2024-02-08T17:46:31.686Z] Start: Run: git rev-parse --show-cdup
+[2024-02-08T17:46:31.690Z] Stop (4 ms): Run: git rev-parse --show-cdup
+[2024-02-08T17:46:31.732Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:31.744Z] Stop (12 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:31.744Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.755Z] Stop (11 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:31.756Z] Start: Starting container
+[2024-02-08T17:46:31.756Z] Start: Run: docker start 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-02-08T17:46:32.318Z] Stop (562 ms): Run: docker start 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-02-08T17:46:32.318Z] Stop (562 ms): Starting container
+[2024-02-08T17:46:32.318Z] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:32.334Z] Stop (16 ms): Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/nmurray/code/spotrflow --filter label=devcontainer.config_file=/home/nmurray/code/spotrflow/.devcontainer/cuda122/devcontainer.json
+[2024-02-08T17:46:32.335Z] Start: Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:32.346Z] Stop (11 ms): Run: docker inspect --type container 4297a1e11e61
+[2024-02-08T17:46:32.347Z] Start: Inspecting container
+[2024-02-08T17:46:32.347Z] Start: Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-02-08T17:46:32.359Z] Stop (12 ms): Run: docker inspect --type container 4297a1e11e61ba0a317348ba8bf86ddf065550e8a7d8c14a8583dfcc45dfeeeb
+[2024-02-08T17:46:32.359Z] Stop (12 ms): Inspecting container
+[2024-02-08T17:46:32.360Z] Start: Run in container: /bin/sh
+[2024-02-08T17:46:32.363Z] Start: Run in container: uname -m

@@ -1,0 +1,77 @@
+2024-01-12 09:40:56.864 [info] update#setState idle
+2024-01-12 09:41:26.865 [info] update#setState checking for updates
+2024-01-12 09:41:26.975 [info] update#setState idle
+2024-01-12 10:41:26.965 [info] update#setState checking for updates
+2024-01-12 10:41:27.093 [info] update#setState idle
+2024-01-12 11:41:27.073 [info] update#setState checking for updates
+2024-01-12 11:41:27.233 [info] update#setState idle
+2024-01-12 12:41:27.103 [info] update#setState checking for updates
+2024-01-12 12:41:27.241 [info] update#setState idle
+2024-01-12 13:41:27.206 [info] update#setState checking for updates
+2024-01-12 13:41:27.350 [info] update#setState idle
+2024-01-12 14:41:27.285 [info] update#setState checking for updates
+2024-01-12 14:41:27.415 [info] update#setState idle
+2024-01-12 16:17:20.945 [info] update#setState checking for updates
+2024-01-12 16:17:21.402 [info] update#setState idle
+2024-01-15 09:12:32.805 [info] update#setState checking for updates
+2024-01-15 09:12:32.948 [info] update#setState idle
+2024-01-15 10:12:32.815 [info] update#setState checking for updates
+2024-01-15 10:12:32.950 [info] update#setState idle
+2024-01-15 11:12:32.832 [info] update#setState checking for updates
+2024-01-15 11:12:33.008 [info] update#setState idle
+2024-01-15 12:12:32.940 [info] update#setState checking for updates
+2024-01-15 12:12:33.102 [info] update#setState idle
+2024-01-15 16:24:00.387 [info] update#setState checking for updates
+2024-01-15 16:24:00.686 [info] update#setState idle
+2024-01-15 17:24:00.406 [info] update#setState checking for updates
+2024-01-15 17:24:00.682 [info] update#setState idle
+2024-01-15 18:24:00.505 [info] update#setState checking for updates
+2024-01-15 18:24:00.768 [info] update#setState idle
+2024-01-16 09:41:00.787 [info] update#setState checking for updates
+2024-01-16 09:41:01.232 [info] update#setState idle
+2024-01-16 10:41:00.806 [info] update#setState checking for updates
+2024-01-16 10:41:01.111 [info] update#setState idle
+2024-01-16 11:41:00.816 [info] update#setState checking for updates
+2024-01-16 11:41:01.140 [info] update#setState idle
+2024-01-16 12:41:00.826 [info] update#setState checking for updates
+2024-01-16 12:41:01.080 [info] update#setState idle
+2024-01-16 12:59:43.500 [error] [UtilityProcess id: 2, type: fileWatcher, pid: 883959]: crashed with code 15 and reason 'killed'
+2024-01-16 12:59:43.501 [info] Extension host with pid 883974 exited with code: 0, signal: unknown.
+2024-01-16 13:41:00.830 [info] update#setState checking for updates
+2024-01-16 13:41:01.193 [info] update#setState idle
+2024-01-16 14:41:00.840 [info] update#setState checking for updates
+2024-01-16 14:41:01.150 [info] update#setState idle
+2024-01-16 15:41:00.843 [info] update#setState checking for updates
+2024-01-16 15:41:01.127 [info] update#setState idle
+2024-01-16 16:41:00.846 [info] update#setState checking for updates
+2024-01-16 16:41:01.121 [info] update#setState idle
+2024-01-16 17:41:00.849 [info] update#setState checking for updates
+2024-01-16 17:41:01.128 [info] update#setState idle
+2024-01-17 09:22:08.954 [warning] No ptyHost heartbeat after 6 seconds
+2024-01-17 09:24:35.022 [info] update#setState checking for updates
+2024-01-17 09:24:35.152 [info] update#setState idle
+2024-01-17 10:24:35.026 [info] update#setState checking for updates
+2024-01-17 10:24:35.159 [info] update#setState idle
+2024-01-17 11:24:35.037 [info] update#setState checking for updates
+2024-01-17 11:24:41.381 [info] update#setState idle
+2024-01-17 12:24:35.039 [info] update#setState checking for updates
+2024-01-17 12:24:35.177 [info] update#setState idle
+2024-01-17 13:24:35.041 [info] update#setState checking for updates
+2024-01-17 13:24:35.209 [info] update#setState idle
+2024-01-17 14:24:35.046 [info] update#setState checking for updates
+2024-01-17 14:24:35.202 [info] update#setState idle
+2024-01-17 15:24:35.049 [info] update#setState checking for updates
+2024-01-17 15:24:35.220 [info] update#setState idle
+2024-01-17 16:24:35.053 [info] update#setState checking for updates
+2024-01-17 16:24:35.201 [info] update#setState idle
+2024-01-18 10:02:41.178 [warning] No ptyHost heartbeat after 6 seconds
+2024-01-18 10:10:10.049 [info] update#setState checking for updates
+2024-01-18 10:10:10.281 [info] update#setState idle
+2024-01-18 11:10:10.051 [info] update#setState checking for updates
+2024-01-18 11:10:10.309 [info] update#setState idle
+2024-01-18 12:10:10.057 [info] update#setState checking for updates
+2024-01-18 12:10:10.304 [info] update#setState idle
+2024-01-18 13:10:10.059 [info] update#setState checking for updates
+2024-01-18 13:10:10.328 [info] update#setState available for download
+2024-01-22 09:02:53.412 [warning] No ptyHost heartbeat after 6 seconds
+2024-01-22 16:13:08.382 [info] Extension host with pid 2641431 exited with code: 0, signal: unknown.

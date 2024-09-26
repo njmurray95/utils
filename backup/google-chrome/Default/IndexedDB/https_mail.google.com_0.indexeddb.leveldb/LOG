@@ -1,0 +1,6 @@
+2024/06/24-14:25:03.730 16bc Reusing MANIFEST /home/nmurray/.config/google-chrome/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/06/24-14:25:03.730 16bc Recovering log #3
+2024/06/24-14:25:03.738 16bc Reusing old log /home/nmurray/.config/google-chrome/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000003.log 
+2024/06/24-14:25:29.686 16b1 Level-0 table #5: started
+2024/06/24-14:25:29.699 16b1 Level-0 table #5: 1918772 bytes OK
+2024/06/24-14:25:29.706 16b1 Delete type=0 #3
