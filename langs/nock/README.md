@@ -68,3 +68,10 @@ nock(a)             *a
 
 *a                  *a
 ```
+
+`?`: Wut: -- `0` if an Atom, `1` if Cell
+`+`: Lut: -- Add 1
+`=`: Tis
+`/`: Net
+`#`: Hax
+`*`: Tar
