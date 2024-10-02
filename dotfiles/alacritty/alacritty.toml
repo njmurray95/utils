@@ -1,5 +1,8 @@
 import = ["/home/nmurray/.config/alacritty/fall.toml"]
 
+[env]
+ENV = "$HOME/.config/kshrc"
+
 [bell]
 animation = "EaseOutSine"
 color = "#dba40d"

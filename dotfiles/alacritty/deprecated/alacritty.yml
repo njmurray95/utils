@@ -2,6 +2,7 @@
 #
 # Template config:
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+#
 
 import:
   - ~/.config/alacritty/fall.yml
@@ -28,6 +29,10 @@ window:
   # decorations: full
   # decorations: none
   # decorations: transparent
+  #
+env:
+  # Make sure ksh is pointed to the right place
+  ENV: "$HOME/.config/kshrc"
 
 # Font config (changes require restart)
 font:
