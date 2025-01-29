@@ -191,3 +191,8 @@ PS C:\> Get-PSBreakpoint | Remove-PSBreakpoint
 
 * `Clear-Host`: Clear screen (= Linux <C-l>)
 * Get Version: $PSVersionTable.PSVersion
+
+Check if computer is 64-bit or 32-bit:
+```
+Get-WmiObject win32_operatingsystem | select osarchitecture
+```
