@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.5)  28 JUN 2024 09:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.12.5)  28 JAN 2025 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -117,37 +117,42 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Overfull \hbox (219.83232pt too wide) in paragraph at lines 17--17
+[][]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
@@ -155,22 +160,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
 {/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] ) 
 Here is how much of TeX's memory you used:
- 1121 strings out of 480445
- 15426 string characters out of 5892391
- 310894 words of memory out of 5000000
+ 1120 strings out of 480445
+ 15422 string characters out of 5892391
+ 311894 words of memory out of 5000000
  18455 multiletter control sequences out of 15000+600000
- 406311 words of font info for 37 fonts, out of 8000000 for 9000
+ 406319 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 67i,4n,74p,211b,145s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,5n,74p,211b,179s stack positions out of 5000i,500n,10000p,200000b,80000s
 <
 /usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
 fb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmcsc10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb>
-Output written on njmurray_resume.pdf (1 page, 83630 bytes).
+onts/cm/cmr9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb>
+Output written on njmurray_resume.pdf (1 page, 88572 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
